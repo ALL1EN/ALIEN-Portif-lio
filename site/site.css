@@ -1,0 +1,40 @@
+/* Aviso de cookies, preferências e troca de idioma (todas as páginas) */
+.ac-dock { position: fixed; left: 16px; bottom: 16px; z-index: 2147483002; display: flex; align-items: center; gap: 6px; font: 500 12px/1 system-ui, -apple-system, "Segoe UI", sans-serif; }
+.ac-fab { display: grid; place-items: center; width: 35px; height: 35px; padding: 0; border-radius: 50%; border: 1px solid rgba(255, 255, 255, .18); background: rgba(10, 10, 10, .82); color: #fff; cursor: pointer; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); box-shadow: 0 8px 24px rgba(0, 0, 0, .28); }
+.ac-fab svg { width: 19px; height: 19px; }
+.ac-lang { display: inline-flex; height: 35px; padding: 3px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, .18); background: rgba(10, 10, 10, .82); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); box-shadow: 0 8px 24px rgba(0, 0, 0, .28); }
+.ac-lang button { min-width: 32px; padding: 0 8px; border: 0; border-radius: 999px; background: transparent; color: #a3a3a3; font: inherit; letter-spacing: .04em; cursor: pointer; }
+.ac-lang button[aria-current="true"] { background: #fff; color: #000; }
+.ac-fab:focus-visible, .ac-lang button:focus-visible, .ac-b:focus-visible { outline: 2px solid #E85002; outline-offset: 2px; }
+
+.ac-banner { position: fixed; left: 16px; bottom: 64px; z-index: 2147483003; width: min(420px, calc(100vw - 32px)); padding: 20px; border-radius: 16px; border: 1px solid rgba(255, 255, 255, .14); background: rgba(12, 12, 12, .96); color: #f5f5f5; font: 400 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; box-shadow: 0 24px 60px rgba(0, 0, 0, .5); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); animation: acIn .45s cubic-bezier(.16, 1, .3, 1); }
+.ac-banner[hidden] { display: none; }
+@keyframes acIn { from { opacity: 0; transform: translateY(12px); } }
+.ac-t { margin: 0 0 6px; font-weight: 600; font-size: 15px; color: #fff; }
+.ac-p { margin: 0; color: #c9c9c9; }
+.ac-links { display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 10px 0 0; font-size: 12.5px; }
+.ac-links a { color: #e5e5e5; text-decoration: underline; text-underline-offset: 3px; }
+.ac-btns { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.ac-b { flex: 1 1 auto; height: 40px; padding: 0 14px; border-radius: 999px; font: 600 13px/1 system-ui, -apple-system, "Segoe UI", sans-serif; cursor: pointer; }
+.ac-ghost { border: 1px solid rgba(255, 255, 255, .22); background: transparent; color: #fff; }
+.ac-ghost:hover { border-color: rgba(255, 255, 255, .5); }
+.ac-main { border: 0; background: #E85002; color: #000; }
+.ac-main:hover { background: #ff6a1f; }
+
+.ac-modal { width: min(480px, calc(100vw - 32px)); padding: 22px; border-radius: 16px; border: 1px solid rgba(255, 255, 255, .14); background: #0c0c0c; color: #f5f5f5; font: 400 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+.ac-modal::backdrop { background: rgba(0, 0, 0, .7); }
+.ac-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid rgba(255, 255, 255, .1); cursor: pointer; }
+.ac-row b { display: block; color: #fff; font-weight: 600; }
+.ac-row small { display: block; margin-top: 2px; color: #a3a3a3; font-size: 12.5px; }
+.ac-row input { width: 20px; height: 20px; flex: none; accent-color: #E85002; }
+
+/* nas páginas de projeto, os botões "Portfolio" e "Fale com o Alien" ficam ao lado do painel */
+.alien-back { left: 140px !important; }
+.alien-wa.left { left: 252px !important; }
+@media (max-width: 640px) {
+  .ac-dock { bottom: 16px; }
+  .ac-banner { bottom: 60px; }
+  .alien-back { left: 16px !important; }
+  .alien-wa.left { left: 128px !important; }
+}
+@media print { .ac-dock, .ac-banner { display: none; } }
