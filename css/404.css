@@ -1,0 +1,5 @@
+
+  html, body { margin: 0; height: 100%; background: #000; color: #fff; }
+  body { display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  h1 { font-family: "Geist", system-ui, sans-serif; font-weight: 700; font-size: clamp(140px, 34vw, 480px); line-height: 1; letter-spacing: -0.05em; margin: 0; user-select: none; }
+

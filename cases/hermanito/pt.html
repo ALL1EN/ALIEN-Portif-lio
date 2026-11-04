@@ -15,54 +15,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Inter:wght@400;500;600&display=swap">
 <link rel="preload" as="image" href="../../media/motion/hermanito.jpg">
-<style>
-  :root { --bg: #000; --fg: #f9f9f9; --muted: #a3a3a3; --line: rgba(255, 255, 255, .12); --orange: #E85002; --ease: cubic-bezier(.16, 1, .3, 1); }
-  * { box-sizing: border-box; margin: 0; }
-  html { background: var(--bg); -webkit-text-size-adjust: 100%; }
-  body { min-height: 100vh; background: var(--bg); color: var(--fg); font: 400 16px/1.6 "Geist", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
-  a { color: inherit; }
-  .top { position: fixed; inset: 0 0 auto; z-index: 10; display: flex; align-items: center; justify-content: space-between; height: 72px; padding: 0 clamp(16px, 4vw, 48px); }
-  .top::before { content: ""; position: absolute; inset: 0; background: linear-gradient(#000, rgba(0, 0, 0, 0)); pointer-events: none; }
-  .brand, .back { position: relative; display: inline-flex; align-items: center; text-decoration: none; }
-  .logo { display: block; height: 26px; width: auto; }
-  .back { gap: 8px; font-size: 14px; color: #cfcfcf; transition: color .25s; }
-  .back:hover { color: #fff; }
-  .back svg { width: 15px; height: 15px; }
-  main { max-width: 1120px; margin: 0 auto; padding: 120px clamp(16px, 4vw, 48px) 80px; }
-  .cat { color: var(--orange); font: 500 12px/1 "Geist", sans-serif; letter-spacing: .2em; text-transform: uppercase; }
-  h1 { margin-top: 18px; font: 500 clamp(38px, 6vw, 76px)/1.02 "Inter", system-ui, sans-serif; letter-spacing: -.035em; }
-  .lead { max-width: 640px; margin-top: 20px; color: #d6d6d6; font-size: clamp(16px, 1.4vw, 18px); }
-  .player { position: relative; margin-top: 48px; border-radius: 20px; overflow: hidden; background: #0b0b0b; border: 1px solid var(--line); }
-  .player.square { max-width: 640px; margin-left: auto; margin-right: auto; }
-  .player video { display: block; width: 100%; height: auto; aspect-ratio: 480 / 480; object-fit: cover; background: #0b0b0b; }
-  .play { position: absolute; right: 16px; bottom: 16px; display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, .2); background: rgba(0, 0, 0, .6); color: #fff; font: 500 13px/1 "Geist", sans-serif; cursor: pointer; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); transition: background .25s; }
-  .play:hover { background: rgba(0, 0, 0, .85); }
-  .play svg { width: 14px; height: 14px; }
-  .play:focus-visible, .next:focus-visible, .back:focus-visible, .brand:focus-visible { outline: 2px solid var(--orange); outline-offset: 4px; border-radius: 999px; }
-  .meta { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 40px; padding: 24px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-  .meta dt { color: var(--muted); font: 500 11px/1 "Geist", sans-serif; letter-spacing: .16em; text-transform: uppercase; }
-  .meta dd { margin-top: 10px; font-size: 15px; }
-  .body { max-width: 640px; margin-top: 32px; color: #cfcfcf; }
-  .next { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: 72px; padding: 28px; border-radius: 20px; border: 1px solid var(--line); text-decoration: none; transition: border-color .3s, transform .4s var(--ease); }
-  .next:hover { border-color: rgba(255, 255, 255, .45); transform: translateY(-3px); }
-  .next small { display: block; color: var(--muted); font: 500 11px/1 "Geist", sans-serif; letter-spacing: .16em; text-transform: uppercase; }
-  .next strong { display: block; margin-top: 10px; font: 500 clamp(22px, 3vw, 32px)/1.1 "Inter", sans-serif; letter-spacing: -.02em; }
-  .next span { color: var(--muted); font-size: 14px; }
-  .next svg { flex: none; width: 28px; height: 28px; transition: transform .4s var(--ease); }
-  .next:hover svg { transform: translateX(4px); }
-  footer { max-width: 1120px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px) 48px; color: #6f6f6f; font-size: 13px; }
-  .rise { opacity: 0; transform: translateY(18px); animation: rise .9s var(--ease) forwards; }
-  .rise:nth-child(2) { animation-delay: .08s; } .rise:nth-child(3) { animation-delay: .16s; } .rise:nth-child(4) { animation-delay: .24s; }
-  @keyframes rise { to { opacity: 1; transform: none; } }
-  @media (max-width: 640px) {
-    .top { height: 64px; }
-    .logo { height: 22px; }
-    main { padding-top: 96px; }
-    .meta { grid-template-columns: 1fr 1fr; }
-    .next { padding: 22px; }
-  }
-  @media (prefers-reduced-motion: reduce) { .rise { animation: none; opacity: 1; transform: none; } }
-</style>
+<link rel="stylesheet" href="pt.style.css">
 </head>
 <body>
 <header class="top">
@@ -89,41 +42,8 @@
   </a>
 </main>
 <footer>© 2026 Pablo Augusto Juan · Alien</footer>
-<script>
-(() => {
-  const v = document.getElementById("film");
-  const b = document.getElementById("playBtn");
-  const player = v.parentElement;
-  if (Number(player.dataset.w) === Number(player.dataset.h)) player.classList.add("square");
-  const PAUSE = '<svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="3.5" y="3" width="3" height="10" rx="1"/><rect x="9.5" y="3" width="3" height="10" rx="1"/></svg><span>Pausar</span>';
-  const PLAY = '<svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4.5 2.8v10.4L13 8z"/></svg><span>Reproduzir</span>';
-  const sync = () => { const on = !v.paused; b.innerHTML = on ? PAUSE : PLAY; b.setAttribute("aria-pressed", String(on)); };
-  b.addEventListener("click", () => (v.paused ? v.play() : v.pause()));
-  v.addEventListener("click", () => (v.paused ? v.play() : v.pause()));
-  v.addEventListener("play", sync); v.addEventListener("pause", sync);
-  if (matchMedia("(prefers-reduced-motion: reduce)").matches) v.pause();
-  sync();
-})();
-</script>
-<style>
-  .alien-wa { position: fixed; z-index: 2147483001; bottom: 20px; display: inline-flex; align-items: center; gap: 10px; height: 52px; padding: 0 20px 0 14px; border-radius: 999px; background: #25D366; color: #fff; font: 600 15px/1 system-ui, -apple-system, "Segoe UI", sans-serif; letter-spacing: .01em; text-decoration: none; box-shadow: 0 10px 28px rgba(0, 0, 0, .35); transition: transform .25s ease, box-shadow .25s ease; -webkit-tap-highlight-color: transparent; }
-  .alien-wa:hover { transform: translateY(-2px); box-shadow: 0 14px 34px rgba(0, 0, 0, .42); }
-  .alien-wa:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
-  .alien-wa svg { width: 26px; height: 26px; flex: none; }
-  .alien-wa small { display: block; margin-top: 3px; font-weight: 400; font-size: 11.5px; opacity: .9; }
-  .alien-wa.right { right: 20px; }
-  .alien-wa.left { left: 128px; bottom: 16px; height: 35px; padding: 0 14px 0 10px; gap: 8px; font-size: 13px; font-weight: 500; }
-  .alien-wa.left svg { width: 18px; height: 18px; }
-  .alien-wa.left small { display: none; }
-  @media (max-width: 640px) {
-    .alien-wa.right { right: 14px; bottom: 16px; height: 50px; padding: 0 16px 0 12px; font-size: 14px; }
-    .alien-wa.right small { display: none; }
-    /* nas páginas de projeto, sobe acima das barras fixas que alguns sites têm no rodapé do celular */
-    .alien-wa.left { bottom: 88px; }
-    .alien-wa.left ~ .alien-back, .alien-back { bottom: 88px !important; }
-  }
-  @media print { .alien-wa { display: none; } }
-</style>
+<script src="pt.script1.js"></script>
+<link rel="stylesheet" href="pt.style2.css">
 <a class="alien-wa right" href="https://wa.me/5516993370772?text=Ol%C3%A1%2C%20Pablo!%20Vi%20seu%20portf%C3%B3lio%20e%20quero%20conversar%20sobre%20um%20or%C3%A7amento." target="_blank" rel="noopener" aria-label="Fale com o Alien no WhatsApp (abre em nova aba)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.13-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg><span>Fale com o Alien<small>Orçamento pelo WhatsApp</small></span></a>
 </body>
 </html>
