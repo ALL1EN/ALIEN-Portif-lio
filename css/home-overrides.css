@@ -151,10 +151,10 @@ section.hero .bw-eyebrow{font-size:7.5px!important;letter-spacing:.07em!importan
 .reviews .rv-grid.is-spread .rv-card{animation-play-state:paused}
 .reviews .rv-grid{touch-action:pan-y}
 /* Título principal da hero maior */
-section.hero h1.bw-title{max-width:none!important;font-size:clamp(64px,8.6vw,132px)!important;line-height:1.02!important}
-@media (max-width:809.98px){section.hero h1.bw-title{font-size:clamp(46px,15vw,84px)!important;line-height:1.02!important}}
+section.hero h1.bw-title{max-width:none!important;font-size:90px!important;line-height:1.02!important}
+@media (max-width:809.98px){section.hero h1.bw-title{font-size:50px!important;line-height:1.02!important}}
 /* Com o título maior, o texto sobe e o botão nunca encosta no subtítulo */
 @media (min-width:641px){
 section.hero .bw-head{padding-top:14vh}
-section.hero .bw-head .bw-cta{top:max(66vh,calc(14vh + 150px + 17.5vw))}
+section.hero .bw-head .bw-cta{top:max(66vh,calc(14vh + 334px))}
 }
