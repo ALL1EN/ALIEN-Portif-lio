@@ -1,5 +1,7 @@
 window.ALIEN_REVIEWS = {
   starsLabel: "5 de 5",
+  more: "Ler completo",
+  close: "Fechar",
   items: [
   { initials: "MB", name: "Marianne Belotti", role: "Identidade de marca e logo", quote: "Trabalhamos juntos numa agência de publicidade. O Pablo trabalha muito bem em equipe, tem conhecimento avançado das ferramentas, é extremamente criativo e está sempre estudando e aprendendo coisas novas. No geral, é um excelente profissional.", dark: false, delay: "0s" },
   { initials: "RG", name: "Raunilo Guimarães", role: "Edição de vídeo", quote: "Profissional excepcional. Qualidade de trabalho impecável, entrega rápida e muita atenção aos detalhes. Respondeu a todas as perguntas com clareza e profissionalismo. Recomendo muito.", dark: true, delay: "0.12s" },

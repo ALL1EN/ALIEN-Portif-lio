@@ -46,3 +46,49 @@ section.hero .bw-eyebrow{font-size:7.5px!important;letter-spacing:.07em!importan
 .reviews.is-in .rv-grid,.reviews.is-in .rv-card,.reviews.is-in .rv-card *{pointer-events:auto!important}
 /* Projetos no mobile: uma arrastada atravessa a seção, com a mesma animação */
 @media (max-width:809.98px){.wl{height:125vh!important;height:125svh!important}}
+/* Depoimentos compactos: todos à vista; o texto completo abre ao clicar */
+.reviews .rv-grid{display:grid!important;width:auto!important;max-width:none;overflow:visible!important;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px 14px!important;margin:32px 0 0!important;padding:18px 0 8px!important;animation:none!important;transform:none!important;scroll-snap-type:none}
+.reviews .rv-grid .rv-card{position:relative;display:flex;flex-direction:column;flex:none!important;width:100%;margin:0;padding:18px 0 0!important;border:0;background:none;color:inherit;font:inherit;text-align:center;cursor:pointer;scroll-snap-align:none}
+.reviews .rv-card .rv-av{width:36px;height:36px;font-size:11px}
+.reviews .rv-card .rv-body{flex:1;height:auto!important;display:flex;flex-direction:column;align-items:center;padding:24px 14px 12px!important;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.reviews .rv-card .rv-name{display:block;margin:0!important;font-size:14px;line-height:1.25}
+.reviews .rv-card .rv-role{display:block;margin:3px 0 0;font-size:11px;line-height:1.3}
+.reviews .rv-card .rv-quote{display:-webkit-box!important;-webkit-box-orient:vertical;-webkit-line-clamp:3!important;overflow:hidden!important;flex:0 0 auto;max-height:none!important;margin:10px 0!important;font-size:12.5px!important;line-height:1.4!important}
+.reviews .rv-card .rv-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;margin-top:auto}
+.reviews .rv-card .rv-more{color:#c94400;font:500 11px/1.2 Geist,sans-serif;text-decoration:underline;text-underline-offset:2px}
+.reviews .rv-card.is-dark .rv-more{color:#ff8a4c}
+.reviews .rv-card:focus-visible{outline:2px solid #e85002;outline-offset:3px;border-radius:12px}
+@media (hover:hover){.reviews .rv-card:hover .rv-body{transform:translateY(-4px);border-color:#e85002;box-shadow:0 12px 28px rgba(0,0,0,.14)}}
+@media (max-width:809.98px){
+.reviews .rv-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 10px!important;margin-top:24px!important}
+.reviews .rv-card .rv-body{padding:22px 10px 10px!important}
+.reviews .rv-card .rv-name{font-size:13px}
+.reviews .rv-card .rv-quote{font-size:12px!important}
+.reviews .rv-card .rv-foot{justify-content:center}
+.reviews .rv-card .rv-stars{display:none}
+.reviews .rv-card .rv-more{display:inline-block;padding:6px 4px}
+}
+.rv-dlg{width:min(92vw,520px);max-height:85vh;padding:0;border:0;border-radius:16px;background:#fff;color:#121212;pointer-events:auto;box-shadow:0 24px 70px rgba(0,0,0,.4)}
+.rv-dlg::backdrop{background:rgba(0,0,0,.65)}
+.rv-dlg-in{position:relative;padding:28px 24px 22px;text-align:left}
+.rv-dlg-x{position:absolute;top:6px;right:6px;width:44px;height:44px;border:0;background:none;color:#121212;font-size:26px;line-height:1;cursor:pointer}
+.rv-dlg-name{margin:0 40px 0 0;font:600 18px/1.25 Geist,sans-serif}
+.rv-dlg-role{margin:4px 40px 0 0;color:#5c5c5c;font:400 13px/1.3 Geist,sans-serif}
+.rv-dlg-quote{margin:16px 0;color:#2a2a2a;font:400 16px/1.55 Geist,sans-serif}
+/* Mobile: os 8 cartões cabem na altura da tela (o palco da animação é fixo) */
+@media (max-width:809.98px){
+.about-copy p:last-of-type{display:block!important}
+.sun-stage>.reviews{padding-top:52px!important}
+.sun-stage>.reviews>.reviews-inner{margin-top:0!important;margin-bottom:auto}
+.reviews .reviews-title{font-size:24px!important;line-height:1.15!important}
+.reviews .rv-grid{gap:8px!important;margin-top:12px!important;padding:0!important}
+.reviews .rv-grid .rv-card{padding:0!important}
+.reviews .rv-card .rv-av{display:none}
+.reviews .rv-card .rv-body{padding:9px 10px 6px!important;align-items:flex-start;text-align:left}
+.reviews .rv-card .rv-name{font-size:12.5px;white-space:nowrap}
+.reviews .rv-card .rv-role{max-width:100%;font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.reviews .rv-card .rv-quote{-webkit-line-clamp:2!important;margin:5px 0 2px!important;font-size:11px!important;line-height:1.3!important;text-align:left}
+.reviews .rv-card .rv-foot{justify-content:flex-start}
+.reviews .rv-card .rv-more{padding:4px 0;font-size:10.5px}
+}
+@media (max-width:809.98px) and (max-height:660px){.reviews .rv-card .rv-quote{display:none!important}}

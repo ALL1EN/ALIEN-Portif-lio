@@ -1,5 +1,7 @@
 window.ALIEN_REVIEWS = {
   starsLabel: "5 out of 5",
+  more: "Read more",
+  close: "Close",
   items: [
   { initials: "MB", name: "Marianne Belotti", role: "Brand identity and logo", quote: "We worked together at an advertising agency. Pablo is a great team player, has advanced knowledge of the tools, is extremely creative and is always studying and learning new things. Overall, an excellent professional.", dark: false, delay: "0s" },
   { initials: "RG", name: "Raunilo Guimarães", role: "Video editing", quote: "An exceptional professional. Flawless quality, fast delivery and great attention to detail. He answered every question clearly and professionally. Highly recommended.", dark: true, delay: "0.12s" },
