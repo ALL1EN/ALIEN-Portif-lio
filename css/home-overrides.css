@@ -37,3 +37,12 @@ section.hero .bw-eyebrow{font-size:7.5px!important;letter-spacing:.07em!importan
 .reviews .rv-card:hover .rv-quote,.reviews .rv-card:focus-visible .rv-quote{-webkit-line-clamp:unset;display:block;overflow:auto}
 .reviews .rv-card:hover .rv-body{border-color:#e85002}
 }
+@media (min-width:810px) and (hover:hover){
+.reviews .rv-quote{flex:0 0 auto;max-height:4.5em}
+.reviews .rv-stars{margin-top:auto}
+.reviews .rv-card:hover .rv-quote,.reviews .rv-card:focus-visible .rv-quote{max-height:none}
+}
+/* Depoimentos aceitam o mouse depois de aparecer */
+.reviews.is-in .rv-grid,.reviews.is-in .rv-card,.reviews.is-in .rv-card *{pointer-events:auto!important}
+/* Projetos no mobile: uma arrastada atravessa a seção, com a mesma animação */
+@media (max-width:809.98px){.wl{height:125vh!important;height:125svh!important}}
