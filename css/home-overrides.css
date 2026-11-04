@@ -147,3 +147,6 @@ section.hero .bw-eyebrow{font-size:7.5px!important;letter-spacing:.07em!importan
 /* Cards arrastáveis */
 .reviews .rv-grid .rv-card,.reviews.js .rv-grid .rv-card{cursor:grab;touch-action:none;user-select:none;-webkit-user-select:none}
 .reviews .rv-grid .rv-card.is-drag{cursor:grabbing;animation-play-state:paused;box-shadow:0 24px 50px rgba(0,0,0,.45)}
+/* Enquanto os cards se espalham, a flutuação fica pausada */
+.reviews .rv-grid.is-spread .rv-card{animation-play-state:paused}
+.reviews .rv-grid{touch-action:pan-y}
