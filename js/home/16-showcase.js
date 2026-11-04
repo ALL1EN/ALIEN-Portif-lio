@@ -1,1 +1,2 @@
-(()=>{const e=document.getElementById("vitrine");if(!e)return;if(window.matchMedia("(prefers-reduced-motion: reduce)").matches)return void e.classList.add("is-in");new IntersectionObserver(s=>{s.forEach(s=>{s.isIntersecting?(e.classList.remove("is-in"),e.offsetWidth,e.classList.add("is-in")):e.classList.remove("is-in")})},{threshold:0,rootMargin:"0px 0px -35% 0px"}).observe(e)})()
+/* Anima a entrada da seção de projetos só uma vez. */
+(()=>{const e=document.getElementById("vitrine");if(!e)return;if(window.matchMedia("(prefers-reduced-motion: reduce)").matches)return void e.classList.add("is-in");const o=new IntersectionObserver(s=>{s.forEach(s=>{s.isIntersecting&&(e.classList.add("is-in"),o.disconnect())})},{threshold:0,rootMargin:"0px 0px -35% 0px"});o.observe(e)})()
