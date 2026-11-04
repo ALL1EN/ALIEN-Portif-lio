@@ -10,6 +10,9 @@ window.ALIEN_REVIEWS = {
   { initials: "LM", name: "Lucas Moretti", role: "Creatives for Meta Ads", quote: "We tested the variations he created and two became the account's winners. Beautiful creatives, but built around the number, which is what matters at the end of the month.", dark: false, delay: "0.48s" },
   { initials: "JF", name: "Juliana Ferraz", role: "Video and motion", quote: "He delivered the video ahead of schedule with a level of animation we didn't expect. Clear communication from start to finish.", dark: true, delay: "0.60s" },
   { initials: "TR", name: "Thiago Ribeiro", role: "Company website", quote: "We went from a stagnant website to a fast, modern page that brings in leads every day. I recommend him without a second thought.", dark: false, delay: "0.72s" },
-  { initials: "BS", name: "Beatriz Souza", role: "Visual identity and creatives", quote: "He created the identity and the brand's first ads. Everything consistent, looking like a big brand from day one.", dark: true, delay: "0.84s" }
+  { initials: "BS", name: "Beatriz Souza", role: "Visual identity and creatives", quote: "He created the identity and the brand's first ads. Everything consistent, looking like a big brand from day one.", dark: true, delay: "0.84s" },
+  { initials: "AS", name: "Allan Stein", role: "Creative director, L9 Propaganda", quote: "Creative and always proposing changes to improve performance.", dark: false, delay: "0s" },
+  { initials: "PA", name: "Pedro Augusto Veloso", role: "Client", quote: "Excellent professional! Creative, with broad technical knowledge.", dark: false, delay: "0s" },
+  { initials: "AB", name: "Ana Beatriz Menezes", role: "Communication and marketing", quote: "I wholeheartedly recommend Juan's design work. Always detail-oriented, strategic and creative!", dark: false, delay: "0s" }
   ]
 };

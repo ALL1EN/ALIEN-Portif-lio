@@ -10,6 +10,9 @@ window.ALIEN_REVIEWS = {
   { initials: "LM", name: "Lucas Moretti", role: "Criativos para Meta Ads", quote: "Testamos as variações que ele criou e duas viraram campeãs da conta. Criativo bonito, mas pensado para o número, que é o que importa no fim do mês.", dark: false, delay: "0.48s" },
   { initials: "JF", name: "Juliana Ferraz", role: "Vídeo e motion", quote: "Entregou o vídeo antes do prazo e com um nível de animação que a gente não esperava. Comunicação clara do começo ao fim.", dark: true, delay: "0.60s" },
   { initials: "TR", name: "Thiago Ribeiro", role: "Site institucional", quote: "Saímos de um site parado para uma página rápida, moderna e que gera contato todos os dias. Recomendo de olhos fechados.", dark: false, delay: "0.72s" },
-  { initials: "BS", name: "Beatriz Souza", role: "Identidade visual e criativos", quote: "Criou a identidade e os primeiros anúncios da marca. Tudo conversando entre si, com cara de marca grande desde o início.", dark: true, delay: "0.84s" }
+  { initials: "BS", name: "Beatriz Souza", role: "Identidade visual e criativos", quote: "Criou a identidade e os primeiros anúncios da marca. Tudo conversando entre si, com cara de marca grande desde o início.", dark: true, delay: "0.84s" },
+  { initials: "AS", name: "Allan Stein", role: "Diretor de criação, L9 Propaganda", quote: "Criativo e sempre propondo mudanças para melhorar o desempenho.", dark: false, delay: "0s" },
+  { initials: "PA", name: "Pedro Augusto Veloso", role: "Cliente", quote: "Excelente profissional! Criativo e com amplo conhecimento técnico.", dark: false, delay: "0s" },
+  { initials: "AB", name: "Ana Beatriz Menezes", role: "Comunicação e marketing", quote: "Recomendo de olhos fechados os trabalhos de design do Juan. Sempre detalhista, estratégico e criativo!", dark: false, delay: "0s" }
   ]
 };

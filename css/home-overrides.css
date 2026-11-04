@@ -121,3 +121,26 @@ section.hero .bw-eyebrow{font-size:7.5px!important;letter-spacing:.07em!importan
 }
 /* Pop-up centralizado na tela */
 .rv-dlg[open]{position:fixed;inset:0;margin:auto!important;height:fit-content}
+/* Cards maiores, espalhados pela seção inteira, sem área vazia */
+.sun-stage>.reviews{padding-bottom:16px!important}
+.sun-stage>.reviews>.reviews-inner{flex:1;display:flex;flex-direction:column;width:100%;max-width:none!important;min-height:0;margin:0!important;padding:0 5vw!important}
+.reviews .reviews-title,.reviews .rv-hint{flex:none}
+.reviews .rv-grid{flex:1;height:auto!important;min-height:0;width:auto!important;margin:18px -5vw 0!important}
+.reviews .rv-grid .rv-card,.reviews.js .rv-grid .rv-card{width:270px;padding:15px 16px!important}
+.reviews .rv-card .rv-name{font-size:16px}
+.reviews .rv-card .rv-role{font-size:12.5px}
+.reviews .rv-card .rv-av{width:42px;height:42px;font-size:12px}
+.rv-grid .rv-card:nth-child(8){--y:84%}
+.rv-grid .rv-card:nth-child(9){--x:30%;--y:10%;--dx:-18vw;--dy:10vh;--r:4deg;--t:19s;--o:-8s}
+.rv-grid .rv-card:nth-child(10){--x:8%;--y:84%;--dx:28vw;--dy:-8vh;--r:-5deg;--t:13s;--o:-1s}
+.rv-grid .rv-card:nth-child(11){--x:40%;--y:44%;--dx:-30vw;--dy:7vh;--r:3deg;--t:16s;--o:-12s}
+@media (max-width:809.98px){
+.sun-stage>.reviews{padding-bottom:84px!important}
+.sun-stage>.reviews>.reviews-inner{padding:0 24px!important}
+.reviews .rv-grid{margin:14px -24px 0!important}
+.reviews .rv-grid .rv-card,.reviews.js .rv-grid .rv-card{width:168px;gap:8px;padding:11px 12px!important}
+.reviews .rv-grid .rv-card .rv-av{width:30px;height:30px}
+.reviews .rv-card .rv-name{font-size:13px}
+.reviews .rv-card .rv-role{font-size:10.5px}
+}
+@media (min-width:810px){.reviews .rv-grid .rv-card,.reviews.js .rv-grid .rv-card{left:min(calc(var(--x) * 1.45),calc(100% - 290px))}}
