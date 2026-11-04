@@ -92,3 +92,32 @@ section.hero .bw-eyebrow{font-size:7.5px!important;letter-spacing:.07em!importan
 .reviews .rv-card .rv-more{padding:4px 0;font-size:10.5px}
 }
 @media (max-width:809.98px) and (max-height:660px){.reviews .rv-card .rv-quote{display:none!important}}
+/* Depoimentos flutuantes: cards de uma cor, só com o título; o comentário abre no pop-up */
+.reviews .rv-hint{margin:8px 0 0;color:#5c5c5c;font:400 14px/1.4 Geist,sans-serif}
+.reviews .rv-grid{display:block!important;position:relative;width:100%!important;height:58vh;min-height:340px;margin:20px 0 0!important;padding:0!important;overflow:visible!important}
+.reviews .rv-grid .rv-card,.reviews.js .rv-grid .rv-card{position:absolute;display:flex;flex-direction:row;align-items:center;gap:10px;width:230px;left:var(--x);top:var(--y);padding:12px 14px!important;border:1px solid rgba(255,255,255,.14);border-radius:14px;background:#141414;color:#fff;text-align:left;box-shadow:0 14px 30px rgba(0,0,0,.28);cursor:pointer;rotate:var(--r);animation:rvDrift var(--t) ease-in-out var(--o) infinite alternate;transition:opacity .6s ease,box-shadow .25s ease,border-color .25s ease}
+.reviews .rv-card .rv-av{position:static;flex:none;display:grid;width:36px;height:36px;transform:none;background:#e85002;color:#000;font-weight:600}
+.reviews .rv-card .rv-body{flex:1;min-width:0;display:block;height:auto!important;padding:0!important;border:0;background:none;color:#fff;box-shadow:none!important;transform:none!important;text-align:left}
+.reviews .rv-card .rv-name{color:#fff;font-size:14px;white-space:normal}
+.reviews .rv-card .rv-role{color:#b5b5b5;font-size:11.5px;white-space:normal;overflow:visible}
+.reviews .rv-card:hover,.reviews .rv-card:focus-visible{z-index:20;border-color:#e85002;box-shadow:0 18px 40px rgba(0,0,0,.4);animation-play-state:paused}
+.reviews .rv-card:focus-visible{outline:2px solid #e85002;outline-offset:3px}
+.rv-grid .rv-card:nth-child(1){--x:0%;--y:2%;--dx:22vw;--dy:6vh;--r:-6deg;--t:13s;--o:-2s}
+.rv-grid .rv-card:nth-child(2){--x:52%;--y:0%;--dx:-24vw;--dy:8vh;--r:5deg;--t:16s;--o:-7s}
+.rv-grid .rv-card:nth-child(3){--x:22%;--y:20%;--dx:20vw;--dy:-5vh;--r:3deg;--t:11s;--o:-4s}
+.rv-grid .rv-card:nth-child(4){--x:50%;--y:30%;--dx:-30vw;--dy:6vh;--r:-4deg;--t:18s;--o:-11s}
+.rv-grid .rv-card:nth-child(5){--x:2%;--y:42%;--dx:26vw;--dy:5vh;--r:6deg;--t:14s;--o:-6s}
+.rv-grid .rv-card:nth-child(6){--x:48%;--y:54%;--dx:-22vw;--dy:-6vh;--r:-5deg;--t:12s;--o:-3s}
+.rv-grid .rv-card:nth-child(7){--x:10%;--y:68%;--dx:30vw;--dy:4vh;--r:-3deg;--t:17s;--o:-9s}
+.rv-grid .rv-card:nth-child(8){--x:54%;--y:78%;--dx:-26vw;--dy:-5vh;--r:4deg;--t:15s;--o:-5s}
+@keyframes rvDrift{from{translate:0 0;rotate:var(--r)}to{translate:var(--dx) var(--dy);rotate:calc(var(--r) * -1)}}
+@media (prefers-reduced-motion:reduce){.reviews .rv-grid .rv-card,.reviews.js .rv-grid .rv-card{animation:none}}
+@media (max-width:809.98px){
+.reviews .rv-hint{font-size:12.5px}
+.reviews .rv-grid .rv-card,.reviews.js .rv-grid .rv-card{width:150px;gap:7px;padding:9px 10px!important}
+.reviews .rv-grid .rv-card .rv-av{display:grid;width:28px;height:28px;font-size:10px}
+.reviews .rv-card .rv-name{font-size:12px}
+.reviews .rv-card .rv-role{font-size:10px}
+}
+/* Pop-up centralizado na tela */
+.rv-dlg[open]{position:fixed;inset:0;margin:auto!important;height:fit-content}

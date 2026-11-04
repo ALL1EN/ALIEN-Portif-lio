@@ -19,19 +19,16 @@
     var r = props.review;
     return h("button", {
         type: "button",
-        className: "rv-card" + (r.dark ? " is-dark" : ""),
+        className: "rv-card",
         style: { "--rd": r.delay },
         "aria-haspopup": "dialog",
+        "aria-label": r.name + ", " + r.role + ". " + data.more,
         onClick: props.onOpen
       },
       h("span", { className: "rv-av", "aria-hidden": "true" }, r.initials),
       h("span", { className: "rv-body" },
         h("span", { className: "rv-name" }, r.name),
-        h("span", { className: "rv-role" }, r.role),
-        h("span", { className: "rv-quote" }, r.quote),
-        h("span", { className: "rv-foot" },
-          h(Stars),
-          h("span", { className: "rv-more" }, data.more))));
+        h("span", { className: "rv-role" }, r.role)));
   }
 
   function ReviewDialog(props) {
