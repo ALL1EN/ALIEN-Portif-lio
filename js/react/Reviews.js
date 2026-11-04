@@ -56,10 +56,106 @@
         h(Stars)));
   }
 
+  /* Interação: arrastar um card e afastar os vizinhos do mouse ou do dedo.
+     O deslocamento vai em margin porque translate e rotate são usados pela flutuação. */
+  function useCardPhysics() {
+    React.useEffect(function () {
+      var calm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var cards = Array.prototype.slice.call(root.querySelectorAll(".rv-card")).map(function (el) {
+        return { el: el, ox: 0, oy: 0, px: 0, py: 0 };
+      });
+      var pointer = null, drag = null, skipClick = false, raf = 0, z = 30;
+
+      function tick() {
+        raf = 0;
+        var moving = false;
+        var radius = window.innerWidth < 810 ? 120 : 190;
+        var force = window.innerWidth < 810 ? 70 : 110;
+        cards.forEach(function (c) {
+          var tx = 0, ty = 0;
+          if (pointer && !calm && c !== (drag && drag.card) && c.el !== pointer.over) {
+            var b = c.el.getBoundingClientRect();
+            var dx = b.left + b.width / 2 - pointer.x;
+            var dy = b.top + b.height / 2 - pointer.y;
+            var d = Math.sqrt(dx * dx + dy * dy) || 1;
+            if (d < radius) {
+              tx = dx / d * (1 - d / radius) * force;
+              ty = dy / d * (1 - d / radius) * force;
+            }
+          }
+          c.px += (tx - c.px) * 0.14;
+          c.py += (ty - c.py) * 0.14;
+          if (Math.abs(tx - c.px) > 0.3 || Math.abs(ty - c.py) > 0.3) moving = true;
+          c.el.style.marginLeft = (c.ox + c.px).toFixed(1) + "px";
+          c.el.style.marginTop = (c.oy + c.py).toFixed(1) + "px";
+        });
+        if (moving || pointer) raf = requestAnimationFrame(tick);
+      }
+      function wake() { if (!raf) raf = requestAnimationFrame(tick); }
+      function inDialog(e) { return e.target.closest && e.target.closest(".rv-dlg"); }
+
+      function onDown(e) {
+        if (inDialog(e) || e.button > 0) return;
+        var el = e.target.closest(".rv-card");
+        if (!el) return;
+        var card = cards.filter(function (c) { return c.el === el; })[0];
+        drag = { card: card, x: e.clientX, y: e.clientY, ox: card.ox, oy: card.oy, moved: false };
+        el.setPointerCapture(e.pointerId);
+        el.classList.add("is-drag");
+        el.style.zIndex = ++z;
+        skipClick = false;
+      }
+      function onMove(e) {
+        if (inDialog(e)) return;
+        var over = e.target.closest ? e.target.closest(".rv-card") : null;
+        pointer = { x: e.clientX, y: e.clientY, over: over };
+        if (drag) {
+          var dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+          if (Math.abs(dx) + Math.abs(dy) > 6) drag.moved = true;
+          var card = drag.card;
+          var prevX = card.ox, prevY = card.oy;
+          card.ox = drag.ox + dx;
+          card.oy = drag.oy + dy;
+          card.el.style.marginLeft = (card.ox + card.px).toFixed(1) + "px";
+          card.el.style.marginTop = (card.oy + card.py).toFixed(1) + "px";
+          /* não deixa o card sair da área da seção */
+          var g = root.getBoundingClientRect(), b = card.el.getBoundingClientRect();
+          if (b.left < g.left || b.right > g.right) card.ox = prevX;
+          if (b.top < g.top || b.bottom > g.bottom) card.oy = prevY;
+        }
+        wake();
+      }
+      function onUp() {
+        if (drag) {
+          drag.card.el.classList.remove("is-drag");
+          skipClick = drag.moved;
+          drag = null;
+        }
+      }
+      function onLeave() { if (!drag) { pointer = null; wake(); } }
+      function onTouchEnd(e) { if (e.pointerType !== "mouse") { pointer = null; wake(); } }
+      function onClick(e) {
+        if (skipClick && e.target.closest(".rv-card")) { e.preventDefault(); e.stopPropagation(); }
+        skipClick = false;
+      }
+
+      root.addEventListener("pointerdown", onDown);
+      root.addEventListener("pointermove", onMove);
+      root.addEventListener("pointerup", onUp);
+      root.addEventListener("pointercancel", onUp);
+      root.addEventListener("pointerup", onTouchEnd);
+      root.addEventListener("pointercancel", onTouchEnd);
+      root.addEventListener("pointerleave", onLeave);
+      root.addEventListener("click", onClick, true);
+      return function () { cancelAnimationFrame(raf); };
+    }, []);
+  }
+
   function Reviews() {
     var state = React.useState(null);
     var open = state[0];
     var setOpen = state[1];
+    useCardPhysics();
     return h(React.Fragment, null,
       data.items.map(function (r, i) {
         return h(ReviewCard, { key: r.name, review: r, onOpen: function () { setOpen(i); } });
