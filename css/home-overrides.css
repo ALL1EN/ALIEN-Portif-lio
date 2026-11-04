@@ -155,6 +155,6 @@ section.hero h1.bw-title{max-width:none!important;font-size:90px!important;line-
 @media (max-width:809.98px){section.hero h1.bw-title{font-size:50px!important;line-height:1.02!important}}
 /* Com o título maior, o texto sobe e o botão nunca encosta no subtítulo */
 @media (min-width:641px){
-section.hero .bw-head{padding-top:14vh}
-section.hero .bw-head .bw-cta{top:max(66vh,calc(14vh + 334px))}
+section.hero .bw-head{padding-top:max(90px,calc(66vh - 338px))}
+section.hero .bw-head .bw-cta{top:max(66vh,428px)}
 }
