@@ -1,0 +1,1 @@
+(()=>{if(window.matchMedia("(prefers-reduced-motion: reduce)").matches||!("IntersectionObserver"in window))return;const e=[...document.querySelectorAll(".fq-inner, .cta-end-inner")];e.forEach(e=>e.classList.add("tx-ready"));const r=new IntersectionObserver(e=>{e.forEach(e=>e.target.classList.toggle("tx-in",e.isIntersecting))},{threshold:.2});e.forEach(e=>r.observe(e))})()

@@ -1,0 +1,1 @@
+(()=>{const t=document.querySelector(".craft"),e=t&&t.querySelector(".craft-stage");if(!e)return;const n=()=>{const n=window.matchMedia("(max-width: 809.98px)").matches;e.style.zoom=n?"":String(Math.min(1,(t.clientWidth-32)/1e3))};n(),window.addEventListener("resize",n)})()

@@ -1,0 +1,1 @@
+(()=>{const e=document.getElementById("icp");if(!e||!("IntersectionObserver"in window))return;e.classList.add("js");new IntersectionObserver(s=>{s.forEach(s=>e.classList.toggle("is-in",s.isIntersecting))},{threshold:.3}).observe(e)})()

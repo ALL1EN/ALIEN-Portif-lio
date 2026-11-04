@@ -1,0 +1,1 @@
+(()=>{const e=document.querySelector(".craft"),r=e&&e.querySelector(".craft-stage");if(!r||!("IntersectionObserver"in window)||window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;e.classList.add("js");new IntersectionObserver(r=>{r.forEach(r=>e.classList.toggle("is-in",r.isIntersecting))},{threshold:.35}).observe(r)})()

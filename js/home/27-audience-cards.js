@@ -1,0 +1,1 @@
+document.querySelectorAll(".icp-card").forEach(e=>{e.addEventListener("pointermove",t=>{const n=e.getBoundingClientRect();e.style.setProperty("--mx",t.clientX-n.left+"px"),e.style.setProperty("--my",t.clientY-n.top+"px")})})

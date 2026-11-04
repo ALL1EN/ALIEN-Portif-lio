@@ -1,0 +1,1 @@
+(()=>{if(!("IntersectionObserver"in window))return;const e=new IntersectionObserver(e=>{e.forEach(e=>e.target.classList.toggle("off-screen",!e.isIntersecting))},{rootMargin:"300px 0px 300px 0px"});document.querySelectorAll("body > section, body > footer, body > .sun-pin, body > .craft, body > .brief, body > .spm").forEach(o=>e.observe(o))})()

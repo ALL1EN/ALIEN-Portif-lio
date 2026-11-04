@@ -1,0 +1,1 @@
+(()=>{const e=document.querySelector(".rv-grid");if(!e)return;const r=document.createElement("div");r.className="rv-band",e.parentNode.insertBefore(r,e),r.appendChild(e),[...e.children].forEach(r=>{const t=r.cloneNode(!0);t.setAttribute("aria-hidden","true"),e.appendChild(t)})})()
