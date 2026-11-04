@@ -175,3 +175,4 @@ section.hero .bw-head .bw-cta{top:max(66vh,428px)}
 .wl-sticky{position:relative!important;top:auto!important;height:100%!important}
 #vitrine{padding-bottom:0!important}
 }
+@media (max-width:809.98px){.bh-word{will-change:auto!important;filter:none!important}.bw-head{will-change:auto}}
