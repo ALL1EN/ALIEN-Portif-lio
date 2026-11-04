@@ -17,7 +17,7 @@
 
   function ReviewCard(props) {
     var r = props.review;
-    return h("article", { className: "rv-card" + (r.dark ? " is-dark" : ""), style: { "--rd": r.delay } },
+    return h("article", { className: "rv-card" + (r.dark ? " is-dark" : ""), tabIndex: 0, style: { "--rd": r.delay } },
       h("span", { className: "rv-av", "aria-hidden": "true" }, r.initials),
       h("div", { className: "rv-body" },
         h("h3", { className: "rv-name" }, r.name),
