@@ -158,3 +158,12 @@ section.hero h1.bw-title{max-width:none!important;font-size:90px!important;line-
 section.hero .bw-head{padding-top:max(90px,calc(66vh - 338px))}
 section.hero .bw-head .bw-cta{top:max(66vh,428px)}
 }
+/* Projetos no celular: versão leve, sem camadas 3D nem vídeos */
+@media (max-width:699.98px){
+.wl-sticky{perspective:none!important}
+.wl-plane,.wl-col,.wl-card,.wl-in{transform-style:flat!important;will-change:auto!important;backface-visibility:visible!important}
+.wl-card,.wl-in,.wl-in img{filter:none!important;box-shadow:none!important;transition:none!important}
+.wl-plane{will-change:transform,opacity!important}
+.wl-col{will-change:transform!important}
+.wl-vid{display:none!important}
+}
