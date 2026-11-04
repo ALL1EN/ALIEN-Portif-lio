@@ -169,3 +169,9 @@ section.hero .bw-head .bw-cta{top:max(66vh,428px)}
 }
 /* Hero no celular: sem desfoque nas palavras */
 @media (max-width:809.98px){.bh-word{will-change:transform,opacity}}
+/* Projetos no celular: seção do tamanho da tela, com rolagem normal (sem prender) */
+@media (max-width:699.98px){
+.wl{height:68vh!important;height:68svh!important;margin-top:0}
+.wl-sticky{position:relative!important;top:auto!important;height:100%!important}
+#vitrine{padding-bottom:0!important}
+}
