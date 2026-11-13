@@ -56,7 +56,7 @@
         h(Stars)));
   }
 
-  /* Interação: o mouse ou o dedo empurra os cards, que se espalham e ficam onde pararam.
+  /* Interação: os cards podem ser arrastados e param de flutuar enquanto o ponteiro está na seção.
      Também dá para arrastar um card. O deslocamento vai em margin porque
      translate e rotate são usados pela flutuação. */
   function useCardPhysics() {
@@ -88,7 +88,7 @@
         var force = small ? 3.2 : 4.2;
         var g = root.getBoundingClientRect();
         var rects = cards.map(function (c) { return c.el.getBoundingClientRect(); });
-        var fresh = pointer && now - pointer.t < 140;
+        var fresh = false; /* cards nao fogem mais do mouse/dedo: da para passar por cima e clicar */
 
         cards.forEach(function (c, i) {
           var r = rects[i];
