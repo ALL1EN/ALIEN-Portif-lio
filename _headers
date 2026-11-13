@@ -1,0 +1,17 @@
+# Cache do Cloudflare Pages (lido automaticamente no deploy)
+# CSS/JS versionados com ?v= nas paginas; midias por 30 dias; HTML sempre atualizado.
+
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/site/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/media/*
+  Cache-Control: public, max-age=2592000
+
+/cases/*
+  Cache-Control: public, max-age=604800

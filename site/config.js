@@ -7,12 +7,16 @@ window.ALIEN_CONFIG = {
   /* ---------- Google Analytics 4 ----------
      Cole o ID de medição (começa com "G-"). Vazio = desligado.
      Só carrega depois que a pessoa aceita os cookies de análise. */
-  GA4_ID: "",                // ex.: "G-XXXXXXXXXX"
+  GA4_ID: "",                // ex.: "G-XXXXXXXXXX" (o GA4 pode ficar só dentro do GTM)
+
+  /* ---------- Google Tag Manager ----------
+     Mesmo container do outro site. Carrega junto com a categoria "Análise". */
+  GTM_ID: "GTM-MJWWZLXH",
 
   /* ---------- Meta Pixel (Facebook / Instagram Ads) ----------
      Cole o ID do pixel (só números). Vazio = desligado.
      Só carrega depois que a pessoa aceita os cookies de marketing. */
-  META_PIXEL_ID: "",         // ex.: "123456789012345"
+  META_PIXEL_ID: "2742685782608777",
 
   /* ---------- Formulário de contato ----------
      Endereço que recebe o formulário (ex.: Formspree, Make, Zapier, n8n, sua API).

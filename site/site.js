@@ -79,6 +79,10 @@
       window.gtag("js", new Date());
       window.gtag("config", CFG.GA4_ID);
     }
+    if (CFG.GTM_ID) {
+      window.dataLayer.push({ "gtm.start": Date.now(), event: "gtm.js" });
+      addScript("https://www.googletagmanager.com/gtm.js?id=" + encodeURIComponent(CFG.GTM_ID));
+    }
     try { SCRIPTS.analytics && SCRIPTS.analytics(); } catch (e) { console.warn("[analytics]", e); }
   }
   function loadMarketing() {
@@ -114,6 +118,7 @@
   /* Eventos: use alienTrack("nome", {dados}) em qualquer lugar. Vai para o GA4 e para o Pixel (se aceitos). */
   window.alienTrack = function (name, params) {
     try { if (loaded.analytics && CFG.GA4_ID) window.gtag("event", name, params || {}); } catch (e) {}
+    try { if (loaded.analytics && CFG.GTM_ID) { var ev = { event: name }; for (var k in (params || {})) ev[k] = params[k]; window.dataLayer.push(ev); } } catch (e) {}
     try { if (window.fbq && loaded.marketing) { var std = { generate_lead: "Lead", contact: "Contact" }; std[name] ? window.fbq("track", std[name], params || {}) : window.fbq("trackCustom", name, params || {}); } } catch (e) {}
   };
 

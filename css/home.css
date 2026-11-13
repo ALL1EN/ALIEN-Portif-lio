@@ -6,3 +6,10 @@
 @media (max-width:809.98px){.about-copy p:last-of-type{display:none}}
 body [class] em,body [class] h1,body [class] h2,body [class] h3,body h1,body h1 em,body h2,body h2 em,body h3,body h3 em{font-family:Inter,system-ui,sans-serif!important;font-style:normal!important}#icp-title{font-family:Inter,system-ui,sans-serif!important}
 .ft-legal{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 22px;margin-top:14px;font-size:12.5px}.ft-legal a{color:#8a8a8a;text-decoration:none}.ft-legal a:hover{color:#fff}
+
+/* etapas com mais pontos */
+.brief-logs{gap:8px}
+.brief-logs li{font-size:11.5px}
+.brief-card-list{list-style:none;margin:0;padding:14px 0 0;border-top:1px solid #ececec;display:grid;gap:7px}
+.brief-card-list li{display:flex;gap:8px;align-items:flex-start;color:#444;font:400 12.5px/1.45 Geist,sans-serif}
+.brief-card-list li::before{content:"\2713";flex:none;color:#e85002;font:600 11px/1.45 Geist,ui-monospace,monospace}
