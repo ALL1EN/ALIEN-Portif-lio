@@ -156,7 +156,7 @@
       function onMove(e) {
         if (inDialog(e)) return;
         var over = e.target.closest ? e.target.closest(".rv-card") : null;
-        touchAt(e.clientX, e.clientY, over);
+        if (e.pointerType !== "mouse") touchAt(e.clientX, e.clientY, over); /* no computador o mouse não pausa a flutuação */
         if (drag) {
           var dx = e.clientX - drag.x, dy = e.clientY - drag.y;
           if (Math.abs(dx) + Math.abs(dy) > 6) drag.moved = true;
