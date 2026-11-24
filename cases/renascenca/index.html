@@ -1,0 +1,1273 @@
+<!doctype html>
+<html lang="en" data-tema="escuro">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Renaissance with Wi-Fi · what if the geniuses of 1500 were online?</title>
+    <meta
+      name="description"
+      content="An interactive experience: Michelangelo, Leonardo, Botticelli and Raphael told as if the Renaissance had Wi-Fi. True stories, public-domain artworks and a touch of 2026."
+    />
+    <meta name="theme-color" content="#0f0d0b" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Renaissance with Wi-Fi" />
+    <meta property="og:description" content="What if the geniuses of 1500 were online?" />
+    <link rel="alternate" hreflang="pt" href="pt.html" />
+    <link rel="alternate" hreflang="en" href="index.html" />
+    <link rel="icon" href="./assets/favicon-DJ3mLLbb.svg" type="image/svg+xml" />
+    <!-- Antes da pintura: liga os estados iniciais das animações. Se o JS de
+         movimento não subir em 8s, desliga, para nada ficar invisível. -->
+    <script>
+      (function () {
+        var h = document.documentElement;
+        h.classList.add('js');
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          h.classList.add('js-motion');
+          setTimeout(function () {
+            if (!window.__movimentoOk) h.classList.remove('js-motion');
+          }, 8000);
+        }
+      })();
+    </script>
+    <script defer src="./assets/index-en.js"></script>
+    <link rel="stylesheet" href="./assets/style-B8uPC7Rc.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Skip to content</a>
+
+    <!-- HUD fixo (hud.js): marca, cena atual, ano em odômetro e sinal de Wi-Fi -->
+    <header class="hud" data-hud>
+      <a class="hud__marca" href="#abertura" aria-label="Renaissance with Wi-Fi, back to the start">
+        <span class="hud__nome">Renaissance</span>
+        <span class="hud__sub">with Wi-Fi</span>
+      </a>
+      <p class="hud__cena" data-hud-cena aria-live="polite"></p>
+      <div class="hud__dir">
+        <span class="hud__ano" data-hud-ano>1512</span>
+        <svg class="hud__wifi" viewBox="0 0 22 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+          <path data-barra="3" d="M1.5 6.2a13.5 13.5 0 0 1 19 0" />
+          <path data-barra="2" d="M4.8 9.6a8.8 8.8 0 0 1 12.4 0" />
+          <path data-barra="1" d="M8 12.9a4.3 4.3 0 0 1 6 0" />
+          <circle data-barra="0" cx="11" cy="15.8" r="1.4" fill="currentColor" stroke="none" />
+        </svg>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <!-- =====================================================================
+     Cena 01 · abertura — A Criação de Adão (ver docs/BRIEF.md)
+     Prefixo de classe: .ab-
+     1. carregando (overlay fixo, só com movimento) · 2. palco: a obra
+     partida no vão entre os dedos (duas camadas da MESMA imagem), a
+     leitura da visão de IA, a faísca, o título, a notificação e a banda
+     final (narração + ficha). No desktop o palco fica preso (~250vh); no
+     celular em pé também (~240vh, recomposto para o retrato; o sizes pede
+     um arquivo maior porque a câmera começa bem perto dos dedos).
+     Medidas (frações da imagem 3524×1599): corte em x 0.379; ponta do
+     dedo de Adão em (0.378, 0.458); ponta do dedo do Criador em
+     (0.380, 0.452).
+     ===================================================================== -->
+<section class="cena cena--abertura" id="abertura" data-cena="01" data-local="Sistine Chapel, Vatican" data-ano="1512" data-sinal="0" data-tema="escuro" aria-labelledby="ab-titulo">
+
+  <!-- 1 · Carregando: o JS conduz (barras + HUD) e remove; sem JS some sozinho -->
+  <div class="ab-carregando" aria-hidden="true">
+    <div class="ab-carregando__miolo">
+      <svg class="ab-carregando__wifi" viewBox="0 0 120 92" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round">
+        <path class="ab-carregando__barra" data-ab-barra="3" pathLength="1" d="M5 33.5a78 78 0 0 1 110 0" />
+        <path class="ab-carregando__barra" data-ab-barra="2" pathLength="1" d="M23.5 52a52 52 0 0 1 73 0" />
+        <path class="ab-carregando__barra" data-ab-barra="1" pathLength="1" d="M42 70.5a26 26 0 0 1 36 0" />
+        <circle class="ab-carregando__ponto" cx="60" cy="84" r="3.4" fill="currentColor" stroke="none" />
+      </svg>
+      <p class="ab-carregando__texto">
+        <span class="ab-carregando__busca">searching for networks…</span>
+        <span class="ab-carregando__ok"><b>RENASCENCA_5G</b> · connected</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- 2 · Palco -->
+  <div class="ab-palco">
+    <div class="ab-obra" data-scanner-rotulo="The Creation of Adam">
+      <!-- base: a obra inteira (referência da visão de IA e do scanner) -->
+      <img
+        class="ab-obra__base"
+        src="./assets/adao-1600-F6eP6lnp.webp"
+        srcset="./assets/adao-480-lWn5_9Q9.webp 480w, ./assets/adao-800-BZR1IMA2.webp 800w, ./assets/adao-1200-Bbxoo7i5.webp 1200w, ./assets/adao-1600-F6eP6lnp.webp 1600w, ./assets/adao-2400-CnK3Np0C.webp 2400w, ./assets/adao-3200-TpUD7Sym.webp 3200w"
+        sizes="(min-width: 1024px) 200vw, (min-height: 600px) and (prefers-reduced-motion: no-preference) 240vw, 100vw"
+        width="3524" height="1599"
+        alt="The Creation of Adam, Michelangelo's fresco on the ceiling of the Sistine Chapel: Adam, reclining on the left, reaches out his arm to the Creator, who arrives from the right wrapped in a red cloak and surrounded by angels; their index fingers almost touch."
+        fetchpriority="high" />
+      <!-- as duas metades (mesma imagem, cortadas no vão entre os dedos) -->
+      <div class="ab-metade ab-metade--adao" aria-hidden="true">
+        <img
+          class="ab-metade__img"
+          src="./assets/adao-1600-F6eP6lnp.webp"
+          srcset="./assets/adao-480-lWn5_9Q9.webp 480w, ./assets/adao-800-BZR1IMA2.webp 800w, ./assets/adao-1200-Bbxoo7i5.webp 1200w, ./assets/adao-1600-F6eP6lnp.webp 1600w, ./assets/adao-2400-CnK3Np0C.webp 2400w, ./assets/adao-3200-TpUD7Sym.webp 3200w"
+          sizes="(min-width: 1024px) 200vw, (min-height: 600px) and (prefers-reduced-motion: no-preference) 240vw, 100vw"
+          width="3524" height="1599" alt="" />
+      </div>
+      <div class="ab-metade ab-metade--criador" aria-hidden="true">
+        <img
+          class="ab-metade__img"
+          src="./assets/adao-1600-F6eP6lnp.webp"
+          srcset="./assets/adao-480-lWn5_9Q9.webp 480w, ./assets/adao-800-BZR1IMA2.webp 800w, ./assets/adao-1200-Bbxoo7i5.webp 1200w, ./assets/adao-1600-F6eP6lnp.webp 1600w, ./assets/adao-2400-CnK3Np0C.webp 2400w, ./assets/adao-3200-TpUD7Sym.webp 3200w"
+          sizes="(min-width: 1024px) 200vw, (min-height: 600px) and (prefers-reduced-motion: no-preference) 240vw, 100vw"
+          width="3524" height="1599" alt="" />
+      </div>
+    </div>
+
+    <div class="ab-veu" aria-hidden="true"></div>
+
+    <!-- leitura da visão de IA nos dedos (posicionada pelo JS) -->
+    <div class="ab-medida" aria-hidden="true">
+      <svg class="ab-medida__svg">
+        <line class="ab-medida__linha" x1="0" y1="0" x2="0" y2="0" />
+        <line class="ab-medida__ponta" x1="0" y1="0" x2="0" y2="0" />
+        <line class="ab-medida__ponta" x1="0" y1="0" x2="0" y2="0" />
+      </svg>
+      <span class="ab-corte"></span>
+      <span class="ab-corte"></span>
+      <div class="ab-mira">
+        <canvas class="ab-mira__pixels"></canvas>
+        <span class="ab-mira__valor">0.9812</span>
+        <span class="ab-mira__rotulo">finger · Adam</span>
+      </div>
+      <div class="ab-mira">
+        <canvas class="ab-mira__pixels"></canvas>
+        <span class="ab-mira__valor">0.9907</span>
+        <span class="ab-mira__rotulo">finger · Creator</span>
+      </div>
+      <div class="ab-leitura">
+        <p class="ab-leitura__chip">
+          <span class="ab-leitura__rotulo">distance between fingers</span>
+          <span class="ab-leitura__valor">0.4129</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- a faísca do toque (posicionada pelo JS no vão) -->
+    <div class="ab-faisca" aria-hidden="true">
+      <span class="ab-faisca__foco"></span>
+      <span class="ab-faisca__brilho"></span>
+      <span class="ab-faisca__onda"></span>
+      <span class="ab-faisca__onda"></span>
+      <span class="ab-faisca__onda"></span>
+      <span class="ab-faisca__linha"></span>
+      <span class="ab-faisca__linha ab-faisca__linha--v"></span>
+    </div>
+
+    <h1 class="ab-titulo" id="ab-titulo">
+      <span class="ab-titulo__linha"><span class="ab-titulo__texto">What if the Renaissance</span></span>
+      <span class="ab-titulo__linha"><span class="ab-titulo__texto">had <em>Wi-Fi</em>?</span></span>
+    </h1>
+
+    <p class="ab-dica" aria-hidden="true"><span class="ab-dica__in">scroll to connect <span class="ab-dica__seta">↓</span></span></p>
+
+    <div class="ab-notificacao">
+      <div class="notificacao cartao-app">
+        <span class="notificacao__icone" aria-hidden="true">
+          <svg viewBox="0 0 22 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <path d="M1.5 6.2a13.5 13.5 0 0 1 19 0" />
+            <path d="M4.8 9.6a8.8 8.8 0 0 1 12.4 0" />
+            <path d="M8 12.9a4.3 4.3 0 0 1 6 0" />
+            <circle cx="11" cy="15.8" r="1.4" fill="currentColor" stroke="none" />
+          </svg>
+        </span>
+        <div>
+          <p class="notificacao__titulo">Wi-Fi <time>now</time></p>
+          <p class="notificacao__texto">Pairing complete · Adam ⇄ Creator</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="ab-banda">
+      <p class="narra ab-banda__narra">For more than 500 years, these two fingers have almost touched. Today, for a moment, there was signal.</p>
+      <p class="narra ab-banda__narra">Next stops: Florence, Milan and Rome, around 1500. No cell signal. And still, everything went viral.</p>
+      <p class="ficha-obra ab-banda__ficha"><span>The Creation of Adam</span><span>Michelangelo</span><span>c. 1508–1512</span><span>Sistine Chapel, Vatican</span></p>
+    </div>
+  </div>
+</section>
+
+      <!-- =====================================================================
+     Cena 02 · florenca — Antes do patrocinado, os Medici (ver docs/BRIEF.md)
+     Prefixo de classe: .fl-
+     1. faixa vermelha (brasão, manifesto em caixa alta, assinatura) —
+        presa no desktop, as palavras acendem com a rolagem ·
+     2. mapa como app: a Pianta della Catena com busca de mentira, pins
+        caindo nos marcos e a visão de IA. No celular em pé as duas partes
+        ficam presas; o mapa vira o app em tela cheia com pan até cada
+        marco (o sizes pede o arquivo maior: a pintura fica bem mais
+        larga que a tela).
+     Marcos medidos na imagem (frações de 2000×865): cúpula do Duomo
+     (0.495, 0.205–0.33) · torre do Palazzo Vecchio (0.606, 0.245–0.36) ·
+     Ponte Vecchio, ao lado do rótulo "S. FELICITA" (0.707, 0.46–0.50) ·
+     rio Arno (0.405, 0.755) · o desenhista de manto vermelho (0.855, 0.86).
+     ===================================================================== -->
+<section class="cena cena--florenca" id="florenca" data-cena="02" data-local="Florence" data-ano="1470" data-sinal="1" data-tema="vermelho" aria-labelledby="fl-titulo">
+
+  <!-- 1 · Faixa vermelha: o manifesto -->
+  <div class="fl-faixa">
+    <div class="wrap fl-faixa__miolo">
+      <svg class="fl-brasao" viewBox="0 0 48 56" fill="none" stroke="currentColor" stroke-width="1.1" aria-hidden="true">
+        <path class="fl-brasao__traco" pathLength="1" d="M4 3h40v23c0 15-10 24-20 27C14 50 4 41 4 26Z" />
+        <circle class="fl-brasao__traco fl-brasao__palla" pathLength="1" cx="24" cy="12.5" r="5.2" fill="currentColor" />
+        <circle class="fl-brasao__traco" pathLength="1" cx="12.8" cy="21.5" r="4" />
+        <circle class="fl-brasao__traco" pathLength="1" cx="35.2" cy="21.5" r="4" />
+        <circle class="fl-brasao__traco" pathLength="1" cx="13.6" cy="32.5" r="4" />
+        <circle class="fl-brasao__traco" pathLength="1" cx="34.4" cy="32.5" r="4" />
+        <circle class="fl-brasao__traco" pathLength="1" cx="24" cy="41.5" r="4" />
+      </svg>
+      <p class="rotulo fl-faixa__rotulo">Scene 02 · Florence, c. 1470</p>
+      <p class="fl-manifesto">Florence, late 15th century. No <span class="fl-junto">Wi-Fi,</span> no cell phones. And the highest concentration of geniuses per square meter in history.</p>
+      <div class="fl-assinatura">
+        <p class="fl-assinatura__nome">Lorenzo de' Medici</p>
+        <p class="fl-assinatura__cargo">official sponsor · 1449–1492</p>
+      </div>
+      <p class="fl-apoio">Before the sponsored post, there was the patron. The Medici were bankers and patrons of the arts, and their money turned into painting, sculpture and architecture.</p>
+    </div>
+  </div>
+
+  <!-- 2 · O mapa como app -->
+  <div class="wrap fl-mapa-bloco">
+    <header class="fl-cabeca">
+      <h2 class="fl-cabeca__titulo" id="fl-titulo">Before <span class="fl-junto"><em>#sponsored</em>,</span> the Medici</h2>
+      <div class="fl-cabeca__texto">
+        <p class="narra" data-reveal>Lorenzo de' Medici, the Magnificent (1449–1492), supported Botticelli and took the young Michelangelo into the family palace. Talent curation before algorithms existed.</p>
+        <p class="narra" data-reveal data-reveal-delay="0.1">Leonardo was an apprentice in Verrocchio's workshop, right here in Florence. Tutorials were live only, next to the master.</p>
+      </div>
+    </header>
+
+    <figure class="fl-mapa">
+      <div class="fl-app">
+        <div class="fl-app__busca" aria-hidden="true">
+          <div class="fl-busca">
+            <svg class="fl-busca__lupa" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="8.5" cy="8.5" r="5.75" /><path d="m13 13 4.5 4.5" /></svg>
+            <span class="fl-busca__campo">
+              <span class="fl-busca__dica">Search Florence</span>
+              <span class="fl-busca__texto" data-texto="workshop near me"></span><span class="fl-busca__cursor"></span>
+            </span>
+          </div>
+          <ul class="fl-resultados" role="list">
+            <li class="fl-resultado">
+              <span class="fl-resultado__icone"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 19s6.5-6.8 6.5-11.6a6.5 6.5 0 0 0-13 0C3.5 12.2 10 19 10 19Zm0-9a2.6 2.6 0 1 1 0-5.2 2.6 2.6 0 0 1 0 5.2Z" /></svg></span>
+              <span class="fl-resultado__txt"><b>Verrocchio's Workshop</b><small>apprentice: Leonardo da Vinci</small></span>
+            </li>
+            <li class="fl-resultado">
+              <span class="fl-resultado__icone"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 19s6.5-6.8 6.5-11.6a6.5 6.5 0 0 0-13 0C3.5 12.2 10 19 10 19Zm0-9a2.6 2.6 0 1 1 0-5.2 2.6 2.6 0 0 1 0 5.2Z" /></svg></span>
+              <span class="fl-resultado__txt"><b>Botticelli's Workshop</b><small>sponsored by: the Medici family</small></span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="fl-app__pintura pintura" data-scanner data-scanner-rotulo="Florence, c. 1470">
+          <img
+            src="./assets/florenca-1470-1600-BXjRJvSk.webp"
+            srcset="./assets/florenca-1470-480-B_xYbtvR.webp 480w, ./assets/florenca-1470-800-DL-8aviY.webp 800w, ./assets/florenca-1470-1200-BsP_s4Nm.webp 1200w, ./assets/florenca-1470-1600-BXjRJvSk.webp 1600w, ./assets/florenca-1470-2000-BE-l5BwL.webp 2000w"
+            sizes="(min-width: 1024px) min(1360px, 92vw), (min-height: 600px) and (prefers-reduced-motion: no-preference) 380vw, (min-width: 640px) 92vw, 160vw"
+            width="2000" height="865"
+            alt="Pianta della Catena, a view of Florence around 1470: the Arno river crosses the walled city; in the center, the red dome of the Duomo; to its right, the tower of the Palazzo Vecchio; over the river, the bridges, among them the Ponte Vecchio; in the lower right corner, a draftsman in a red cloak draws the city."
+            loading="lazy" decoding="async" />
+
+          <span class="fl-pin fl-pin--duomo" data-x="0.495" data-y="0.205" aria-hidden="true">
+            <span class="fl-pin__sombra"></span>
+            <span class="fl-pin__corpo">
+              <svg class="fl-pin__icone" viewBox="0 0 28 36"><path d="M14 35s12-12.6 12-21.5a12 12 0 0 0-24 0C2 22.4 14 35 14 35Z" /><circle cx="14" cy="13.5" r="4.4" /></svg>
+              <span class="fl-pin__rotulo"><b>Duomo</b><small>Brunelleschi's dome · 1436</small></span>
+            </span>
+          </span>
+          <span class="fl-pin" data-x="0.606" data-y="0.243" aria-hidden="true">
+            <span class="fl-pin__sombra"></span>
+            <span class="fl-pin__corpo">
+              <svg class="fl-pin__icone" viewBox="0 0 28 36"><path d="M14 35s12-12.6 12-21.5a12 12 0 0 0-24 0C2 22.4 14 35 14 35Z" /><circle cx="14" cy="13.5" r="4.4" /></svg>
+              <span class="fl-pin__rotulo"><b>Palazzo Vecchio</b><small>seat of the city government</small></span>
+            </span>
+          </span>
+          <span class="fl-pin fl-pin--ponte" data-x="0.707" data-y="0.462" aria-hidden="true">
+            <span class="fl-pin__sombra"></span>
+            <span class="fl-pin__corpo">
+              <svg class="fl-pin__icone" viewBox="0 0 28 36"><path d="M14 35s12-12.6 12-21.5a12 12 0 0 0-24 0C2 22.4 14 35 14 35Z" /><circle cx="14" cy="13.5" r="4.4" /></svg>
+              <span class="fl-pin__rotulo"><b>Ponte Vecchio</b><small>with shops built on the bridge</small></span>
+            </span>
+          </span>
+          <span class="fl-pin" data-x="0.405" data-y="0.755" aria-hidden="true">
+            <span class="fl-pin__sombra"></span>
+            <span class="fl-pin__corpo">
+              <svg class="fl-pin__icone" viewBox="0 0 28 36"><path d="M14 35s12-12.6 12-21.5a12 12 0 0 0-24 0C2 22.4 14 35 14 35Z" /><circle cx="14" cy="13.5" r="4.4" /></svg>
+              <span class="fl-pin__rotulo"><b>Arno river</b></span>
+            </span>
+          </span>
+          <span class="fl-voce" data-x="0.857" data-y="0.875" aria-hidden="true">
+            <span class="fl-voce__halo"></span>
+            <span class="fl-voce__ponto"></span>
+            <span class="fl-voce__rotulo">you are here</span>
+          </span>
+        </div>
+
+        <div class="fl-app__controles" aria-hidden="true">
+          <span>+</span><span>−</span>
+        </div>
+      </div>
+      <p class="sr-only">Illustration in the style of a map app: the search “workshop near me” shows Verrocchio's Workshop, where Leonardo was an apprentice, and Botticelli's Workshop, backed by the Medici. The pins mark the Duomo, the Palazzo Vecchio, the Ponte Vecchio and the Arno river; the “you are here” dot sits on the draftsman who drew the view.</p>
+      <figcaption class="ficha-obra fl-mapa__ficha"><span>Pianta della Catena</span><span>attributed to Francesco Rosselli</span><span>c. 1470</span><span>1887 reproduction</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+      <!-- =====================================================================
+     Cena 03 · leonardo — O currículo de Leonardo (ver docs/BRIEF.md)
+     Prefixo de classe: .le-
+     1. topo · 2. palco (perfil + competências, preso no desktop) ·
+     3. resultado · 4. cadernos (códice espelhado) · 5. protótipos
+     ===================================================================== -->
+<section class="cena cena--leonardo" id="leonardo" data-cena="03" data-local="Milan" data-ano="1482" data-sinal="2" data-tema="pergaminho" aria-labelledby="le-titulo">
+
+  <!-- 1 · Topo -->
+  <header class="wrap le-topo" data-le-zona="1482">
+    <p class="rotulo le-topo__rotulo">Scene 03 · Florence → Milan, c. 1482</p>
+    <h2 class="le-topo__titulo" id="le-titulo" data-split>The most <em>over-the-top</em> résumé in history</h2>
+    <div class="le-topo__texto">
+      <p class="narra" data-reveal>Around 1482, Leonardo wrote to Ludovico Sforza, who ruled Milan, offering his services. The draft survived in the Codex Atlanticus.</p>
+      <p class="narra" data-reveal data-reveal-delay="0.1">He was about 30 and had a list of skills. Almost all of them for war.</p>
+    </div>
+  </header>
+
+  <!-- 2 · Palco: perfil + competências (preso e com scrub no desktop) -->
+  <div class="le-palco" data-le-palco>
+    <div class="wrap le-palco__grade">
+
+      <article class="le-perfil" aria-label="Leonardo da Vinci's professional profile, social-media style">
+        <div class="le-perfil__capa">
+          <img
+            src="./assets/leonardo-capa-800-CPSycEU5.webp"
+            srcset="./assets/leonardo-capa-480-Hr-FMVQ7.webp 480w, ./assets/leonardo-capa-800-CPSycEU5.webp 800w, ./assets/leonardo-capa-1200-ZhTTD4DU.webp 1200w"
+            sizes="(min-width: 1024px) 420px, 100vw"
+            width="2934" height="734" alt="" loading="lazy" decoding="async" />
+        </div>
+
+        <div class="le-perfil__corpo">
+          <div class="le-avatar" data-le-avatar>
+            <img
+              class="le-avatar__foto"
+              src="./assets/leonardo-rosto-480-jrUdjlKp.webp"
+              srcset="./assets/leonardo-rosto-480-jrUdjlKp.webp 480w, ./assets/leonardo-rosto-800-dulXxEYe.webp 800w"
+              sizes="168px"
+              width="1024" height="1024"
+              alt="Presumed self-portrait of Leonardo da Vinci in red chalk, c. 1512: an elderly man with a long beard"
+              loading="lazy" decoding="async" />
+            <canvas class="le-avatar__pixels" aria-hidden="true"></canvas>
+            <svg class="le-avatar__anel" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+              <defs>
+                <linearGradient id="le-anel-degrade" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="200">
+                  <stop offset="0.2" stop-color="#fff" stop-opacity="0" />
+                  <stop offset="0.5" stop-color="#fff" stop-opacity="1" />
+                </linearGradient>
+                <mask id="le-anel-mascara" maskUnits="userSpaceOnUse" x="-10" y="-10" width="220" height="220">
+                  <rect x="-10" y="-10" width="220" height="220" fill="url(#le-anel-degrade)" />
+                </mask>
+                <path id="le-anel-trilho" d="M 16.17 60.91 A 92.5 92.5 0 1 0 183.83 60.91" />
+              </defs>
+              <g mask="url(#le-anel-mascara)">
+                <path class="le-anel le-anel--verde" d="M 27.91 49.53 A 88 88 0 1 0 172.09 49.53" pathLength="1" />
+                <path class="le-anel le-anel--vermelho" d="M 27.91 49.53 A 88 88 0 1 0 172.09 49.53" pathLength="1" />
+              </g>
+              <g class="le-anel__grupo-verde"><text class="le-anel__txt le-anel__txt--verde"><textPath href="#le-anel-trilho" startOffset="30%" text-anchor="middle">#OPENTOWORK</textPath></text></g>
+              <text class="le-anel__txt le-anel__txt--vermelho"><textPath href="#le-anel-trilho" startOffset="30%" text-anchor="middle">#HIRED</textPath></text>
+            </svg>
+          </div>
+
+          <h3 class="le-perfil__nome">Leonardo di ser Piero da Vinci</h3>
+          <p class="le-perfil__headline">Military engineer · Inventor · (also paints)</p>
+          <p class="le-perfil__local">
+            <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 14.5s-4.5-4.2-4.5-7.6a4.5 4.5 0 0 1 9 0c0 3.4-4.5 7.6-4.5 7.6Z" /><circle cx="8" cy="6.8" r="1.6" /></svg>
+            Florence → Milan
+          </p>
+          <p class="le-perfil__formacao">
+            <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M1.5 6 8 3l6.5 3L8 9 1.5 6Z" /><path d="M4.2 7.4v3.1c1 .9 2.3 1.4 3.8 1.4s2.8-.5 3.8-1.4V7.4" /></svg>
+            Apprentice in Verrocchio's workshop, Florence
+          </p>
+
+          <div class="le-perfil__status" data-le-status>
+            <p class="le-status le-status--aberto"><strong>Open to work:</strong> yes</p>
+            <p class="le-status le-status--contratado" aria-hidden="true"><strong>Hired:</strong> court of Ludovico Sforza, Milan</p>
+            <p class="le-perfil__cargos">Military engineering, architecture, sculpture…</p>
+          </div>
+
+          <div class="le-perfil__acoes" aria-hidden="true">
+            <span class="le-pill le-pill--cheia">Connect</span>
+            <span class="le-pill">Message</span>
+          </div>
+        </div>
+      </article>
+
+      <div class="le-cv">
+        <div class="le-cv__topo">
+          <div>
+            <h3 class="le-cv__titulo">Skills</h3>
+            <p class="le-cv__fonte">Source: letter to Ludovico Sforza, lord of Milan · c. 1482</p>
+          </div>
+          <p class="le-cv__contador" aria-hidden="true"><span data-le-contador>10</span><small>/10</small></p>
+        </div>
+        <div class="le-cv__barra" aria-hidden="true"><span data-le-barra></span></div>
+
+        <ol class="le-cv__lista" role="list">
+          <li class="le-item" data-le-item style="--le-w: 72%">
+            <div class="le-item__linha"><span class="le-item__num">01</span><span class="le-item__check" aria-hidden="true"><svg viewBox="0 0 16 16" focusable="false"><path d="M3.5 8.4 6.6 11.5 12.6 4.6" pathLength="1" /></svg></span><span class="le-item__txt">Very light, strong bridges, easy to carry.</span><span class="le-item__curto" aria-hidden="true">Light, portable bridges</span><span class="le-item__tag">war</span></div>
+            <span class="le-item__esqueleto" aria-hidden="true"></span>
+          </li>
+          <li class="le-item" data-le-item style="--le-w: 58%">
+            <div class="le-item__linha"><span class="le-item__num">02</span><span class="le-item__check" aria-hidden="true"><svg viewBox="0 0 16 16" focusable="false"><path d="M3.5 8.4 6.6 11.5 12.6 4.6" pathLength="1" /></svg></span><span class="le-item__txt">Draining the water from moats during a siege.</span><span class="le-item__curto" aria-hidden="true">Draining moats in a siege</span><span class="le-item__tag">war</span></div>
+            <span class="le-item__esqueleto" aria-hidden="true"></span>
+          </li>
+          <li class="le-item" data-le-item style="--le-w: 80%">
+            <div class="le-item__linha"><span class="le-item__num">03</span><span class="le-item__check" aria-hidden="true"><svg viewBox="0 0 16 16" focusable="false"><path d="M3.5 8.4 6.6 11.5 12.6 4.6" pathLength="1" /></svg></span><span class="le-item__txt">Bringing down any fortress, even where artillery fails.</span><span class="le-item__curto" aria-hidden="true">Bringing down fortresses</span><span class="le-item__tag">war</span></div>
+            <span class="le-item__esqueleto" aria-hidden="true"></span>
+          </li>
+          <li class="le-item" data-le-item style="--le-w: 76%">
+            <div class="le-item__linha"><span class="le-item__num">04</span><span class="le-item__check" aria-hidden="true"><svg viewBox="0 0 16 16" focusable="false"><path d="M3.5 8.4 6.6 11.5 12.6 4.6" pathLength="1" /></svg></span><span class="le-item__txt">Easy-to-carry bombards that hurl stones like hail.</span><span class="le-item__curto" aria-hidden="true">Portable bombards</span><span class="le-item__tag">war</span></div>
+            <span class="le-item__esqueleto" aria-hidden="true"></span>
+          </li>
+          <li class="le-item" data-le-item style="--le-w: 62%">
+            <div class="le-item__linha"><span class="le-item__num">05</span><span class="le-item__check" aria-hidden="true"><svg viewBox="0 0 16 16" focusable="false"><path d="M3.5 8.4 6.6 11.5 12.6 4.6" pathLength="1" /></svg></span><span class="le-item__txt">Ships that withstand fire from the largest cannons.</span><span class="le-item__curto" aria-hidden="true">Cannon-proof ships</span><span class="le-item__tag">war</span></div>
+            <span class="le-item__esqueleto" aria-hidden="true"></span>
+          </li>
+          <li class="le-item" data-le-item style="--le-w: 70%">
+            <div class="le-item__linha"><span class="le-item__num">06</span><span class="le-item__check" aria-hidden="true"><svg viewBox="0 0 16 16" focusable="false"><path d="M3.5 8.4 6.6 11.5 12.6 4.6" pathLength="1" /></svg></span><span class="le-item__txt">Secret underground passages, dug without a sound.</span><span class="le-item__curto" aria-hidden="true">Underground passages</span><span class="le-item__tag">war</span></div>
+            <span class="le-item__esqueleto" aria-hidden="true"></span>
+          </li>
+          <li class="le-item" data-le-item style="--le-w: 54%">
+            <div class="le-item__linha"><span class="le-item__num">07</span><span class="le-item__check" aria-hidden="true"><svg viewBox="0 0 16 16" focusable="false"><path d="M3.5 8.4 6.6 11.5 12.6 4.6" pathLength="1" /></svg></span><span class="le-item__txt">Covered vehicles, safe and unassailable.</span><span class="le-item__curto" aria-hidden="true">Covered vehicles (the “tank”)</span><span class="le-item__tag">war</span></div>
+            <span class="le-item__esqueleto" aria-hidden="true"></span>
+          </li>
+          <li class="le-item" data-le-item style="--le-w: 74%">
+            <div class="le-item__linha"><span class="le-item__num">08</span><span class="le-item__check" aria-hidden="true"><svg viewBox="0 0 16 16" focusable="false"><path d="M3.5 8.4 6.6 11.5 12.6 4.6" pathLength="1" /></svg></span><span class="le-item__txt">Cannons, mortars and light ordnance, beautiful and useful in form.</span><span class="le-item__curto" aria-hidden="true">Cannons and mortars</span><span class="le-item__tag">war</span></div>
+            <span class="le-item__esqueleto" aria-hidden="true"></span>
+          </li>
+          <li class="le-item" data-le-item style="--le-w: 66%">
+            <div class="le-item__linha"><span class="le-item__num">09</span><span class="le-item__check" aria-hidden="true"><svg viewBox="0 0 16 16" focusable="false"><path d="M3.5 8.4 6.6 11.5 12.6 4.6" pathLength="1" /></svg></span><span class="le-item__txt">Catapults and other machines of remarkable effectiveness.</span><span class="le-item__curto" aria-hidden="true">Catapults and other machines</span><span class="le-item__tag">war</span></div>
+            <span class="le-item__esqueleto" aria-hidden="true"></span>
+          </li>
+          <li class="le-item le-item--paz" data-le-item style="--le-w: 86%">
+            <div class="le-item__linha"><span class="le-item__num">10</span><span class="le-item__check" aria-hidden="true"><svg viewBox="0 0 16 16" focusable="false"><path d="M3.5 8.4 6.6 11.5 12.6 4.6" pathLength="1" /></svg></span><span class="le-item__txt">In peacetime: architecture, water engineering and sculpture in marble, bronze and clay.</span><span class="le-item__curto" aria-hidden="true">Architecture and sculpture</span><span class="le-item__tag">peace</span></div>
+            <span class="le-item__esqueleto" aria-hidden="true"></span>
+          </li>
+        </ol>
+
+        <!-- Leitura da IA sobre as nove de guerra (só na coreografia do desktop) -->
+        <div class="le-cv__grupo" data-le-grupo aria-hidden="true">
+          <p class="le-cv__grupo-leitura"><span class="le-cv__grupo-rotulo">war</span><span class="le-cv__grupo-num">9<small>/10</small></span><span class="le-cv__grupo-valor">0.9000</span></p>
+        </div>
+
+        <div class="le-cv__final" data-le-final>
+          <p class="le-cv__pintura">…and also <span class="le-cv__destaque">painting.<svg class="le-cv__circulo" viewBox="0 0 300 110" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M262 22C214 6 120 4 62 16 20 25 4 48 14 70c12 26 74 36 142 34 70-2 128-16 138-44 7-21-16-36-52-44-30-7-66-8-96-6" pathLength="1" /></svg></span></p>
+          <p class="le-cv__pintura-sub">As well as anyone else.</p>
+          <p class="le-cv__leitura" aria-hidden="true"><span>analysis</span> painting: half a line · position: last</p>
+        </div>
+
+        <p class="le-cv__nota">Summary of the letter, in roughly its original order. The draft is in the Codex Atlanticus (Biblioteca Ambrosiana, Milan).</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3 + 4 · Resultado e cadernos: no celular em retrato viram um palco
+       preso (data-le-folhas), com os cadernos subindo como uma folha -->
+  <div class="le-folhas" data-le-folhas>
+
+  <!-- 3 · Resultado -->
+  <div class="wrap le-resultado" data-le-zona="1495">
+    <div class="le-resultado__texto">
+      <p class="rotulo">Result</p>
+      <h3 class="le-resultado__titulo" data-split>Hired.</h3>
+      <p class="narra" data-reveal>Leonardo moved to Milan around 1482 and stayed until 1499. He designed, invented and even ran the court's parties.</p>
+      <p class="narra le-resultado__virada" data-reveal data-reveal-delay="0.1">But the most famous work of that stint was neither a bridge nor a cannon. It was a painting: <strong>The Last Supper</strong> (1495–1498).</p>
+    </div>
+
+    <aside class="le-cargo" data-reveal aria-label="Profile update, social-media style">
+      <div class="le-cargo__cabeca">
+        <img
+          class="le-cargo__foto"
+          src="./assets/leonardo-rosto-480-jrUdjlKp.webp"
+          width="1024" height="1024" alt="" loading="lazy" decoding="async" />
+        <p><strong>Leonardo da Vinci</strong> started a new position</p>
+      </div>
+      <div class="le-cargo__corpo">
+        <span class="le-cargo__icone" aria-hidden="true">
+          <svg viewBox="0 0 24 24" focusable="false"><rect x="3.5" y="7.5" width="17" height="12" rx="2" /><path d="M9 7.5V6a1.5 1.5 0 0 1 1.5-1.5h3A1.5 1.5 0 0 1 15 6v1.5M3.5 12.5h17" /></svg>
+        </span>
+        <div>
+          <p class="le-cargo__cargo">Court of Ludovico Sforza</p>
+          <p class="le-cargo__meta">Milan · c. 1482 – 1499</p>
+        </div>
+      </div>
+      <p class="le-cargo__reacoes" aria-hidden="true"><span>Congratulate</span><span>500 years late</span></p>
+    </aside>
+  </div>
+
+  <!-- 4 · Cadernos: a página espelhada -->
+  <div class="wrap le-cadernos" data-le-zona="1505">
+    <div class="le-cadernos__texto">
+      <p class="rotulo">The notebooks</p>
+      <h3 class="le-cadernos__titulo" data-split>More than <span class="le-junto">7,000</span> pages survived. <em>Written backwards.</em></h3>
+      <p class="narra" data-reveal>Left-handed, Leonardo wrote in mirror script, from right to left. To read it, you need a mirror. <span class="le-so-botao">Or this button.</span><span class="le-so-rolar">Or just scroll.</span></p>
+
+      <div class="le-cadernos__acao" data-reveal>
+        <button class="btn le-leitura" type="button" aria-pressed="false" aria-controls="le-codice" data-le-leitura>
+          <svg class="le-leitura__icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v18" stroke-dasharray="2 2.4" /><path d="M9 6.5 3.5 12 9 17.5Z" /><path d="M15 6.5l5.5 5.5-5.5 5.5" /></svg>
+          Reading mode
+        </button>
+        <p class="le-dica">
+          <span class="le-dica--mouse">Or hover over the page.</span>
+          <span class="le-dica--toque">Or tap the page.</span>
+        </p>
+      </div>
+    </div>
+
+    <figure class="le-codice" id="le-codice">
+      <div class="le-codice__moldura" data-le-moldura>
+        <div class="le-codice__pagina pintura le-desenho" data-le-pagina>
+          <img
+            src="./assets/leonardo-codice-1200-8OyI03ln.webp"
+            srcset="./assets/leonardo-codice-480-BGK72_y9.webp 480w, ./assets/leonardo-codice-800-BIJ45cW_.webp 800w, ./assets/leonardo-codice-1200-8OyI03ln.webp 1200w, ./assets/leonardo-codice-1600-DEhkecYs.webp 1600w, ./assets/leonardo-codice-2400-Csq3odnx.webp 2400w"
+            sizes="(min-width: 1024px) 62svh, 92vw"
+            width="3047" height="4214"
+            alt="Page from the Codex on the Flight of Birds: text in mirror writing and small drawings of birds and flight paths in the margin"
+            loading="lazy" decoding="async" />
+          <canvas class="le-codice__pixels" aria-hidden="true"></canvas>
+        </div>
+        <p class="le-codice__estado" aria-hidden="true"><span class="le-codice__estado-ponto"></span><span data-le-estado>mirror writing</span></p>
+      </div>
+      <figcaption class="ficha-obra"><span>Codex on the Flight of Birds</span><span>Leonardo da Vinci</span><span>c. 1505</span><span>Biblioteca Reale, Turin</span></figcaption>
+    </figure>
+  </div>
+
+  </div><!-- /le-folhas -->
+
+  <!-- 5 · Protótipos (no celular em retrato: palco preso, o Vitruviano sobe como folha) -->
+  <div class="wrap le-proto">
+    <div class="le-proto__linha" data-le-zona="1485">
+      <figure class="le-maquina">
+        <div class="le-maquina__desenho pintura le-desenho" data-scanner data-scanner-rotulo="flying machine" data-le-maquina>
+          <img
+            src="./assets/maquina-voadora-1122-CI86b15M.webp"
+            srcset="./assets/maquina-voadora-480-9JDwjc6o.webp 480w, ./assets/maquina-voadora-800-XqO7NdR4.webp 800w, ./assets/maquina-voadora-1122-CI86b15M.webp 1122w"
+            sizes="(min-width: 1024px) 58vw, 92vw"
+            width="1122" height="604"
+            alt="Leonardo's drawing of a flying machine: a large articulated wing, with rods and pulleys"
+            loading="lazy" decoding="async" />
+        </div>
+        <figcaption class="ficha-obra"><span>Flying machine</span><span>Leonardo da Vinci</span><span>c. 1485</span></figcaption>
+      </figure>
+
+      <div class="le-proto__texto">
+        <p class="rotulo">Prototypes</p>
+        <p class="le-beta" data-reveal><span class="le-beta__ponto" aria-hidden="true"></span><span class="le-beta__txt">prototype · status: <strong>in beta for 500 years</strong></span></p>
+        <div class="le-carga" data-le-carga aria-hidden="true">
+          <p class="le-carga__topo"><span>takeoff test</span><span data-le-carga-num>99%</span></p>
+          <div class="le-carga__barra"><span data-le-carga-barra></span></div>
+        </div>
+        <p class="narra" data-reveal>Leonardo drew flying machines some 400 years before the first airplane.</p>
+        <ol class="le-versoes" role="list" aria-label="Version history">
+          <li data-reveal><span class="le-versoes__v">v0.1 · c. 1485</span><span>flying machine drawing</span></li>
+          <li data-reveal><span class="le-versoes__v">v0.2 · c. 1505</span><span>studied the flight of birds (the page up there)</span></li>
+          <li data-reveal><span class="le-versoes__v">v1.0</span><span>ETA: coming soon</span></li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="le-proto__linha le-proto__linha--vitru" data-le-zona="1490">
+      <div class="le-proto__texto le-vitru__texto">
+        <p class="rotulo">Measurement</p>
+        <p class="le-medida" data-reveal><span>height ÷ arm span</span> <strong data-le-medida>1.0000</strong></p>
+        <p class="narra" data-reveal>The AI measured it and confirmed: with arms outstretched, the arm span equals the height. Vitruvius wrote this rule in the 1st century BC; Leonardo drew it c. 1490.</p>
+      </div>
+      <figure class="le-vitruviano">
+        <div class="le-vitruviano__desenho pintura le-desenho" data-scanner data-scanner-rotulo="Vitruvian Man" data-le-vitruviano>
+          <img
+            src="./assets/leonardo-vitruviano-1200-P0LHdtkv.webp"
+            srcset="./assets/leonardo-vitruviano-480-B9OQ_Mw_.webp 480w, ./assets/leonardo-vitruviano-800-CR7Qexhw.webp 800w, ./assets/leonardo-vitruviano-1200-P0LHdtkv.webp 1200w, ./assets/leonardo-vitruviano-1600-Cy9WKcpw.webp 1600w"
+            sizes="(min-width: 1024px) 60svh, 92vw"
+            width="2122" height="2960"
+            alt="The Vitruvian Man: a man with outstretched arms inscribed in a circle and a square, with notes in mirror writing"
+            loading="lazy" decoding="async" />
+        </div>
+        <figcaption class="ficha-obra"><span>Vitruvian Man</span><span>Leonardo da Vinci</span><span>c. 1490</span><span>Gallerie dell'Accademia, Venice</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+      <!-- =====================================================================
+     Cena 04 · venus — A primeira influencer (ver docs/BRIEF.md)
+     Prefixo de classe: .ve-
+     Desktop (venus.js, .is-coreo): palco preso ~280vh. Original em tela
+     cheia com a visão de IA → "carregando versão 2026…" → transição
+     pixelada → objetos modernos marcados → a pintura encolhe e vira a
+     mídia de um post (curtidas subindo, comentários entrando).
+     Celular e movimento reduzido: tudo em fluxo, botão troca as versões.
+     ===================================================================== -->
+<section class="cena cena--venus" id="venus" data-cena="04" data-local="Uffizi, Florence" data-ano="1485" data-sinal="3" data-tema="escuro" aria-labelledby="ve-titulo">
+  <div class="ve-palco wrap">
+    <div class="ve-veu" aria-hidden="true"></div>
+
+    <div class="ve-intro">
+      <p class="rotulo">Scene 04 · Botticelli, c. 1484–1486</p>
+      <h2 id="ve-titulo" class="ve-titulo" data-split>The first <em>influencer</em></h2>
+      <p class="narra ve-narra">Zephyr, the west wind, blows Venus to the shore. The Hora of Spring is already waiting with the cloak. Legend has it that the model was Simonetta Vespucci.</p>
+    </div>
+
+    <div class="ve-pintura">
+      <div class="ve-camada ve-camada--1486" data-scanner data-scanner-rotulo="Venus · c. 1485">
+        <img
+          class="ve-img"
+          src="./assets/venus-1486-1600-z0fG5xKX.webp"
+          srcset="./assets/venus-1486-480-B358w2kM.webp 480w, ./assets/venus-1486-800-CIgiuYm3.webp 800w, ./assets/venus-1486-1200-BJcFyGOm.webp 1200w, ./assets/venus-1486-1600-z0fG5xKX.webp 1600w, ./assets/venus-1486-2400-BeW-Rpmx.webp 2400w, ./assets/venus-1486-3200-BefToQfw.webp 3200w"
+          sizes="(min-width: 1024px) 100vw, calc(100vw - 40px)"
+          width="3840"
+          height="2412"
+          alt="The Birth of Venus, by Botticelli: Venus standing on a shell over the sea, Zephyr and Chloris blowing from the left and the Hora of Spring arriving with the cloak on the right."
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      <div class="ve-camada ve-camada--2026" data-scanner data-scanner-rotulo="Venus · 2026">
+        <img
+          class="ve-img"
+          src="./assets/venus-2026-1600-xulfmNEI.webp"
+          srcset="./assets/venus-2026-480-BvCbgINe.webp 480w, ./assets/venus-2026-800-COmgt58a.webp 800w, ./assets/venus-2026-1200-NEwAdHMC.webp 1200w, ./assets/venus-2026-1600-xulfmNEI.webp 1600w, ./assets/venus-2026-2400-BvwCLJt6.webp 2400w, ./assets/venus-2026-2752-CNGnrMCF.webp 2752w"
+          sizes="(min-width: 1024px) 100vw, calc(100vw - 40px)"
+          width="2752"
+          height="1536"
+          alt="2026 version of the same scene, generated with AI: a lit ring light floats next to Zephyr and the Hora of Spring films Venus with a smartphone."
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      <canvas class="ve-pixel" aria-hidden="true"></canvas>
+      <svg class="ve-coracao-grande" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 20.3s-7.6-4.6-9.2-9.3C1.6 7.4 3.8 4 7.2 4c2 0 3.6 1.1 4.8 2.8C13.2 5.1 14.8 4 16.8 4c3.4 0 5.6 3.4 4.4 7-1.6 4.7-9.2 9.3-9.2 9.3z"/></svg>
+      <div class="ve-carregando" aria-hidden="true">
+        <div class="ve-carregando__caixa">
+          <p class="ve-carregando__linha">
+            <span data-ve-leitura>loading version 2026…</span>
+            <span class="ve-carregando__pct" data-ve-pct>000%</span>
+          </p>
+          <span class="ve-carregando__barra"><span data-ve-barra></span></span>
+          <p class="ve-carregando__sub">installing 541 years of updates</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="ve-controle">
+      <button class="btn ve-trocar" type="button" aria-pressed="false" data-ve-trocar>See 2026 version</button>
+      <p class="ve-nota">2026 version generated with AI from the artwork</p>
+    </div>
+
+    <div class="ve-modal">
+      <article class="ve-post cartao-app" aria-label="Fictional post by @venus">
+        <header class="ve-post__topo">
+          <span class="ve-av ve-av--venus ve-av--anel">
+            <img
+              src="./assets/venus-2026-1600-xulfmNEI.webp"
+              srcset="./assets/venus-2026-480-BvCbgINe.webp 480w, ./assets/venus-2026-800-COmgt58a.webp 800w, ./assets/venus-2026-1200-NEwAdHMC.webp 1200w, ./assets/venus-2026-1600-xulfmNEI.webp 1600w, ./assets/venus-2026-2400-BvwCLJt6.webp 2400w, ./assets/venus-2026-2752-CNGnrMCF.webp 2752w"
+              sizes="(min-width: 1024px) 100vw, calc(100vw - 40px)"
+              width="2752"
+              height="1536"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+          </span>
+          <div class="ve-post__quem">
+            <p class="ve-post__nome">
+              @venus
+              <svg class="ve-selo" viewBox="0 0 16 16" aria-label="verified" role="img"><path fill="currentColor" d="M8 0l1.9 1.4 2.3-.2.8 2.2 2.1 1-.4 2.3L16 8l-1.3 1.9.4 2.3-2.1 1-.8 2.2-2.3-.2L8 16l-1.9-1.4-2.3.2-.8-2.2-2.1-1 .4-2.3L0 8l1.3-1.9-.4-2.3 2.1-1 .8-2.2 2.3.2z"/><path fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M4.9 8.2l2 2 4.2-4.3"/></svg>
+            </p>
+            <p class="ve-post__local">Uffizi, Florence</p>
+          </div>
+          <span class="ve-post__mais" aria-hidden="true">•••</span>
+        </header>
+
+        <div class="ve-post__corpo">
+          <p class="ve-post__legenda"><b>venus</b> just arrived. no filter, just tempera 🐚</p>
+          <ol class="ve-post__comentarios" role="list" aria-label="Comments">
+            <li class="ve-com">
+              <span class="ve-av ve-av--zefiro"><img src="./assets/venus-2026-1600-xulfmNEI.webp" srcset="./assets/venus-2026-480-BvCbgINe.webp 480w, ./assets/venus-2026-800-COmgt58a.webp 800w, ./assets/venus-2026-1200-NEwAdHMC.webp 1200w, ./assets/venus-2026-1600-xulfmNEI.webp 1600w, ./assets/venus-2026-2400-BvwCLJt6.webp 2400w, ./assets/venus-2026-2752-CNGnrMCF.webp 2752w" sizes="(min-width: 1024px) 100vw, calc(100vw - 40px)" width="2752" height="1536" alt="" loading="lazy" decoding="async" /></span>
+              <p><b>zephyr</b> did I blow too hard?<span class="ve-com__meta">541y · Reply</span></p>
+            </li>
+            <li class="ve-com">
+              <span class="ve-av ve-av--hora"><img src="./assets/venus-2026-1600-xulfmNEI.webp" srcset="./assets/venus-2026-480-BvCbgINe.webp 480w, ./assets/venus-2026-800-COmgt58a.webp 800w, ./assets/venus-2026-1200-NEwAdHMC.webp 1200w, ./assets/venus-2026-1600-xulfmNEI.webp 1600w, ./assets/venus-2026-2400-BvwCLJt6.webp 2400w, ./assets/venus-2026-2752-CNGnrMCF.webp 2752w" sizes="(min-width: 1024px) 100vw, calc(100vw - 40px)" width="2752" height="1536" alt="" loading="lazy" decoding="async" /></span>
+              <p><b>hora.of.spring</b> girl, put this on<span class="ve-com__meta">541y · 98K likes · Reply</span></p>
+            </li>
+            <li class="ve-com">
+              <span class="ve-av ve-av--mono" aria-hidden="true">SB</span>
+              <p><b>sandro.botticelli</b> photo credit?<span class="ve-com__meta">541y · Reply</span></p>
+            </li>
+            <li class="ve-com">
+              <span class="ve-av ve-av--mono" aria-hidden="true">SV</span>
+              <p><b>simonetta.vespucci</b> legend says it's me<span class="ve-com__meta">541y · Reply</span></p>
+            </li>
+          </ol>
+          <p class="ve-digitando"><span class="ve-digitando__pontos" aria-hidden="true"><i></i><i></i><i></i></span> michelangelo is typing…</p>
+        </div>
+
+        <footer class="ve-post__base">
+          <div class="ve-post__acoes" aria-hidden="true">
+            <span class="ve-coracao">
+              <svg class="ve-coracao__linha" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M12 20.3s-7.6-4.6-9.2-9.3C1.6 7.4 3.8 4 7.2 4c2 0 3.6 1.1 4.8 2.8C13.2 5.1 14.8 4 16.8 4c3.4 0 5.6 3.4 4.4 7-1.6 4.7-9.2 9.3-9.2 9.3z"/></svg>
+              <svg class="ve-coracao__cheio" viewBox="0 0 24 24"><path fill="currentColor" d="M12 20.3s-7.6-4.6-9.2-9.3C1.6 7.4 3.8 4 7.2 4c2 0 3.6 1.1 4.8 2.8C13.2 5.1 14.8 4 16.8 4c3.4 0 5.6 3.4 4.4 7-1.6 4.7-9.2 9.3-9.2 9.3z"/></svg>
+            </span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M20.5 11.6a8.4 8.4 0 0 1-12.4 7.4L3.5 20.5l1.5-4.4a8.4 8.4 0 1 1 15.5-4.5z"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M21.5 3.5 10.4 13.6M21.5 3.5l-6.9 17-4.2-6.9-6.9-4.2z"/></svg>
+            <svg class="ve-post__salvar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M18.5 21 12 15.8 5.5 21V3.5h13z"/></svg>
+          </div>
+          <p class="ve-post__curtidas"><strong class="ve-curtidas" data-ve-curtidas>1,486,000</strong> <span>likes</span></p>
+          <p class="ve-post__por">liked by <b>lorenzo.de.medici</b> and others</p>
+          <p class="ve-post__tempo">541 years ago</p>
+        </footer>
+      </article>
+    </div>
+
+    <p class="ficha-obra ve-ficha">
+      <span>The Birth of Venus</span><span>Sandro Botticelli</span><span>c. 1484–1486</span><span>Tempera on canvas</span><span>Galleria degli Uffizi, Florence</span><span class="ve-ficha__ia">2026 version generated with AI from the artwork</span>
+    </p>
+  </div>
+</section>
+
+      <!-- =====================================================================
+     Cena 05 · monalisa — O freela que nunca foi entregue (ver docs/BRIEF.md)
+     Prefixo de classe: .ml-
+     Desktop (≥1024 × ≥600, com movimento): o .ml-palco fica preso (~300vh)
+     em três colunas: título + narração | retrato | cartões. Os passos
+     (.ml-passo) viram "display: contents" e cada narração/cartão divide a
+     mesma célula com os outros; a rolagem troca um pelo outro.
+     Celular em pé (≤1023 × ≥600, com movimento, .ml--cel): o .ml-palco
+     vira uma tela de 100svh presa (~250vh) com o retrato ocupando a tela;
+     narrações viram legendas e os cartões sobem como folhas, um por vez.
+     A ficha e o passo 04 (botão) vão para o .ml-depois, depois do pin.
+     Movimento reduzido / celular deitado: tudo empilhado e visível.
+     ===================================================================== -->
+<section class="cena cena--monalisa" id="monalisa" data-cena="05" data-local="Florence · Paris" data-ano="1503" data-sinal="3" data-tema="escuro" aria-labelledby="ml-titulo">
+  <div class="ml-palco">
+    <header class="ml-intro">
+      <p class="rotulo">Scene 05 · Florence, 1503</p>
+      <h2 class="ml-titulo" id="ml-titulo" data-split>The freelance job that was never <em>delivered</em></h2>
+    </header>
+
+    <p class="narra ml-narra" data-passo="0">
+      Florence, 1503. According to Vasari, a merchant commissioned Leonardo to paint his wife's portrait. It seemed like a simple request.
+    </p>
+
+    <div class="ml-obra">
+      <figure class="ml-moldura">
+        <div class="ml-quadro" data-scanner data-scanner-rotulo="Lisa Gherardini">
+          <!-- Duas "câmeras" dentro da moldura: .ml-camera (aproximação do
+               botão 2026, por tempo) e .ml-zoom (aproximação do Face ID, pela
+               rolagem). A camada de visão mora dentro de .ml-zoom e vai junto. -->
+          <div class="ml-camera">
+            <div class="ml-zoom">
+              <img
+                class="ml-img"
+                src="./assets/monalisa-1503-800-DKxddKGy.webp"
+                srcset="./assets/monalisa-1503-480-zBZQGqeL.webp 480w, ./assets/monalisa-1503-800-DKxddKGy.webp 800w, ./assets/monalisa-1503-1200-CRTPNK1u.webp 1200w, ./assets/monalisa-1503-1600-A82xC89m.webp 1600w, ./assets/monalisa-1503-1696-ITJesAP0.webp 1696w"
+                sizes="(min-width: 1024px) calc(67vh - 120px), min(calc(100vw - 56px), 460px)"
+                width="1696"
+                height="2528"
+                loading="lazy"
+                decoding="async"
+                alt="Mona Lisa, by Leonardo da Vinci: Lisa Gherardini in half length, hands crossed and a faint smile, with a landscape of rivers and mountains in the background."
+              />
+              <canvas class="ml-pixel" aria-hidden="true"></canvas>
+              <!-- 1911: a parede vazia (os quatro ganchos) -->
+              <div class="ml-vazio" aria-hidden="true">
+                <span class="ml-gancho" style="--x: 0.3; --y: 0.07"></span>
+                <span class="ml-gancho" style="--x: 0.7; --y: 0.07"></span>
+                <span class="ml-gancho" style="--x: 0.3; --y: 0.93"></span>
+                <span class="ml-gancho" style="--x: 0.7; --y: 0.93"></span>
+                <span class="ml-vazio__caixa">
+                  <span class="ml-vazio__valor">0.0000</span>
+                  <span class="ml-vazio__rotulo">artwork not found</span>
+                </span>
+              </div>
+              <!-- Face ID: mira, varredura, pontos e malha (pontos e linhas montados pelo JS) -->
+              <div class="ml-faceid" aria-hidden="true">
+                <span class="ml-mira"><i></i><i></i><i></i><i></i></span>
+                <span class="ml-varredura"><span class="ml-varredura__linha"></span></span>
+                <div class="ml-marcas">
+                  <svg class="ml-malha" viewBox="0 0 1696 2528" preserveAspectRatio="none"></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="ml-brilho" aria-hidden="true"><span class="ml-brilho__luz"></span></span>
+      </figure>
+      <p class="ml-dica" aria-hidden="true"><span class="ml-dica__olho"></span>Mona Lisa effect · move the mouse, her eyes follow</p>
+      <!-- celular preso: véu escuro embaixo, para as legendas sobre a pintura -->
+      <span class="ml-veu" aria-hidden="true"></span>
+      <!-- celular preso: o cartão do botão fica abaixo do pin; durante a troca
+           de versão o status dele aparece aqui, sobre a pintura (o leitor de
+           tela já ouve o status do cartão, que é aria-live) -->
+      <p class="ml-instala" aria-hidden="true">
+        <span class="ml-instala__texto"></span>
+        <span class="ml-instala__trilho"><span class="ml-instala__cheio"></span></span>
+      </p>
+    </div>
+
+    <div class="ml-ficha">
+      <p class="ficha-obra"><span>Mona Lisa</span><span>Leonardo da Vinci</span><span>c. 1503–1519</span><span>Louvre Museum, Paris</span></p>
+      <p class="ml-nota">The 2026 version, with wireless earbuds and iced coffee, was generated with AI from the artwork.</p>
+    </div>
+
+    <div class="ml-passos">
+      <!-- 01 · Face ID ---------------------------------------------------->
+      <div class="ml-passo" data-passo="1">
+        <p class="narra ml-narra">
+          In 2005, researchers from the University of Amsterdam and the University of Illinois ran her face through emotion-recognition software. The most debated smile in art, finally, in numbers.
+        </p>
+        <article class="ml-cartao ml-emocoes cartao-app" aria-labelledby="ml-emocoes-titulo">
+          <p class="ml-cartao__olho">01 · Face ID</p>
+          <header class="ml-cartao__topo">
+            <span class="ml-cartao__icone" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+                <path d="M3 8V5.5A2.5 2.5 0 0 1 5.5 3H8M16 3h2.5A2.5 2.5 0 0 1 21 5.5V8M21 16v2.5a2.5 2.5 0 0 1-2.5 2.5H16M8 21H5.5A2.5 2.5 0 0 1 3 18.5V16" />
+                <path d="M9 9.5v1M15 9.5v1M12 9.5v4h-1M9.5 16.2c1.4 1.1 3.6 1.1 5 0" />
+              </svg>
+            </span>
+            <div>
+              <h3 class="ml-cartao__titulo" id="ml-emocoes-titulo">Emotion reading</h3>
+              <p class="ml-cartao__meta">Univ. of Amsterdam + Univ. of Illinois · 2005</p>
+            </div>
+          </header>
+          <p class="ml-emocoes__status">
+            <span class="ml-emocoes__procurando" aria-hidden="true">looking for a face…</span>
+            <span class="ml-emocoes__achou">face found · eyebrows: 0</span>
+          </p>
+          <ul class="ml-barras" role="list">
+            <li class="ml-barra" style="--v: 0.83">
+              <span class="ml-barra__nome">Happiness</span>
+              <span class="ml-barra__trilho" aria-hidden="true"><span class="ml-barra__cheio"></span></span>
+              <span class="ml-barra__valor" aria-hidden="true" data-final="83">83%</span>
+              <span class="sr-only">83%</span>
+            </li>
+            <li class="ml-barra" style="--v: 0.09">
+              <span class="ml-barra__nome">Disgust</span>
+              <span class="ml-barra__trilho" aria-hidden="true"><span class="ml-barra__cheio"></span></span>
+              <span class="ml-barra__valor" aria-hidden="true" data-final="9">9%</span>
+              <span class="sr-only">9%</span>
+            </li>
+            <li class="ml-barra" style="--v: 0.06">
+              <span class="ml-barra__nome">Fear</span>
+              <span class="ml-barra__trilho" aria-hidden="true"><span class="ml-barra__cheio"></span></span>
+              <span class="ml-barra__valor" aria-hidden="true" data-final="6">6%</span>
+              <span class="sr-only">6%</span>
+            </li>
+            <li class="ml-barra" style="--v: 0.02">
+              <span class="ml-barra__nome">Anger</span>
+              <span class="ml-barra__trilho" aria-hidden="true"><span class="ml-barra__cheio"></span></span>
+              <span class="ml-barra__valor" aria-hidden="true" data-final="2">2%</span>
+              <span class="sr-only">2%</span>
+            </li>
+          </ul>
+          <p class="ml-emocoes__veredito">Verdict: happy. With reservations.</p>
+        </article>
+      </div>
+
+      <!-- 02 · Encomenda ---------------------------------------------------->
+      <div class="ml-passo" data-passo="2">
+        <p class="narra ml-narra">
+          The client was Francesco del Giocondo, a Florentine silk merchant. Leonardo never delivered: he took the painting to France and kept retouching it until shortly before his death, in 1519.
+        </p>
+        <article class="ml-cartao ml-pedido cartao-app" aria-labelledby="ml-pedido-titulo">
+          <p class="ml-cartao__olho">02 · Commission</p>
+          <header class="ml-pedido__topo">
+            <h3 class="ml-cartao__titulo" id="ml-pedido-titulo">Order #1503</h3>
+            <span class="ml-chip"><span class="ml-chip__ponto" aria-hidden="true"></span>overdue</span>
+          </header>
+          <div class="ml-pedido__cliente">
+            <span class="ml-avatar" aria-hidden="true">FG</span>
+            <p><strong>Francesco del Giocondo</strong><span>client · Florence</span></p>
+          </div>
+          <dl class="ml-pedido__dados">
+            <div class="ml-linha"><dt>Order</dt><dd>Portrait of his wife, Lisa Gherardini</dd></div>
+            <div class="ml-linha"><dt>Opened</dt><dd>1503 · according to Vasari</dd></div>
+            <div class="ml-linha"><dt>Status</dt><dd>in progress… since 1503</dd></div>
+          </dl>
+          <div class="ml-retoques">
+            <p class="ml-retoques__topo"><span>Retouching</span><span class="ml-retoques__valor">99%</span></p>
+            <span class="ml-retoques__trilho" aria-hidden="true"><span class="ml-retoques__cheio"></span></span>
+          </div>
+          <p class="ml-entrega"><span>Delivery</span><strong class="ml-carimbo">never</strong></p>
+        </article>
+      </div>
+
+      <!-- 03 · 1911 -------------------------------------------------------->
+      <div class="ml-passo" data-passo="3">
+        <p class="narra ml-narra">
+          On August 21, 1911, she vanished from the Louvre. The thief, Vincenzo Peruggia, worked at the museum. The disappearance turned her into the most famous painting in the world.
+        </p>
+        <article class="ml-cartao ml-alta cartao-app" aria-labelledby="ml-alta-titulo">
+          <p class="ml-cartao__olho">03 · 1911</p>
+          <header class="ml-cartao__topo">
+            <span class="ml-cartao__icone ml-cartao__icone--vermelho" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 17l6-6 4 4 8-8" />
+                <path d="M15 7h6v6" />
+              </svg>
+            </span>
+            <div>
+              <p class="ml-cartao__titulo">Trending in Paris</p>
+              <p class="ml-cartao__meta">August 1911</p>
+            </div>
+          </header>
+          <h3 class="ml-alta__tag" id="ml-alta-titulo">#MonaLisaRoubada</h3>
+          <figure class="ml-fama">
+            <svg class="ml-fama__grafico" viewBox="0 0 300 84" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="ml-fama-grad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#d0301a" stop-opacity="0.38" />
+                  <stop offset="1" stop-color="#d0301a" stop-opacity="0" />
+                </linearGradient>
+              </defs>
+              <path class="ml-fama__area" d="M0 74 L70 72 L118 70 L146 66 L164 50 L184 40 L208 30 L236 20 L266 12 L300 6 L300 84 L0 84 Z" fill="url(#ml-fama-grad)" />
+              <path class="ml-fama__linha" d="M0 74 L70 72 L118 70 L146 66 L164 50 L184 40 L208 30 L236 20 L266 12 L300 6" fill="none" />
+            </svg>
+            <figcaption class="ml-fama__legenda"><span>fame</span><span>1911 → 1913</span></figcaption>
+          </figure>
+          <p class="ml-alta__volta">
+            <span class="ml-alta__check" aria-hidden="true">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5l3 3 6-7" /></svg>
+            </span>
+            December 1913 · found in Florence
+          </p>
+        </article>
+      </div>
+
+      <!-- 04 · 2026 -------------------------------------------------------->
+      <div class="ml-passo" data-passo="4">
+        <p class="narra ml-narra">
+          Five centuries later, she's still at the Louvre, with no delivery date. What if the portrait were commissioned today?
+        </p>
+        <div class="ml-cartao ml-atualizar cartao-app">
+          <header class="ml-cartao__topo">
+            <span class="ml-cartao__icone ml-cartao__icone--ouro" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 4v11M7.5 10.5L12 15l4.5-4.5M5 19.5h14" />
+              </svg>
+            </span>
+            <div>
+              <p class="ml-cartao__titulo">Mona Lisa 2026</p>
+              <p class="ml-cartao__meta">Update available</p>
+            </div>
+          </header>
+          <p class="ml-atualizar__status" aria-live="polite">What's new: wireless earbuds and iced coffee.</p>
+          <span class="ml-atualizar__trilho" aria-hidden="true"><span class="ml-atualizar__cheio"></span></span>
+          <button class="btn ml-btn" type="button" aria-pressed="false">
+            <svg class="ml-btn__icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 11a8 8 0 0 0-14.3-4.9L4 8" />
+              <path d="M4 3.5V8h4.5" />
+              <path d="M4 13a8 8 0 0 0 14.3 4.9L20 16" />
+              <path d="M20 20.5V16h-4.5" />
+            </svg>
+            <span class="ml-btn__texto">Update to <span class="ml-btn__ano">2026</span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- celular preso: a ficha e o passo 04 vêm para cá (depois do pin); vazio no resto -->
+  <div class="ml-depois"></div>
+</section>
+
+      <!-- =====================================================================
+     Cena 06 · michelangelo — O primeiro desabafo (ver docs/BRIEF.md)
+     Prefixo de classe: .mi-
+     Desktop (michelangelo.js liga .mi--palco): o palco fica preso; o
+     soneto se digita no post enquanto a visão lê cada verso no manuscrito,
+     o post se traduz sozinho e a câmera aproxima o autodesenho da margem.
+     Celular em pé (.mi--cel): também preso, numa coluna; o post é uma
+     folha que sobe por cima do manuscrito e desce para a margem aparecer.
+     Celular deitado e movimento reduzido: tudo empilhado e visível.
+     ===================================================================== -->
+<section class="cena cena--michelangelo mi" id="michelangelo" data-cena="06" data-local="Sistine Chapel, Vatican" data-ano="1509" data-sinal="1" data-tema="pergaminho" aria-labelledby="mi-titulo">
+  <div class="wrap mi-intro">
+    <div class="mi-intro__cabeca">
+      <p class="rotulo">Scene 06 · Sistine Chapel, Vatican, 1509</p>
+      <h2 class="mi-titulo" id="mi-titulo" data-split>The first <em>rant</em></h2>
+    </div>
+    <div class="mi-intro__texto">
+      <p class="narra" data-reveal>While painting the ceiling of the Sistine Chapel, Michelangelo sent his friend Giovanni da Pistoia a sonnet complaining about the job. And drew himself in the margin.</p>
+      <p class="narra" data-reveal data-reveal-delay="0.1">Fun fact: he saw himself as a sculptor, not a painter. The ceiling took four years, from 1508 to 1512.</p>
+    </div>
+  </div>
+
+  <div class="mi-palco">
+    <div class="wrap mi-grade">
+      <figure class="mi-obra">
+        <p class="mi-status" aria-hidden="true"><span class="mi-status__ponto"></span><span data-mi-status>vision · manuscript · 20 lines</span></p>
+        <div class="mi-quadro pintura" data-scanner data-scanner-rotulo="Manuscript">
+          <div class="mi-camera">
+            <!-- Fonte única (densidade 1): a visão e o scanner amostram a imagem
+                 pelo naturalWidth, que o srcset+sizes "corrige" e desalinha. -->
+            <img
+              src="./assets/soneto-1509-1018-dFW1AjgF.webp"
+              width="1018"
+              height="1400"
+              alt="Handwritten sheet with Michelangelo's sonnet in Italian. In the right margin, a small drawing of himself, standing, head tilted back and arm raised, painting a figure on the ceiling."
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+        <figcaption class="ficha-obra mi-ficha"><span>Sonnet with self-portrait sketch</span><span>Michelangelo</span><span>c. 1508–1512</span><span>Archivio Buonarroti, Florence</span></figcaption>
+      </figure>
+
+      <div class="mi-lado">
+        <article class="mi-post cartao-app cartao-app--claro" aria-label="Michelangelo's sonnet as a social media post">
+          <header class="mi-post__topo">
+            <span class="mi-post__avatar" aria-hidden="true">M</span>
+            <div class="mi-post__quem">
+              <p class="mi-post__nome">Michelangelo Buonarroti <span class="mi-post__selo">sculptor</span></p>
+              <p class="mi-post__local">@buonarroti · Sistine Chapel<span class="mi-post__vaticano">, Vatican</span> · 1509</p>
+            </div>
+            <span class="mi-post__mais" aria-hidden="true">
+              <svg viewBox="0 0 20 4" width="20" height="4" fill="currentColor"><circle cx="2" cy="2" r="1.6" /><circle cx="10" cy="2" r="1.6" /><circle cx="18" cy="2" r="1.6" /></svg>
+            </span>
+          </header>
+          <p class="mi-post__marcou">to <strong>Giovanni da Pistoia</strong></p>
+
+          <div class="mi-post__texto" data-mi-texto data-idioma-ativo="it">
+            <div class="mi-versos" lang="it" data-idioma="it">
+              <p class="mi-verso"><span class="mi-verso__n" aria-hidden="true">01</span><span class="mi-verso__txt">I' ho già fatto un gozzo in questo stento</span></p>
+              <p class="mi-salto" aria-hidden="true">[…]</p>
+              <p class="mi-verso"><span class="mi-verso__n" aria-hidden="true">05</span><span class="mi-verso__txt">La barba al cielo</span></p>
+              <p class="mi-salto" aria-hidden="true">[…]</p>
+              <p class="mi-verso"><span class="mi-verso__n" aria-hidden="true">07</span><span class="mi-verso__txt">e 'l pennel sopra 'l viso tuttavia</span></p>
+              <p class="mi-verso"><span class="mi-verso__n" aria-hidden="true">08</span><span class="mi-verso__txt">mel fa, gocciando, un ricco pavimento</span></p>
+              <p class="mi-salto" aria-hidden="true">[…]</p>
+              <p class="mi-verso"><span class="mi-verso__n" aria-hidden="true">20</span><span class="mi-verso__txt">non sendo in loco bon, né io pittore</span></p>
+            </div>
+            <div class="mi-versos" lang="en" data-idioma="pt">
+              <p class="mi-verso"><span class="mi-verso__n" aria-hidden="true">01</span><span class="mi-verso__txt">I've already grown a goiter from this toil</span></p>
+              <p class="mi-salto" aria-hidden="true">[…]</p>
+              <p class="mi-verso"><span class="mi-verso__n" aria-hidden="true">05</span><span class="mi-verso__txt">My beard points to the sky</span></p>
+              <p class="mi-salto" aria-hidden="true">[…]</p>
+              <p class="mi-verso"><span class="mi-verso__n" aria-hidden="true">07</span><span class="mi-verso__txt">and the brush, forever above my face,</span></p>
+              <p class="mi-verso"><span class="mi-verso__n" aria-hidden="true">08</span><span class="mi-verso__txt">dripping, turns it into a colorful floor</span></p>
+              <p class="mi-salto" aria-hidden="true">[…]</p>
+              <p class="mi-verso"><span class="mi-verso__n" aria-hidden="true">20</span><span class="mi-verso__txt">I'm not in a good place, and I'm no painter</span></p>
+            </div>
+          </div>
+
+          <p class="mi-post__traducao">
+            <span class="mi-post__nota" data-mi-nota hidden>Translated from Italian ·</span>
+            <button class="mi-post__botao" type="button" aria-pressed="false" data-mi-traduzir>See translation</button>
+          </p>
+
+          <p class="mi-post__rodape">1509 · sent from the scaffolding</p>
+
+          <div class="mi-dobra" data-mi-dobra>
+            <ul class="mi-post__numeros" role="list">
+              <li><strong>4 years</strong> of work <span>1508–1512</span></li>
+              <li><strong>20</strong> lines of venting</li>
+              <li><strong>1</strong> goiter on his neck <span>according to him</span></li>
+            </ul>
+          </div>
+
+          <ul class="mi-post__comentarios" role="list" aria-label="Comments">
+            <li class="mi-dobra" data-mi-dobra>
+              <div class="mi-coment">
+                <span class="mi-coment__av" aria-hidden="true">G</span>
+                <p><strong>giovanni.dapistoia</strong> hang in there, buddy. Only about three years to go.</p>
+              </div>
+            </li>
+            <li class="mi-dobra" data-mi-dobra>
+              <div class="mi-coment">
+                <span class="mi-coment__av mi-coment__av--ouro" aria-hidden="true">J</span>
+                <p><strong>pope.julius.ii</strong> so when's the ceiling coming out?</p>
+              </div>
+            </li>
+          </ul>
+        </article>
+
+        <p class="mi-margem narra" data-mi-margem><strong>Look at the margin:</strong> he paints standing up, head thrown back. Painting while lying on his back is a myth.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <!-- =====================================================================
+     Cena 07 · atenas — O primeiro coworking (ver docs/BRIEF.md)
+     Prefixo de classe: .at-
+     Desktop (atenas.js liga .at--palco): palco preso ~300vh. Começa com o
+     afresco inteiro ao lado do título; a câmera entra na faixa dos
+     filósofos e corre para a direita; a visão identifica um por um e o
+     cartão de legenda troca junto; fecha no autorretrato de Rafael.
+     Celular em pé (.at--cel): também preso (~250vh): título e afresco
+     inteiro; a câmera desce à faixa dos filósofos e faz o pan, um por vez,
+     com a legenda embaixo; fecha no close de Rafael com o visor de selfie.
+     Celular deitado e movimento reduzido: afresco inteiro numerado + lista.
+     ===================================================================== -->
+<section class="cena cena--atenas at" id="atenas" data-cena="07" data-local="Vatican, Rome" data-ano="1511" data-sinal="3" data-tema="escuro" aria-labelledby="at-titulo">
+  <div class="at-palco">
+    <div class="wrap at-intro">
+      <p class="rotulo">Scene 07 · Vatican, Rome, 1511</p>
+      <h2 class="at-titulo" id="at-titulo" data-split>The first <em>coworking space</em></h2>
+      <p class="narra at-narra">Raphael gathered on a Vatican wall thinkers who lived centuries apart. High ceilings, lots of talk, nobody in the same time zone.</p>
+      <p class="ficha-obra at-ficha"><span>The School of Athens</span><span>Raphael</span><span>1509–1511</span><span>Stanza della Segnatura, Vatican</span></p>
+      <p class="at-dica" aria-hidden="true"><span class="at-dica__ponto"></span>scroll · the vision identifies each one</p>
+    </div>
+
+    <figure class="at-obra">
+      <div class="at-quadro pintura">
+        <div class="at-camera" data-scanner data-scanner-rotulo="The School of Athens">
+          <!-- Fontes de densidade 1 (sem "w" + sizes): a visão e o scanner
+               amostram a imagem pelo naturalWidth, que o sizes "corrige". No
+               desktop a câmera aproxima ~3×, então vai a maior; no celular em
+               pé ela também aproxima (até o rosto de Rafael), então vai a 2400. -->
+          <picture>
+            <source media="(min-width: 1024px)" srcset="./assets/atenas-3200-DqcGHN6c.webp" />
+            <img
+              src="./assets/atenas-2400-C_SdpKO-.webp"
+              width="3820"
+              height="2964"
+              alt="The School of Athens, Raphael's fresco: dozens of ancient philosophers gathered in a great arched hall. In the center, Plato points upward and Aristotle extends his hand downward."
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
+          <span class="at-selfie" aria-hidden="true"><span class="at-selfie__rec">rec · selfie</span></span>
+        </div>
+      </div>
+      <figcaption class="sr-only">The identified figures are in the list below.</figcaption>
+    </figure>
+    <span class="at-flash" aria-hidden="true"></span>
+
+    <ol class="at-lista" role="list" aria-label="Who's who in The School of Athens">
+      <li class="at-item cartao-app" data-at="pitagoras">
+        <p class="at-item__topo"><span class="at-item__n" aria-hidden="true">01</span><span class="at-item__nome">Pythagoras</span></p>
+        <p class="at-item__piada">taking the meeting minutes</p>
+        <p class="at-item__fato">Writing nonstop in a book while a student holds up a slate for him.</p>
+      </li>
+      <li class="at-item cartao-app" data-at="socrates">
+        <p class="at-item__topo"><span class="at-item__n" aria-hidden="true">02</span><span class="at-item__nome">Socrates</span></p>
+        <p class="at-item__piada">the meeting that could have been an email</p>
+        <p class="at-item__fato">Counting arguments on his fingers. He left nothing in writing: what we know of him came from his students.</p>
+      </li>
+      <li class="at-item cartao-app" data-at="heraclito">
+        <p class="at-item__topo"><span class="at-item__n" aria-hidden="true">03</span><span class="at-item__nome">Heraclitus</span></p>
+        <p class="at-item__piada">focus mode</p>
+        <p class="at-item__fato">Alone, leaning on a block, writing. It's believed to be a portrait of Michelangelo, added later. Yes, the one with the rant.</p>
+      </li>
+      <li class="at-item cartao-app" data-at="platao">
+        <p class="at-item__topo"><span class="at-item__n" aria-hidden="true">04</span><span class="at-item__nome">Plato</span></p>
+        <p class="at-item__piada">already used the cloud</p>
+        <p class="at-item__fato">Pointing upward, where ideas live. His face is believed to be Leonardo da Vinci's. Yes, the one with the résumé.</p>
+      </li>
+      <li class="at-item cartao-app" data-at="aristoteles">
+        <p class="at-item__topo"><span class="at-item__n" aria-hidden="true">05</span><span class="at-item__nome">Aristotle</span></p>
+        <p class="at-item__piada">prefers a local server</p>
+        <p class="at-item__fato">His open palm points down: to the world we can observe from here.</p>
+      </li>
+      <li class="at-item cartao-app" data-at="diogenes">
+        <p class="at-item__topo"><span class="at-item__n" aria-hidden="true">06</span><span class="at-item__nome">Diogenes</span></p>
+        <p class="at-item__piada">status: away</p>
+        <p class="at-item__fato">Sprawled on the steps, ignoring everyone. Tradition says he lived in a jar.</p>
+      </li>
+      <li class="at-item cartao-app" data-at="euclides">
+        <p class="at-item__topo"><span class="at-item__n" aria-hidden="true">07</span><span class="at-item__nome">Euclid</span></p>
+        <p class="at-item__piada">drawing the wireframe</p>
+        <p class="at-item__fato">Compass on the slate, students all around. He's believed to have the face of Bramante, the architect.</p>
+      </li>
+      <li class="at-item cartao-app" data-at="globos">
+        <p class="at-item__topo"><span class="at-item__n" aria-hidden="true">08</span><span class="at-item__nome">Ptolemy and Zoroaster</span></p>
+        <p class="at-item__piada">the first Google Earth</p>
+        <p class="at-item__fato">Ptolemy, with his back to us, holds the terrestrial globe. Zoroaster, facing us, holds the starry sky.</p>
+      </li>
+      <li class="at-item cartao-app" data-at="rafael">
+        <p class="at-item__topo"><span class="at-item__n" aria-hidden="true">09</span><span class="at-item__nome">Raphael</span></p>
+        <p class="at-item__piada">looking at the camera: the first selfie</p>
+        <p class="at-item__fato">On the right edge, in a dark beret, looking out of the frame. It's the painter's own self-portrait.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+      <!-- =====================================================================
+     Cena 08 · final — Fim do sinal (ver docs/BRIEF.md)
+     Prefixo de classe: .fi-
+     Faixa vermelha: título centrado, assinatura cursiva, botão de volta
+     ao topo e os anjinhos da Madona Sistina (versão 2026, fundo = vermelho
+     da página) encostados embaixo, com a visão de IA. O Wi-Fi cai e volta
+     (final.js; no desktop, preso à rolagem): a notificação mora no
+     vermelho vazio da própria imagem. Rodapé de créditos.
+     Celular em pé (final.js, .is-cel): o .fi-palco (título + anjos) fica
+     preso ~150vh com a queda do sinal andando com a rolagem; a narração e
+     o botão descem para o .fi-depois (vazio no desktop) e os créditos
+     rolam normalmente. No desktop o .fi-palco não tem estilo nenhum.
+     ===================================================================== -->
+<section class="cena cena--final" id="final" data-cena="08" data-local="Internet" data-ano="2026" data-sinal="3" data-tema="vermelho" aria-labelledby="fi-titulo">
+  <div class="fi-palco">
+    <div class="fi-topo wrap">
+      <p class="rotulo">Scene 08 · Signal lost</p>
+      <h2 id="fi-titulo" class="fi-titulo" data-split>500 years later, it's still the best content on the internet.</h2>
+      <p class="fi-assinatura">with love, the Renaissance</p>
+      <p class="narra fi-narra" data-reveal>No feed, no likes, no Wi-Fi. And for five centuries, nobody has been able to stop looking.</p>
+      <button class="btn fi-voltar" type="button" data-fi-voltar data-reveal data-reveal-delay="0.15">Back to <span class="btn__ano">1512</span> <span aria-hidden="true">↑</span></button>
+    </div>
+
+    <figure class="fi-figura" data-scanner data-scanner-rotulo="Sistine Madonna · 2026">
+      <img
+        class="fi-img"
+        src="./assets/anjos-2026-1600-B8Hn2s3y.webp"
+        srcset="./assets/anjos-2026-480-CaAylUyD.webp 480w, ./assets/anjos-2026-800-DdukPt-U.webp 800w, ./assets/anjos-2026-1200-CCOYfFKg.webp 1200w, ./assets/anjos-2026-1600-B8Hn2s3y.webp 1600w, ./assets/anjos-2026-2400-BxOVTp1q.webp 2400w, ./assets/anjos-2026-2752-BY8CC3SM.webp 2752w"
+        sizes="100vw"
+        width="2752"
+        height="1536"
+        alt="2026 version, generated with AI, of the two little angels from Raphael's Sistine Madonna, leaning on the parapet and looking up; the one on the left holds a smartphone."
+        loading="lazy"
+        decoding="async"
+      />
+      <div class="fi-aviso notificacao cartao-app" aria-hidden="true">
+        <span class="notificacao__icone">
+          <svg viewBox="0 0 22 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <path class="fi-aviso__onda" d="M1.5 6.2a13.5 13.5 0 0 1 19 0" />
+            <path class="fi-aviso__onda" d="M4.8 9.6a8.8 8.8 0 0 1 12.4 0" />
+            <path class="fi-aviso__onda" d="M8 12.9a4.3 4.3 0 0 1 6 0" />
+            <circle cx="11" cy="15.8" r="1.4" fill="currentColor" stroke="none" />
+            <path class="fi-aviso__corte" d="M3 1.5l16 15" />
+          </svg>
+        </span>
+        <div>
+          <p class="notificacao__titulo">Wi-Fi <time>now</time></p>
+          <p class="notificacao__texto" data-fi-aviso>No connection to RENASCENCA_5G</p>
+        </div>
+      </div>
+      <figcaption class="sr-only">Angels from the Sistine Madonna (Raphael, 1512), 2026 version generated with AI from the artwork.</figcaption>
+    </figure>
+  </div>
+
+  <div class="fi-depois wrap"></div>
+
+  <footer class="fi-creditos">
+    <div class="wrap">
+      <h3 class="rotulo fi-creditos__titulo">Artwork credits</h3>
+      <ul class="fi-creditos__lista" role="list">
+        <li><span class="fi-obra">The Creation of Adam</span> Michelangelo · c. 1508–1512 · Sistine Chapel, Vatican</li>
+        <li><span class="fi-obra">Pianta della Catena (view of Florence)</span> attributed to Francesco Rosselli · c. 1470 (1887 reproduction) · Berlin</li>
+        <li><span class="fi-obra">Self-portrait (presumed)</span> Leonardo da Vinci · c. 1512 · Biblioteca Reale, Turin</li>
+        <li><span class="fi-obra">Codex on the Flight of Birds, fol. 18r</span> Leonardo da Vinci · c. 1505 · Biblioteca Reale, Turin</li>
+        <li><span class="fi-obra">Flying machine drawing</span> Leonardo da Vinci · c. 1485</li>
+        <li><span class="fi-obra">Vitruvian Man</span> Leonardo da Vinci · c. 1490 · Gallerie dell'Accademia, Venice</li>
+        <li><span class="fi-obra">The Birth of Venus</span> Sandro Botticelli · c. 1484–1486 · Galleria degli Uffizi, Florence</li>
+        <li><span class="fi-obra">Mona Lisa</span> Leonardo da Vinci · c. 1503–1519 · Louvre Museum, Paris</li>
+        <li><span class="fi-obra">Sonnet “I’ ho già fatto un gozzo”, with self-portrait sketch</span> Michelangelo · c. 1508–1512 · Archivio Buonarroti, Florence</li>
+        <li><span class="fi-obra">The School of Athens</span> Raphael · 1509–1511 · Stanza della Segnatura, Vatican</li>
+        <li><span class="fi-obra">Sistine Madonna (the angels)</span> Raphael · 1512 · Gemäldegalerie Alte Meister, Dresden</li>
+      </ul>
+      <p class="fi-creditos__nota">Artwork images: Wikimedia Commons, public domain. The 2026 versions (Venus, Mona Lisa and the angels) were generated with AI from the artworks.</p>
+    </div>
+  </footer>
+</section>
+
+    </main>
+  </body>
+</html>

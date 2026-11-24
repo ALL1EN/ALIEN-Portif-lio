@@ -1,0 +1,323 @@
+<!--
+  Navalha · Barbershop — page template created by Upward Academy.
+  © 2026 Upward Academy · UPW-NAVALHA-R4X8 · license __UPW_LICENCA__
+  Use and adaptation for end clients allowed; resale and redistribution prohibited (LICENCA.txt).
+  https://app.upwardacademy.com.br/app/templates
+-->
+<!doctype html>
+<html lang="en" data-upw="UPW-NAVALHA-R4X8">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Navalha · Barbershop in Moema</title>
+  <meta name="description" content="Haircuts, straight-razor shaves with a hot towel and a monthly membership. Book on WhatsApp, no waiting in line.">
+  <meta name="author" content="Upward Academy">
+  <meta name="copyright" content="© 2026 Upward Academy">
+  <meta name="upw-template" content="UPW-NAVALHA-R4X8">
+  <meta name="upw-licenca" content="__UPW_LICENCA__">
+  <meta property="og:title" content="Navalha · Barbershop">
+  <meta property="og:description" content="Classic cuts, straight-razor shaves and appointments booked on WhatsApp.">
+  <meta property="og:image" content="img/navalha.webp">
+  <meta name="theme-color" content="#0e0e0d">
+  <link rel="alternate" hreflang="pt" href="pt.html">
+  <link rel="alternate" hreflang="en" href="index.html">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230e0e0d'/%3E%3Cpath d='M14 40 44 14l6 4-28 26Z' fill='%23c9a063'/%3E%3Ccircle cx='17' cy='45' r='5' fill='none' stroke='%23c9a063' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Barlow+Condensed:wght@500;600&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebPage","name":"Navalha · Barbershop","inLanguage":"en","creator":{"@type":"Organization","name":"Upward Academy","url":"https://app.upwardacademy.com.br/app/templates"},"copyrightHolder":{"@type":"Organization","name":"Upward Academy"},"identifier":"UPW-NAVALHA-R4X8"}
+  </script>
+</head>
+<body>
+
+<header class="topo" id="topo">
+  <div class="topo__barra wrap">
+    <a class="marca" href="#inicio" aria-label="Navalha Barbershop, back to top">
+      <svg class="marca__icone" viewBox="0 0 40 40" aria-hidden="true"><path d="M8 26 28 6l5 3-19 19Z" /><circle cx="10.5" cy="30.5" r="4" /></svg>
+      <span class="marca__nome">Navalha<small>barbershop · 2012</small></span>
+    </a>
+    <nav class="menu" id="menu" aria-label="Main">
+      <a href="#servicos">Services</a>
+      <a href="#assinatura">Membership</a>
+      <a href="#equipe">Team</a>
+      <a href="#visite">Location</a>
+    </nav>
+    <a class="botao botao--pequeno topo__cta" href="#" data-whatsapp="Hi! I'd like to book an appointment at Navalha.">Book</a>
+    <button class="topo__abrir" id="abrir" aria-label="Open the menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="inicio">
+    <img class="hero__fundo" src="img/navalha.webp" srcset="img/navalha-800.webp 800w, img/navalha.webp 1600w" sizes="100vw" width="1600" height="1066" alt="Barber trimming the beard of a client reclined in the chair, in low, warm light">
+    <div class="wrap hero__conteudo">
+      <p class="rotulo surge">Barbershop in Moema · São Paulo</p>
+      <h1 class="titulo-xl surge">Classic cuts,<br><em>a steady hand.</em></h1>
+      <p class="hero__lead surge">Scissors, clippers and a straight razor with a hot towel. You book your time, sit in the chair right on schedule and walk out looking exactly the way you asked.</p>
+      <div class="hero__acoes surge">
+        <a class="botao" href="#" data-whatsapp="Hi! I'd like to book an appointment at Navalha.">Book on WhatsApp</a>
+        <a class="botao botao--linha" href="#servicos">See services and prices</a>
+      </div>
+    </div>
+    <p class="hero__hoje surge" aria-live="polite"><span class="ponto"></span><span id="hoje">Mon to Sat · 9am to 8pm</span></p>
+  </section>
+
+  <!-- ============ STRIP ============ -->
+  <div class="faixa">
+    <ul class="wrap faixa__lista">
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h18M7 8l-4 4 4 4" /></svg>By appointment, no waiting</li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19c4-1 7-4 9-9l5-5M12 6l6 6" /></svg>Straight razor and hot towel</li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h10v9a5 5 0 0 1-10 0Zm10 3h2a2 2 0 0 1 0 4h-2" /></svg>Coffee or beer on the house</li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 17h14M7 17V9l5-4 5 4v8" /></svg>Partner parking</li>
+    </ul>
+  </div>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="secao secao--papel" id="servicos">
+    <div class="wrap servicos">
+      <div class="servicos__lado">
+        <p class="rotulo">Services</p>
+        <h2 class="titulo-l">From the cut<br><em>to a clean shave.</em></h2>
+        <p class="cabeca__texto">Chair time and price for every service. Prices are examples: adjust them in the file.</p>
+        <figure class="servicos__foto revela">
+          <img src="img/cadeira-800.webp" srcset="img/cadeira-800.webp 800w, img/cadeira.webp 1600w" sizes="(max-width: 900px) 92vw, 34vw" width="1600" height="2000" loading="lazy" decoding="async" alt="Classic barber chair in black leather and chrome">
+        </figure>
+      </div>
+      <div class="servicos__listas">
+        <div class="grupo revela">
+          <h3 class="grupo__titulo"><span>I.</span> Hair</h3>
+          <ul class="tabela">
+            <li><div><b>Classic cut</b><small>Scissors and clippers, finished with the razor</small></div><span class="tempo">40 min</span><span class="preco">R$ 55</span></li>
+            <li><div><b>Fade</b><small>From zero to any length you want</small></div><span class="tempo">45 min</span><span class="preco">R$ 60</span></li>
+            <li><div><b>Scissor cut</b><small>For medium and long hair</small></div><span class="tempo">50 min</span><span class="preco">R$ 70</span></li>
+            <li><div><b>Kids' cut</b><small>Up to age 10, with patience</small></div><span class="tempo">30 min</span><span class="preco">R$ 45</span></li>
+          </ul>
+        </div>
+        <div class="grupo revela">
+          <h3 class="grupo__titulo"><span>II.</span> Beard</h3>
+          <ul class="tabela">
+            <li><div><b>Straight-razor shave</b><small>Hot towel, pre-shave and after-shave oil</small></div><span class="tempo">30 min</span><span class="preco">R$ 45</span></li>
+            <li><div><b>Beard shaping</b><small>Line-up and mustache trim</small></div><span class="tempo">20 min</span><span class="preco">R$ 35</span></li>
+            <li><div><b>Beard pigmentation</b><small>Fills in gaps with a natural look</small></div><span class="tempo">25 min</span><span class="preco">R$ 40</span></li>
+          </ul>
+        </div>
+        <div class="grupo revela">
+          <h3 class="grupo__titulo"><span>III.</span> Extras</h3>
+          <ul class="tabela">
+            <li><div><b>Razor eyebrow trim</b></div><span class="tempo">10 min</span><span class="preco">R$ 20</span></li>
+            <li><div><b>Hair treatment</b></div><span class="tempo">20 min</span><span class="preco">R$ 35</span></li>
+            <li><div><b>Highlights or platinum</b><small>Consultation first</small></div><span class="tempo">2 h</span><span class="preco"><small>from</small> R$ 160</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MEMBERSHIP ============ -->
+  <section class="secao secao--preta" id="assinatura">
+    <div class="wrap">
+      <div class="cabeca cabeca--centro">
+        <p class="rotulo">Combos and membership</p>
+        <h2 class="titulo-l">Regulars<br><em>pay less.</em></h2>
+        <p class="cabeca__texto">With a membership you pay monthly and come as often as you need, Monday to Thursday. Cancel anytime.</p>
+      </div>
+      <div class="planos">
+        <article class="plano revela">
+          <p class="plano__nome">Beard</p>
+          <p class="plano__preco"><small>R$</small>89<span>/month</span></p>
+          <ul>
+            <li>Unlimited straight-razor shaves</li>
+            <li>Eyebrow trim included</li>
+            <li>Monday to Thursday</li>
+          </ul>
+          <a class="botao botao--linha" href="#" data-whatsapp="Hi! I'd like to sign up for the Navalha Beard plan.">Get Beard</a>
+        </article>
+        <article class="plano plano--destaque revela">
+          <p class="plano__fita">most popular</p>
+          <p class="plano__nome">Complete</p>
+          <p class="plano__preco"><small>R$</small>189<span>/month</span></p>
+          <ul>
+            <li>Unlimited hair and beard</li>
+            <li>Eyebrow trim and hair treatment included</li>
+            <li>Priority booking on Saturdays</li>
+            <li>10% off products</li>
+          </ul>
+          <a class="botao" href="#" data-whatsapp="Hi! I'd like to sign up for the Navalha Complete plan.">Get Complete</a>
+        </article>
+        <article class="plano revela">
+          <p class="plano__nome">Hair</p>
+          <p class="plano__preco"><small>R$</small>119<span>/month</span></p>
+          <ul>
+            <li>Unlimited haircuts</li>
+            <li>Touch-ups between cuts</li>
+            <li>Monday to Thursday</li>
+          </ul>
+          <a class="botao botao--linha" href="#" data-whatsapp="Hi! I'd like to sign up for the Navalha Hair plan.">Get Hair</a>
+        </article>
+      </div>
+      <div class="combos revela">
+        <p class="combos__titulo">One-off combos</p>
+        <ul>
+          <li><b>Cut + beard</b><span>1h10</span><em>R$ 90</em></li>
+          <li><b>Father and son</b><span>1h10</span><em>R$ 90</em></li>
+          <li><b>Groom's day</b><span>2h</span><em>R$ 220</em></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TEAM ============ -->
+  <section class="secao secao--papel" id="equipe">
+    <div class="wrap">
+      <div class="cabeca cabeca--lado">
+        <div>
+          <p class="rotulo">The team</p>
+          <h2 class="titulo-l">Four chairs,<br><em>four styles.</em></h2>
+        </div>
+        <p class="cabeca__texto">Always want the same barber? Just ask for them by name when you book.</p>
+      </div>
+      <div class="equipe">
+        <article class="barbeiro revela">
+          <span class="barbeiro__inicial" aria-hidden="true">C</span>
+          <h3>Caio Moretti</h3>
+          <p class="barbeiro__papel">Founder · 14 years in the chair</p>
+          <p class="barbeiro__forte">Straight-razor shaves and classic cuts</p>
+          <a href="#" data-whatsapp="Hi! I'd like to book with Caio at Navalha.">Book with Caio <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="barbeiro revela">
+          <span class="barbeiro__inicial" aria-hidden="true">L</span>
+          <h3>Léo Bastos</h3>
+          <p class="barbeiro__papel">Barber · 8 years in the chair</p>
+          <p class="barbeiro__forte">Fades, razor cuts and freestyle</p>
+          <a href="#" data-whatsapp="Hi! I'd like to book with Léo at Navalha.">Book with Léo <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="barbeiro revela">
+          <span class="barbeiro__inicial" aria-hidden="true">T</span>
+          <h3>Tiago Rocha</h3>
+          <p class="barbeiro__papel">Barber · 10 years in the chair</p>
+          <p class="barbeiro__forte">Scissor work, long hair and kids</p>
+          <a href="#" data-whatsapp="Hi! I'd like to book with Tiago at Navalha.">Book with Tiago <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="barbeiro revela">
+          <span class="barbeiro__inicial" aria-hidden="true">D</span>
+          <h3>Diego Lins</h3>
+          <p class="barbeiro__papel">Barber · 6 years in the chair</p>
+          <p class="barbeiro__forte">Pigmentation, highlights and platinum</p>
+          <a href="#" data-whatsapp="Hi! I'd like to book with Diego at Navalha.">Book with Diego <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY ============ -->
+  <section class="galeria" aria-label="Photos of the barbershop">
+    <figure class="galeria__item galeria__item--largo revela"><img src="img/salao-800.webp" srcset="img/salao-800.webp 800w, img/salao.webp 1600w" sizes="(max-width: 900px) 100vw, 50vw" width="1600" height="1062" loading="lazy" decoding="async" alt="Barbershop floor with a brick wall, mirrors and three leather chairs"></figure>
+    <figure class="galeria__item revela"><img src="img/degrade-800.webp" width="800" height="1199" loading="lazy" decoding="async" alt="Tattooed barber finishing a fade with a straight razor"></figure>
+    <figure class="galeria__item revela"><img src="img/pente-800.webp" width="800" height="1200" loading="lazy" decoding="async" alt="Scissor-and-comb cut, seen from behind the client"></figure>
+    <figure class="galeria__item revela"><img src="img/tesoura-800.webp" width="800" height="1000" loading="lazy" decoding="async" alt="Barber trimming the side of the hair with scissors"></figure>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="secao secao--papel" id="depoimentos">
+    <div class="wrap">
+      <div class="cabeca">
+        <p class="rotulo">Who sits in the chair</p>
+        <h2 class="titulo-l">Clients who <em>come back.</em></h2>
+      </div>
+      <div class="depoimentos">
+        <blockquote class="depo revela">
+          <p class="depo__estrelas" aria-label="5 out of 5 stars">★★★★★</p>
+          <p class="depo__texto">“I've had Caio shave me for three years. The hot towel and a well-handled razor make the week start better.”</p>
+          <footer>Rodrigo F. · Complete member</footer>
+        </blockquote>
+        <blockquote class="depo revela">
+          <p class="depo__estrelas" aria-label="5 out of 5 stars">★★★★★</p>
+          <p class="depo__texto">“A booked time is a kept time. I arrive, sit down and walk out in forty minutes with the fade done right.”</p>
+          <footer>Felipe A. · client since 2020</footer>
+        </blockquote>
+        <blockquote class="depo revela">
+          <p class="depo__estrelas" aria-label="5 out of 5 stars">★★★★★</p>
+          <p class="depo__texto">“I bring my son along for the father-and-son combo. It's become our Saturday thing.”</p>
+          <footer>Marcos V. · Moema</footer>
+        </blockquote>
+      </div>
+      <p class="nota-exemplo">Sample testimonials: replace them with your clients' reviews.</p>
+    </div>
+  </section>
+
+  <!-- ============ BOOKING ============ -->
+  <section class="agendar" id="agendar">
+    <div class="wrap agendar__grade">
+      <div>
+        <p class="rotulo">Booking</p>
+        <h2 class="titulo-l">Your appointment in<br><em>three messages.</em></h2>
+      </div>
+      <ol class="passos">
+        <li class="revela"><span>01</span><div><b>Choose the service</b><p>Cut, beard, combo or membership.</p></div></li>
+        <li class="revela"><span>02</span><div><b>Send the day and barber</b><p>Tell us the best time and who you'd like to cut with.</p></div></li>
+        <li class="revela"><span>03</span><div><b>Get your confirmation</b><p>We reply within minutes with your reserved time.</p></div></li>
+      </ol>
+      <a class="botao botao--grande" href="#" data-whatsapp="Hi! I'd like to book an appointment at Navalha. Service: ___ · Day: ___ · Barber: ___">Book on WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- ============ VISIT ============ -->
+  <section class="secao secao--preta" id="visite">
+    <div class="wrap visite">
+      <div class="visite__texto">
+        <p class="rotulo">Address and hours</p>
+        <h2 class="titulo-l">Drop by<br><em>Navalha.</em></h2>
+        <p class="visite__endereco" data-info="endereco">Alameda dos Arapanés, 000 · Moema, São Paulo · SP</p>
+        <p class="visite__contato"><a href="#" data-whatsapp="Hi! I have a question about Navalha." data-info="telefone">(11) 90000-0000</a> · <a href="https://instagram.com/" target="_blank" rel="noopener">@navalha.barbearia</a></p>
+        <div class="hero__acoes">
+          <a class="botao" href="#" data-whatsapp="Hi! I'd like to book an appointment at Navalha.">Book an appointment</a>
+          <a class="botao botao--linha" href="https://maps.google.com/?q=Moema+São+Paulo" target="_blank" rel="noopener">Open in maps</a>
+        </div>
+      </div>
+      <div class="visite__horario revela">
+        <table class="horario" aria-label="Opening hours">
+          <tbody>
+            <tr data-dia="1"><th scope="row">Monday</th><td>10am to 8pm</td></tr>
+            <tr data-dia="2"><th scope="row">Tuesday</th><td>9am to 8pm</td></tr>
+            <tr data-dia="3"><th scope="row">Wednesday</th><td>9am to 8pm</td></tr>
+            <tr data-dia="4"><th scope="row">Thursday</th><td>9am to 9pm</td></tr>
+            <tr data-dia="5"><th scope="row">Friday</th><td>9am to 9pm</td></tr>
+            <tr data-dia="6"><th scope="row">Saturday</th><td>8am to 6pm</td></tr>
+            <tr data-dia="0"><th scope="row">Sunday</th><td>Closed</td></tr>
+          </tbody>
+        </table>
+        <figure class="visite__foto">
+          <img src="img/classico-800.webp" srcset="img/classico-800.webp 800w, img/classico.webp 1600w" sizes="(max-width: 900px) 92vw, 40vw" width="1600" height="2323" loading="lazy" decoding="async" alt="Black-and-white barbershop interior, with chairs lined up in front of the mirrors">
+        </figure>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape" data-upw="UPW-NAVALHA-R4X8">
+  <div class="wrap rodape__grade">
+    <a class="marca" href="#inicio">
+      <svg class="marca__icone" viewBox="0 0 40 40" aria-hidden="true"><path d="M8 26 28 6l5 3-19 19Z" /><circle cx="10.5" cy="30.5" r="4" /></svg>
+      <span class="marca__nome">Navalha<small>barbershop · 2012</small></span>
+    </a>
+    <p class="rodape__frase">Cuts, shaves and appointments in Moema.</p>
+    <nav class="rodape__links" aria-label="Footer">
+      <a href="#servicos">Services</a><a href="#assinatura">Membership</a><a href="#equipe">Team</a><a href="#visite">Location</a>
+    </nav>
+  </div>
+  <div class="wrap rodape__base">
+    <span>© <span id="ano">2026</span> Navalha · demo page with fictional data.</span>
+    <span>Made by <a href="https://app.upwardacademy.com.br/app/templates" target="_blank" rel="noopener">Upward Academy</a></span>
+  </div>
+</footer>
+
+<a class="zap-flutuante" href="#" data-whatsapp="Hi! I'd like to book an appointment at Navalha." aria-label="Book on WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3Zm0 23.6a10.6 10.6 0 0 1-5.4-1.5l-.4-.2-3.9 1 1-3.8-.2-.4A10.6 10.6 0 1 1 16 26.6Zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7a.6.6 0 0 0 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8 1 3.9.8a3.3 3.3 0 0 0 2.1-1.5 2.7 2.7 0 0 0 .2-1.5c-.1-.2-.3-.3-.7-.4Z"/></svg>
+</a>
+
+<script src="js/main.en.js"></script>
+</body>
+</html>

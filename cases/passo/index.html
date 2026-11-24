@@ -1,0 +1,533 @@
+<!--
+  Passo · Dance school — page template created by Upward Academy.
+  © 2026 Upward Academy · UPW-PASSO-C3V1 · license __UPW_LICENCA__
+  Use and adaptation for end clients allowed; resale and redistribution prohibited (LICENCA.txt).
+  https://app.upwardacademy.com.br/app/templates
+-->
+<!doctype html>
+<html lang="en" data-upw="UPW-PASSO-C3V1">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Passo · Dance school in Perdizes</title>
+  <meta name="description" content="Ballet, jazz, contemporary dance, hip hop, ballroom and kids' classes. Classes by age and level, a year-end show and a free trial class.">
+  <meta name="author" content="Upward Academy">
+  <meta name="copyright" content="© 2026 Upward Academy">
+  <meta name="upw-template" content="UPW-PASSO-C3V1">
+  <meta name="upw-licenca" content="__UPW_LICENCA__">
+  <meta property="og:title" content="Passo · Dance school">
+  <meta property="og:description" content="Six dance styles, classes from age 3 and a free trial class.">
+  <meta property="og:image" content="img/palco.webp">
+  <meta name="theme-color" content="#14081f">
+  <link rel="alternate" hreflang="pt" href="pt.html">
+  <link rel="alternate" hreflang="en" href="index.html">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%2314081f'/%3E%3Cpath d='M18 46 30 18h6L24 46z M34 46l8-18h6l-8 18z' fill='%23ff4d8d'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebPage","name":"Passo · Dance school","inLanguage":"en","creator":{"@type":"Organization","name":"Upward Academy","url":"https://app.upwardacademy.com.br/app/templates"},"copyrightHolder":{"@type":"Organization","name":"Upward Academy"},"identifier":"UPW-PASSO-C3V1"}
+  </script>
+</head>
+<body>
+
+<header class="topo" id="topo">
+  <div class="topo__barra">
+    <a class="marca" href="#inicio" aria-label="Passo, back to top">
+      <svg class="marca__icone" viewBox="0 0 32 32" aria-hidden="true"><path d="M7 26 15 6h4L11 26z"/><path d="M17 26l6-13h4l-6 13z"/></svg>
+      <span>passo</span>
+    </a>
+    <nav class="menu" id="menu" aria-label="Main">
+      <a href="#modalidades">Styles</a>
+      <a href="#turmas">Classes</a>
+      <a href="#horarios">Schedule</a>
+      <a href="#planos">Plans</a>
+      <a href="#espetaculo">Show</a>
+      <a href="#duvidas">FAQ</a>
+    </nav>
+    <a class="botao botao--pequeno topo__cta" href="#experimental">Free class</a>
+    <button class="topo__abrir" id="abrir" aria-label="Open the menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="inicio">
+    <div class="hero__quadro">
+      <img class="hero__foto" src="img/palco.webp" srcset="img/palco-800.webp 800w, img/palco.webp 1600w" sizes="100vw" width="1600" height="1060" alt="Contemporary dancers lying on the stage floor under pink and blue light" fetchpriority="high">
+      <div class="hero__conteudo">
+        <p class="etiqueta surge"><span class="ponto"></span>2027 enrollment open · Perdizes, SP</p>
+        <h1 class="hero__titulo surge">
+          <span class="sr">Dance ballet, jazz, hip hop, ballroom and much more, at your own pace.</span>
+          <span class="hero__linha" aria-hidden="true">Dance</span>
+          <span class="hero__linha hero__linha--gira" aria-hidden="true"><span class="gira" id="gira">ballet</span></span>
+          <span class="hero__linha hero__linha--fina" aria-hidden="true">at your pace.</span>
+        </h1>
+        <div class="hero__base surge">
+          <p class="hero__lead">Six dance styles, classes from age 3 and teachers who remember your name. Nobody needs to arrive knowing how: the first class is on us.</p>
+          <div class="hero__acoes">
+            <a class="botao" href="#experimental">Book a free class <span class="botao__seta" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+            <a class="botao botao--vidro" href="#horarios">See the schedule</a>
+          </div>
+        </div>
+      </div>
+      <aside class="hero__cartao surge" aria-label="Next class with open spots">
+        <p class="mini">Next class with open spots</p>
+        <p class="hero__cartao-titulo">Adult jazz · beginner</p>
+        <p class="hero__cartao-hora">Tue &amp; Thu · 7:30pm</p>
+        <p class="hero__cartao-vagas"><span class="barra"><span style="width:72%"></span></span> 4 spots</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ STRIP ============ -->
+  <div class="faixa" aria-hidden="true">
+    <div class="faixa__inclina" id="faixa">
+      <div class="faixa__trilho">
+        <span>Ballet</span><i>✶</i><span class="vazado">Jazz</span><i>✶</i><span>Hip hop</span><i>✶</i><span class="vazado">Contemporary</span><i>✶</i><span>Ballroom</span><i>✶</i><span class="vazado">Baby class</span><i>✶</i>
+        <span>Ballet</span><i>✶</i><span class="vazado">Jazz</span><i>✶</i><span>Hip hop</span><i>✶</i><span class="vazado">Contemporary</span><i>✶</i><span>Ballroom</span><i>✶</i><span class="vazado">Baby class</span><i>✶</i>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ NUMBERS ============ -->
+  <section class="numeros wrap" aria-label="The school in numbers">
+    <div class="numero revela"><strong><span class="conta" data-ate="6">6</span></strong><span>dance styles under one roof</span></div>
+    <div class="numero revela"><strong><span class="conta" data-ate="3">3</span>+</strong><span>years: age of our youngest class</span></div>
+    <div class="numero revela"><strong><span class="conta" data-ate="14">14</span></strong><span>students max per class</span></div>
+    <div class="numero revela"><strong><span class="conta" data-ate="3">3</span></strong><span>studios with sprung floors and mirrors</span></div>
+  </section>
+
+  <!-- ============ STYLES ============ -->
+  <section class="secao" id="modalidades">
+    <div class="wrap">
+      <div class="cabeca">
+        <p class="etiqueta revela"><span class="ponto"></span>01 · Styles</p>
+        <h2 class="titulo-l revela">Choose where<br><span class="rosa">to start moving.</span></h2>
+        <p class="cabeca__texto revela">Every style has a path from beginner to advanced. You can take two at the same time, and lots of people do.</p>
+      </div>
+
+      <div class="bento">
+        <article class="mod mod--foto mod--alta revela">
+          <img src="img/ballet.webp" srcset="img/ballet-800.webp 800w, img/ballet.webp 1600w" sizes="(max-width: 760px) 92vw, 40vw" width="1600" height="1066" loading="lazy" alt="Ballerina at the barre, in black and white, with strong light coming through the window">
+          <div class="mod__texto">
+            <span class="mod__num">01</span>
+            <h3>Classical ballet</h3>
+            <p>Foundations, posture and musicality. A progressive method, from barre to center, with pointe only when the body is ready.</p>
+            <ul class="tags"><li>From age 4</li><li>Adults too</li></ul>
+          </div>
+        </article>
+        <article class="mod mod--foto revela">
+          <img src="img/jazz.webp" srcset="img/jazz-800.webp 800w, img/jazz.webp 1600w" sizes="(max-width: 760px) 92vw, 30vw" width="1600" height="1066" loading="lazy" alt="Jazz class dancing a routine in front of the studio mirror">
+          <div class="mod__texto">
+            <span class="mod__num">02</span>
+            <h3>Jazz</h3>
+            <p>Energy, turns and choreography from day one.</p>
+          </div>
+        </article>
+        <article class="mod mod--foto mod--alta-dir revela">
+          <img src="img/hiphop.webp" srcset="img/hiphop-800.webp 800w, img/hiphop.webp 1600w" sizes="(max-width: 760px) 92vw, 30vw" width="1600" height="2400" loading="lazy" alt="Hip hop dancer posing in sunglasses and sneakers against a gray background">
+          <div class="mod__texto">
+            <span class="mod__num">04</span>
+            <h3>Hip hop</h3>
+            <p>Grooves, freestyle and friendly battles at the end of the month.</p>
+          </div>
+        </article>
+        <article class="mod mod--foto mod--clara revela">
+          <img src="img/contemporanea.webp" srcset="img/contemporanea-800.webp 800w, img/contemporanea.webp 1600w" sizes="(max-width: 760px) 92vw, 30vw" width="1600" height="1319" loading="lazy" alt="Dancer in black in a contemporary movement, arms open, in a white studio">
+          <div class="mod__texto">
+            <span class="mod__num">03</span>
+            <h3>Contem&shy;porary dance</h3>
+            <p>Floor work, improvisation and creation. For those who want to express themselves.</p>
+          </div>
+        </article>
+        <article class="mod mod--cor revela">
+          <div class="mod__texto">
+            <span class="mod__num">05</span>
+            <h3>Ballroom dance</h3>
+            <p>Forró, samba de gafieira and zouk. No partner needed: the class rotates.</p>
+            <ul class="tags"><li>Dance party on Fridays</li></ul>
+          </div>
+          <svg class="mod__desenho" viewBox="0 0 200 120" aria-hidden="true"><path d="M10 100c30-80 60-80 90-40s60 40 90-40"/><path d="M10 110c30-80 60-80 90-40s60 40 90-40" opacity=".4"/></svg>
+        </article>
+        <article class="mod mod--rosa revela">
+          <div class="mod__texto">
+            <span class="mod__num">06</span>
+            <h3>Kids and baby class</h3>
+            <p>Ages 3 to 6: play with music, coordination and lots of imagination. Parents watch the last class of the month.</p>
+          </div>
+          <span class="mod__grande" aria-hidden="true">3+</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CLASSES ============ -->
+  <section class="secao secao--clara" id="turmas">
+    <div class="wrap turmas">
+      <div class="turmas__lado">
+        <p class="etiqueta etiqueta--escura revela"><span class="ponto"></span>02 · Classes</p>
+        <h2 class="titulo-l revela">The right class for your age.<br><span class="rosa-escuro">The right level for your body.</span></h2>
+        <p class="revela">In the trial class, the teacher watches and suggests your level. No test, no pressure. You move up when you're ready, not when the calendar says so.</p>
+        <figure class="turmas__foto revela">
+          <img src="img/galpao.webp" srcset="img/galpao-800.webp 800w, img/galpao.webp 1600w" sizes="(max-width: 900px) 92vw, 40vw" width="1600" height="1199" loading="lazy" alt="Large dance studio in a brick warehouse, with wooden floors and arched windows">
+          <figcaption>Studio 1 · 120 m² of sprung floor</figcaption>
+        </figure>
+      </div>
+      <div class="turmas__lista">
+        <article class="turma revela">
+          <span class="turma__idade">3–5</span>
+          <div><h3>Baby class</h3><p>Musicality, coordination and circle games. 45-minute classes.</p></div>
+          <ul class="niveis" aria-label="Levels"><li class="on">Single</li></ul>
+        </article>
+        <article class="turma revela">
+          <span class="turma__idade">6–10</span>
+          <div><h3>Kids</h3><p>Ballet, jazz and hip hop with solid technique and lots of choreography.</p></div>
+          <ul class="niveis" aria-label="Levels"><li class="on">Beg.</li><li class="on">Int.</li></ul>
+        </article>
+        <article class="turma revela">
+          <span class="turma__idade">11–15</span>
+          <div><h3>Teen</h3><p>Stronger technique, group creation and preparation for festivals.</p></div>
+          <ul class="niveis" aria-label="Levels"><li class="on">Beg.</li><li class="on">Int.</li><li class="on">Adv.</li></ul>
+        </article>
+        <article class="turma revela">
+          <span class="turma__idade">16+</span>
+          <div><h3>Adult</h3><p>For those who've never danced, those who stopped and those who never stop.</p></div>
+          <ul class="niveis" aria-label="Levels"><li class="on">Beg.</li><li class="on">Int.</li><li class="on">Adv.</li></ul>
+        </article>
+        <article class="turma revela">
+          <span class="turma__idade">60+</span>
+          <div><h3>Golden years</h3><p>Ballroom dance and stretching at a gentle pace. Plenty of laughs guaranteed.</p></div>
+          <ul class="niveis" aria-label="Levels"><li class="on">Open</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SCHEDULE ============ -->
+  <section class="secao" id="horarios">
+    <div class="wrap">
+      <div class="cabeca cabeca--linha">
+        <div>
+          <p class="etiqueta revela"><span class="ponto"></span>03 · Class schedule</p>
+          <h2 class="titulo-l revela">The <span class="rosa">whole</span> week dances.</h2>
+        </div>
+        <div class="filtros revela" role="group" aria-label="Filter by style">
+          <button class="filtro is-ativo" data-filtro="todas" aria-pressed="true">All</button>
+          <button class="filtro" data-filtro="ballet" aria-pressed="false">Ballet</button>
+          <button class="filtro" data-filtro="jazz" aria-pressed="false">Jazz</button>
+          <button class="filtro" data-filtro="contemp" aria-pressed="false">Contemp.</button>
+          <button class="filtro" data-filtro="hiphop" aria-pressed="false">Hip hop</button>
+          <button class="filtro" data-filtro="salao" aria-pressed="false">Ballroom</button>
+          <button class="filtro" data-filtro="infantil" aria-pressed="false">Kids</button>
+        </div>
+      </div>
+
+      <div class="grade revela" id="grade">
+        <div class="dia"><h3>Mon</h3><ul>
+          <li data-mod="infantil"><time>9:00am</time>Baby class</li>
+          <li data-mod="ballet"><time>5:30pm</time>Ballet kids</li>
+          <li data-mod="jazz"><time>7:00pm</time>Jazz teen</li>
+          <li data-mod="contemp"><time>8:30pm</time>Adult contemporary</li>
+        </ul></div>
+        <div class="dia"><h3>Tue</h3><ul>
+          <li data-mod="ballet"><time>8:00am</time>Adult ballet beg.</li>
+          <li data-mod="hiphop"><time>6:00pm</time>Hip hop kids</li>
+          <li data-mod="jazz"><time>7:30pm</time>Adult jazz beg.</li>
+          <li data-mod="salao"><time>8:45pm</time>Forró</li>
+        </ul></div>
+        <div class="dia"><h3>Wed</h3><ul>
+          <li data-mod="infantil"><time>9:00am</time>Baby class</li>
+          <li data-mod="ballet"><time>5:30pm</time>Ballet kids</li>
+          <li data-mod="hiphop"><time>7:00pm</time>Hip hop teen</li>
+          <li data-mod="contemp"><time>8:30pm</time>Adult contemporary</li>
+        </ul></div>
+        <div class="dia"><h3>Thu</h3><ul>
+          <li data-mod="ballet"><time>8:00am</time>Adult ballet beg.</li>
+          <li data-mod="salao"><time>3:00pm</time>Golden years 60+</li>
+          <li data-mod="jazz"><time>7:30pm</time>Adult jazz beg.</li>
+          <li data-mod="salao"><time>8:45pm</time>Samba de gafieira</li>
+        </ul></div>
+        <div class="dia"><h3>Fri</h3><ul>
+          <li data-mod="ballet"><time>6:00pm</time>Teen ballet adv.</li>
+          <li data-mod="hiphop"><time>7:30pm</time>Adult hip hop</li>
+          <li data-mod="salao"><time>9:00pm</time>House dance party</li>
+        </ul></div>
+        <div class="dia"><h3>Sat</h3><ul>
+          <li data-mod="infantil"><time>9:00am</time>Baby class</li>
+          <li data-mod="infantil"><time>10:00am</time>Kids mix</li>
+          <li data-mod="jazz"><time>11:00am</time>Adult jazz int.</li>
+          <li data-mod="salao"><time>2:00pm</time>Zouk</li>
+        </ul></div>
+      </div>
+      <p class="nota">Sample schedule. The full, up-to-date timetable is available from the front desk on WhatsApp.</p>
+    </div>
+  </section>
+
+  <!-- ============ PLANS ============ -->
+  <section class="secao secao--planos" id="planos">
+    <div class="wrap">
+      <div class="cabeca cabeca--centro">
+        <p class="etiqueta revela"><span class="ponto"></span>04 · Plans</p>
+        <h2 class="titulo-l revela">Pay for how much<br><span class="rosa">you want to dance.</span></h2>
+      </div>
+      <div class="planos">
+        <article class="plano revela">
+          <p class="plano__nome">Once a week</p>
+          <p class="plano__preco"><small>R$</small>189<small>/month</small></p>
+          <p class="plano__desc">One style, one class a week. Good for starting without rushing.</p>
+          <ul class="plano__itens"><li>1 class of 60 min per week</li><li>1 make-up class per month</li><li>Part in the year-end show</li></ul>
+          <a class="botao botao--linha" href="#" data-whatsapp="Hi! I'd like to know more about Passo's once-a-week plan.">I want this one</a>
+        </article>
+        <article class="plano plano--destaque revela">
+          <p class="plano__selo">Most popular</p>
+          <p class="plano__nome">Twice a week</p>
+          <p class="plano__preco"><small>R$</small>279<small>/month</small></p>
+          <p class="plano__desc">The pace at which the body really learns. You can mix styles.</p>
+          <ul class="plano__itens"><li>2 classes per week</li><li>Mix up to 2 styles</li><li>2 make-up classes per month</li><li>Part in the year-end show</li></ul>
+          <a class="botao" href="#" data-whatsapp="Hi! I'd like to know more about Passo's twice-a-week plan.">I want this one <span class="botao__seta" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        </article>
+        <article class="plano revela">
+          <p class="plano__nome">Unlimited pass</p>
+          <p class="plano__preco"><small>R$</small>389<small>/month</small></p>
+          <p class="plano__desc">Every class on the schedule at your level, as many as you like. For those who live here.</p>
+          <ul class="plano__itens"><li>Unlimited classes at your level</li><li>Friday dance party included</li><li>10% off workshops</li></ul>
+          <a class="botao botao--linha" href="#" data-whatsapp="Hi! I'd like to know more about Passo's unlimited pass.">I want this one</a>
+        </article>
+      </div>
+      <p class="nota nota--centro">Sample prices. One-time enrollment fee of R$ 80 · siblings get 10% off · six-month plan with 1 month free.</p>
+    </div>
+  </section>
+
+  <!-- ============ TRIAL CLASS ============ -->
+  <section class="secao experimental" id="experimental">
+    <div class="wrap">
+      <div class="exp revela">
+        <img class="exp__foto" src="img/sala.webp" srcset="img/sala-800.webp 800w, img/sala.webp 1600w" sizes="(max-width: 900px) 92vw, 1200px" width="1600" height="1326" loading="lazy" alt="Sunlit dance studio with wooden floors, plants and a mirror">
+        <div class="exp__conteudo">
+          <p class="etiqueta"><span class="ponto"></span>05 · Trial class</p>
+          <h2 class="titulo-xl-2">The first one<br>is free.</h2>
+          <ol class="exp__passos">
+            <li><strong>Choose</strong> the style and time on the schedule.</li>
+            <li><strong>Send</strong> us a message: we'll confirm your spot.</li>
+            <li><strong>Come</strong> in comfortable clothes. We'll take care of the rest.</li>
+          </ol>
+          <a class="botao" href="#matricula">I want my free class <span class="botao__seta" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TEACHERS ============ -->
+  <section class="secao" id="professores">
+    <div class="wrap">
+      <div class="cabeca cabeca--linha">
+        <div>
+          <p class="etiqueta revela"><span class="ponto"></span>06 · Teachers</p>
+          <h2 class="titulo-l revela">The ones who<br><span class="rosa">count the beats.</span></h2>
+        </div>
+        <p class="cabeca__texto revela">Fictional team for demonstration. Replace them with your school's real names, photos and stories.</p>
+      </div>
+      <div class="profs">
+        <article class="prof revela" style="--c:#ff4d8d">
+          <span class="prof__mono" aria-hidden="true">LV</span>
+          <h3>Lívia Valente</h3>
+          <p class="prof__mod">Ballet and baby class</p>
+          <p>A dance graduate, she has taught children for over a decade and still gets emotional at every show.</p>
+        </article>
+        <article class="prof revela" style="--c:#8b5cff">
+          <span class="prof__mono" aria-hidden="true">TM</span>
+          <h3>Téo Moraes</h3>
+          <p class="prof__mod">Hip hop</p>
+          <p>He came up through street battles. He teaches fundamentals first and style later, always with the class in a circle.</p>
+        </article>
+        <article class="prof revela" style="--c:#ffb547">
+          <span class="prof__mono" aria-hidden="true">RA</span>
+          <h3>Renata Abreu</h3>
+          <p class="prof__mod">Jazz and contemporary</p>
+          <p>Choreographer of the school's shows. She believes every body has its own dance waiting to come out.</p>
+        </article>
+        <article class="prof revela" style="--c:#3ee0b0">
+          <span class="prof__mono" aria-hidden="true">CF</span>
+          <h3>Caio and Flor</h3>
+          <p class="prof__mod">Ballroom dance</p>
+          <p>A couple on the dance floor and in life. They lead the Friday party and get even the shyest person dancing.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SHOW ============ -->
+  <section class="espetaculo" id="espetaculo">
+    <div class="espetaculo__quadro revela">
+      <img src="img/barra.webp" srcset="img/barra-800.webp 800w, img/barra.webp 1600w" sizes="100vw" width="1600" height="1067" loading="lazy" alt="Dancers rehearsing on stage, in black and white, with dark curtains in the background">
+      <div class="espetaculo__conteudo">
+        <p class="etiqueta"><span class="ponto"></span>07 · Year-end show</p>
+        <p class="espetaculo__data"><span>13</span><span class="vazado">&amp;</span><span>14</span></p>
+        <p class="espetaculo__mes">December · partner theater (venue to be announced)</p>
+        <h2 class="titulo-l">Every student takes the stage.</h2>
+        <p class="espetaculo__texto">From baby class to advanced adults, every class builds its own choreography throughout the semester. Costumes on loan from the school, a dress rehearsal with everything a real stage has, and an audience that gives a standing ovation.</p>
+        <ul class="tags tags--claro"><li>Participation included in all plans</li><li>Tickets for the family</li><li>Photos and video of the performance</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="secao" id="depoimentos">
+    <div class="wrap">
+      <div class="cabeca">
+        <p class="etiqueta revela"><span class="ponto"></span>08 · Who dances here</p>
+        <h2 class="titulo-l revela">What they say <span class="rosa">in the locker room.</span></h2>
+      </div>
+      <div class="depos">
+        <figure class="depo revela">
+          <p class="depo__aviso">Sample testimonial</p>
+          <blockquote>“I started at 41 without ever having taken a class. By the third week I knew the whole jazz routine.”</blockquote>
+          <figcaption><span class="avatar" aria-hidden="true">M</span>Mariana, adult jazz</figcaption>
+        </figure>
+        <figure class="depo depo--rosa revela">
+          <p class="depo__aviso">Sample testimonial</p>
+          <blockquote>“My daughter counts the days until Saturday's class. And the December show had the whole family in tears.”</blockquote>
+          <figcaption><span class="avatar" aria-hidden="true">P</span>Paulo, Alice's dad (age 5)</figcaption>
+        </figure>
+        <figure class="depo revela">
+          <p class="depo__aviso">Sample testimonial</p>
+          <blockquote>“I came for the hip hop and stayed for the crew. Téo pushes the fundamentals, but class feels like a party.”</blockquote>
+          <figcaption><span class="avatar" aria-hidden="true">G</span>Gabriel, teen hip hop</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="secao secao--faq" id="duvidas">
+    <div class="wrap faq">
+      <div class="faq__lado">
+        <p class="etiqueta revela"><span class="ponto"></span>09 · FAQ</p>
+        <h2 class="titulo-l revela">Before your<br><span class="rosa">first step.</span></h2>
+        <p class="revela">Can't find yours? Ask on WhatsApp, the front desk replies the same day.</p>
+      </div>
+      <div class="faq__lista">
+        <details class="pergunta revela">
+          <summary>I've never danced. Can I start in an adult class?</summary>
+          <p>You can, and you should. Beginner classes are made exactly for people who have never danced or stopped a long time ago. The teacher adapts the movements and nobody gets left behind.</p>
+        </details>
+        <details class="pergunta revela">
+          <summary>What should I wear to my first class?</summary>
+          <p>Comfortable clothes that let you move and a water bottle. For ballet, tights and ballet slippers help, but they're not required for the trial class.</p>
+        </details>
+        <details class="pergunta revela">
+          <summary>How do make-up classes work?</summary>
+          <p>Let the front desk know at least 2 hours in advance and make it up in another class of the same level within the same month. The number of make-ups depends on your plan.</p>
+        </details>
+        <details class="pergunta revela">
+          <summary>Does the show cost extra?</summary>
+          <p>Participation is included in every plan and the costume is lent by the school. Audience tickets are sold separately, at a family-friendly price.</p>
+        </details>
+        <details class="pergunta revela">
+          <summary>Can parents watch the kids' classes?</summary>
+          <p>So the kids can focus, classes are closed. On the last class of each month the studio opens for families to watch.</p>
+        </details>
+        <details class="pergunta revela">
+          <summary>Is there a minimum commitment or a cancellation fee?</summary>
+          <p>Not on the monthly plan. Just let us know by the 20th so you aren't charged for the following month. The six-month plan has a discount and its own rules, explained at enrollment.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ENROLLMENT ============ -->
+  <section class="secao matricula" id="matricula">
+    <div class="wrap matricula__grade">
+      <div class="matricula__texto">
+        <p class="etiqueta revela"><span class="ponto"></span>10 · Enrollment</p>
+        <h2 class="titulo-xl-2 revela">Ready<br><span class="rosa">to dance?</span></h2>
+        <p class="revela">Fill this out and the message goes straight to our WhatsApp, ready to send. The front desk confirms your trial class or enrollment. Nothing is saved on the site.</p>
+      </div>
+      <form class="ficha revela" id="ficha" novalidate>
+        <div class="ficha__campo">
+          <label for="f-nome">Your name</label>
+          <input id="f-nome" name="nome" type="text" autocomplete="given-name" placeholder="What should we call you?" required>
+        </div>
+        <div class="ficha__dupla">
+          <div class="ficha__campo">
+            <label for="f-mod">Style</label>
+            <select id="f-mod" name="modalidade">
+              <option>Ballet</option><option>Jazz</option><option>Contemporary dance</option><option>Hip hop</option><option>Ballroom dance</option><option>Kids / baby class</option><option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="ficha__campo">
+            <label for="f-idade">Who is it for?</label>
+            <select id="f-idade" name="idade">
+              <option>For me (adult)</option><option>Child aged 3 to 5</option><option>Child aged 6 to 10</option><option>Teenager</option><option>60+</option>
+            </select>
+          </div>
+        </div>
+        <fieldset class="ficha__opcoes">
+          <legend>I'd like</legend>
+          <label><input type="radio" name="quero" value="book the free trial class" checked><span>Free class</span></label>
+          <label><input type="radio" name="quero" value="enroll"><span>Enrollment</span></label>
+        </fieldset>
+        <p class="ficha__erro" id="ficha-erro" role="alert"></p>
+        <button class="botao botao--largo" type="submit">Send via WhatsApp <span class="botao__seta" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ ADDRESS ============ -->
+  <section class="secao secao--sem-topo" id="endereco">
+    <div class="wrap endereco">
+      <div class="mapa revela" aria-hidden="true">
+        <svg class="mapa__ruas" viewBox="0 0 600 520" preserveAspectRatio="xMidYMid slice">
+          <path d="M-20 140 C 120 120, 260 180, 620 110"/><path d="M-20 360 C 160 330, 380 400, 620 340"/>
+          <path d="M150 -20 C 170 160, 120 340, 190 540"/><path d="M420 -20 C 380 180, 470 330, 430 540"/>
+          <path class="fina" d="M-20 250 H 620"/><path class="fina" d="M300 -20 V 540"/><path class="fina" d="M-20 450 C 200 430, 400 470, 620 440"/>
+          <path class="fina" d="M60 -20 L 80 540"/><path class="fina" d="M530 -20 L 560 540"/>
+        </svg>
+        <span class="mapa__metro">M</span>
+        <span class="mapa__pino"><svg viewBox="0 0 32 32"><path d="M7 26 15 6h4L11 26z"/><path d="M17 26l6-13h4l-6 13z"/></svg></span>
+        <span class="mapa__rotulo">Passo · Rua do Exemplo, 000</span>
+        <span class="mapa__aviso">illustrative map</span>
+      </div>
+      <div class="endereco__info revela">
+        <p class="etiqueta"><span class="ponto"></span>11 · Where we are</p>
+        <h2 class="titulo-l">Rua do Exemplo, 000<br><span class="rosa">Perdizes, SP</span></h2>
+        <dl class="endereco__dados">
+          <div><dt>Front desk</dt><dd>Mon to Fri, 8am to 10pm<br>Sat, 8am to 3pm</dd></div>
+          <div><dt>Getting here</dt><dd>5 min walk from the metro station (example) · bike rack at the entrance</dd></div>
+          <div><dt>Contact</dt><dd>(11) 90000-0000<br>@passo.danca (example)</dd></div>
+        </dl>
+        <div class="hero__acoes">
+          <a class="botao" href="#" data-whatsapp="Hi! I'd like to know how to get to Passo.">Message us on WhatsApp <span class="botao__seta" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+          <a class="botao botao--linha" href="https://www.google.com/maps/search/?api=1&amp;query=Perdizes%2C%20S%C3%A3o%20Paulo" target="_blank" rel="noopener">Open in maps</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape" data-upw="UPW-PASSO-C3V1">
+  <div class="wrap rodape__grade">
+    <a class="marca" href="#inicio">
+      <svg class="marca__icone" viewBox="0 0 32 32" aria-hidden="true"><path d="M7 26 15 6h4L11 26z"/><path d="M17 26l6-13h4l-6 13z"/></svg>
+      <span>passo</span>
+    </a>
+    <nav class="rodape__links" aria-label="Footer">
+      <a href="#modalidades">Styles</a><a href="#turmas">Classes</a><a href="#horarios">Schedule</a><a href="#planos">Plans</a><a href="#espetaculo">Show</a><a href="#matricula">Enrollment</a>
+    </nav>
+  </div>
+  <div class="wrap rodape__base">
+    <span>© <span id="ano">2026</span> Passo · demo page with fictional data.</span>
+    <span>Made by <a href="https://app.upwardacademy.com.br/app/templates" target="_blank" rel="noopener">Upward Academy</a></span>
+  </div>
+  <p class="rodape__marca" aria-hidden="true">passo</p>
+</footer>
+
+<a class="zap-flutuante" href="#" data-whatsapp="Hi! I'd like to book a trial class at Passo." aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3Zm0 23.6a10.6 10.6 0 0 1-5.4-1.5l-.4-.2-3.9 1 1-3.8-.2-.4A10.6 10.6 0 1 1 16 26.6Zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7a.6.6 0 0 0 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8 1 3.9.8a3.3 3.3 0 0 0 2.1-1.5 2.7 2.7 0 0 0 .2-1.5c-.1-.2-.3-.3-.7-.4Z"/></svg>
+</a>
+
+<script src="js/main.en.js"></script>
+</body>
+</html>

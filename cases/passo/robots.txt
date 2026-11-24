@@ -1,0 +1,3 @@
+# Passo · template UPW-PASSO-C3V1 · licença __UPW_LICENCA__ · © 2026 Upward Academy
+User-agent: *
+Allow: /

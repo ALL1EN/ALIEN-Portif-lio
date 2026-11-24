@@ -1,0 +1,321 @@
+<!--
+  Navalha · Barbearia — template de página criado por Upward Academy.
+  © 2026 Upward Academy · UPW-NAVALHA-R4X8 · licença __UPW_LICENCA__
+  Uso e adaptação para clientes finais permitidos; revenda e redistribuição proibidas (LICENCA.txt).
+  https://app.upwardacademy.com.br/app/templates
+-->
+<!doctype html>
+<html lang="pt-BR" data-upw="UPW-NAVALHA-R4X8">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Navalha · Barbearia em Moema</title>
+  <meta name="description" content="Corte, barba na navalha com toalha quente e assinatura mensal. Hora marcada pelo WhatsApp, sem fila.">
+  <meta name="author" content="Upward Academy">
+  <meta name="copyright" content="© 2026 Upward Academy">
+  <meta name="upw-template" content="UPW-NAVALHA-R4X8">
+  <meta name="upw-licenca" content="__UPW_LICENCA__">
+  <meta property="og:title" content="Navalha · Barbearia">
+  <meta property="og:description" content="Corte clássico, barba na navalha e hora marcada pelo WhatsApp.">
+  <meta property="og:image" content="img/navalha.webp">
+  <meta name="theme-color" content="#0e0e0d">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230e0e0d'/%3E%3Cpath d='M14 40 44 14l6 4-28 26Z' fill='%23c9a063'/%3E%3Ccircle cx='17' cy='45' r='5' fill='none' stroke='%23c9a063' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Barlow+Condensed:wght@500;600&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebPage","name":"Navalha · Barbearia","creator":{"@type":"Organization","name":"Upward Academy","url":"https://app.upwardacademy.com.br/app/templates"},"copyrightHolder":{"@type":"Organization","name":"Upward Academy"},"identifier":"UPW-NAVALHA-R4X8"}
+  </script>
+</head>
+<body>
+
+<header class="topo" id="topo">
+  <div class="topo__barra wrap">
+    <a class="marca" href="#inicio" aria-label="Navalha Barbearia, voltar ao início">
+      <svg class="marca__icone" viewBox="0 0 40 40" aria-hidden="true"><path d="M8 26 28 6l5 3-19 19Z" /><circle cx="10.5" cy="30.5" r="4" /></svg>
+      <span class="marca__nome">Navalha<small>barbearia · 2012</small></span>
+    </a>
+    <nav class="menu" id="menu" aria-label="Principal">
+      <a href="#servicos">Serviços</a>
+      <a href="#assinatura">Assinatura</a>
+      <a href="#equipe">Equipe</a>
+      <a href="#visite">Endereço</a>
+    </nav>
+    <a class="botao botao--pequeno topo__cta" href="#" data-whatsapp="Olá! Quero agendar um horário na Navalha.">Agendar</a>
+    <button class="topo__abrir" id="abrir" aria-label="Abrir o menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="inicio">
+    <img class="hero__fundo" src="img/navalha.webp" srcset="img/navalha-800.webp 800w, img/navalha.webp 1600w" sizes="100vw" width="1600" height="1066" alt="Barbeiro aparando a barba de um cliente reclinado na cadeira, em luz baixa e quente">
+    <div class="wrap hero__conteudo">
+      <p class="rotulo surge">Barbearia em Moema · São Paulo</p>
+      <h1 class="titulo-xl surge">Corte clássico,<br><em>mão firme.</em></h1>
+      <p class="hero__lead surge">Tesoura, máquina e navalha com toalha quente. Você marca o horário, senta na cadeira na hora certa e sai do jeito que pediu.</p>
+      <div class="hero__acoes surge">
+        <a class="botao" href="#" data-whatsapp="Olá! Quero agendar um horário na Navalha.">Agendar pelo WhatsApp</a>
+        <a class="botao botao--linha" href="#servicos">Ver serviços e preços</a>
+      </div>
+    </div>
+    <p class="hero__hoje surge" aria-live="polite"><span class="ponto"></span><span id="hoje">Seg a sáb · 9h às 20h</span></p>
+  </section>
+
+  <!-- ============ FAIXA ============ -->
+  <div class="faixa">
+    <ul class="wrap faixa__lista">
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h18M7 8l-4 4 4 4" /></svg>Hora marcada, sem fila</li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19c4-1 7-4 9-9l5-5M12 6l6 6" /></svg>Navalha e toalha quente</li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h10v9a5 5 0 0 1-10 0Zm10 3h2a2 2 0 0 1 0 4h-2" /></svg>Café ou cerveja por conta</li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 17h14M7 17V9l5-4 5 4v8" /></svg>Estacionamento conveniado</li>
+    </ul>
+  </div>
+
+  <!-- ============ SERVIÇOS ============ -->
+  <section class="secao secao--papel" id="servicos">
+    <div class="wrap servicos">
+      <div class="servicos__lado">
+        <p class="rotulo">Serviços</p>
+        <h2 class="titulo-l">Do corte à<br><em>barba feita.</em></h2>
+        <p class="cabeca__texto">Tempo de cadeira e preço de cada serviço. Os valores são de exemplo: ajuste no arquivo.</p>
+        <figure class="servicos__foto revela">
+          <img src="img/cadeira-800.webp" srcset="img/cadeira-800.webp 800w, img/cadeira.webp 1600w" sizes="(max-width: 900px) 92vw, 34vw" width="1600" height="2000" loading="lazy" decoding="async" alt="Cadeira de barbeiro clássica em couro preto e metal cromado">
+        </figure>
+      </div>
+      <div class="servicos__listas">
+        <div class="grupo revela">
+          <h3 class="grupo__titulo"><span>I.</span> Cabelo</h3>
+          <ul class="tabela">
+            <li><div><b>Corte social</b><small>Tesoura e máquina, acabamento na navalha</small></div><span class="tempo">40 min</span><span class="preco">R$ 55</span></li>
+            <li><div><b>Degradê</b><small>Do zero ao comprimento que você quiser</small></div><span class="tempo">45 min</span><span class="preco">R$ 60</span></li>
+            <li><div><b>Corte na tesoura</b><small>Para cabelo médio e longo</small></div><span class="tempo">50 min</span><span class="preco">R$ 70</span></li>
+            <li><div><b>Corte infantil</b><small>Até 10 anos, com paciência</small></div><span class="tempo">30 min</span><span class="preco">R$ 45</span></li>
+          </ul>
+        </div>
+        <div class="grupo revela">
+          <h3 class="grupo__titulo"><span>II.</span> Barba</h3>
+          <ul class="tabela">
+            <li><div><b>Barba na navalha</b><small>Toalha quente, óleo pré-barba e pós-barba</small></div><span class="tempo">30 min</span><span class="preco">R$ 45</span></li>
+            <li><div><b>Barba desenhada</b><small>Contorno e alinhamento do bigode</small></div><span class="tempo">20 min</span><span class="preco">R$ 35</span></li>
+            <li><div><b>Pigmentação de barba</b><small>Preenche falhas com aspecto natural</small></div><span class="tempo">25 min</span><span class="preco">R$ 40</span></li>
+          </ul>
+        </div>
+        <div class="grupo revela">
+          <h3 class="grupo__titulo"><span>III.</span> Extras</h3>
+          <ul class="tabela">
+            <li><div><b>Sobrancelha na navalha</b></div><span class="tempo">10 min</span><span class="preco">R$ 20</span></li>
+            <li><div><b>Hidratação capilar</b></div><span class="tempo">20 min</span><span class="preco">R$ 35</span></li>
+            <li><div><b>Luzes ou platinado</b><small>Com avaliação antes</small></div><span class="tempo">2 h</span><span class="preco"><small>a partir de</small> R$ 160</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ASSINATURA ============ -->
+  <section class="secao secao--preta" id="assinatura">
+    <div class="wrap">
+      <div class="cabeca cabeca--centro">
+        <p class="rotulo">Combos e assinatura</p>
+        <h2 class="titulo-l">Cliente da casa<br><em>paga menos.</em></h2>
+        <p class="cabeca__texto">Na assinatura você paga por mês e vem quantas vezes precisar, de segunda a quinta. Cancela quando quiser.</p>
+      </div>
+      <div class="planos">
+        <article class="plano revela">
+          <p class="plano__nome">Barba</p>
+          <p class="plano__preco"><small>R$</small>89<span>/mês</span></p>
+          <ul>
+            <li>Barba na navalha ilimitada</li>
+            <li>Sobrancelha inclusa</li>
+            <li>Segunda a quinta</li>
+          </ul>
+          <a class="botao botao--linha" href="#" data-whatsapp="Olá! Quero assinar o plano Barba da Navalha.">Assinar Barba</a>
+        </article>
+        <article class="plano plano--destaque revela">
+          <p class="plano__fita">mais escolhido</p>
+          <p class="plano__nome">Completo</p>
+          <p class="plano__preco"><small>R$</small>189<span>/mês</span></p>
+          <ul>
+            <li>Cabelo e barba ilimitados</li>
+            <li>Sobrancelha e hidratação inclusas</li>
+            <li>Encaixe preferencial no sábado</li>
+            <li>10% de desconto em produtos</li>
+          </ul>
+          <a class="botao" href="#" data-whatsapp="Olá! Quero assinar o plano Completo da Navalha.">Assinar Completo</a>
+        </article>
+        <article class="plano revela">
+          <p class="plano__nome">Cabelo</p>
+          <p class="plano__preco"><small>R$</small>119<span>/mês</span></p>
+          <ul>
+            <li>Cortes ilimitados</li>
+            <li>Acabamento entre cortes</li>
+            <li>Segunda a quinta</li>
+          </ul>
+          <a class="botao botao--linha" href="#" data-whatsapp="Olá! Quero assinar o plano Cabelo da Navalha.">Assinar Cabelo</a>
+        </article>
+      </div>
+      <div class="combos revela">
+        <p class="combos__titulo">Combos avulsos</p>
+        <ul>
+          <li><b>Corte + barba</b><span>1h10</span><em>R$ 90</em></li>
+          <li><b>Pai e filho</b><span>1h10</span><em>R$ 90</em></li>
+          <li><b>Dia do noivo</b><span>2h</span><em>R$ 220</em></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EQUIPE ============ -->
+  <section class="secao secao--papel" id="equipe">
+    <div class="wrap">
+      <div class="cabeca cabeca--lado">
+        <div>
+          <p class="rotulo">A equipe</p>
+          <h2 class="titulo-l">Quatro cadeiras,<br><em>quatro estilos.</em></h2>
+        </div>
+        <p class="cabeca__texto">Prefere sempre o mesmo barbeiro? É só pedir pelo nome na hora de agendar.</p>
+      </div>
+      <div class="equipe">
+        <article class="barbeiro revela">
+          <span class="barbeiro__inicial" aria-hidden="true">C</span>
+          <h3>Caio Moretti</h3>
+          <p class="barbeiro__papel">Fundador · 14 anos de cadeira</p>
+          <p class="barbeiro__forte">Barba na navalha e cortes clássicos</p>
+          <a href="#" data-whatsapp="Olá! Quero agendar com o Caio na Navalha.">Agendar com Caio <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="barbeiro revela">
+          <span class="barbeiro__inicial" aria-hidden="true">L</span>
+          <h3>Léo Bastos</h3>
+          <p class="barbeiro__papel">Barbeiro · 8 anos de cadeira</p>
+          <p class="barbeiro__forte">Degradê, navalhado e freestyle</p>
+          <a href="#" data-whatsapp="Olá! Quero agendar com o Léo na Navalha.">Agendar com Léo <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="barbeiro revela">
+          <span class="barbeiro__inicial" aria-hidden="true">T</span>
+          <h3>Tiago Rocha</h3>
+          <p class="barbeiro__papel">Barbeiro · 10 anos de cadeira</p>
+          <p class="barbeiro__forte">Tesoura, cabelo longo e infantil</p>
+          <a href="#" data-whatsapp="Olá! Quero agendar com o Tiago na Navalha.">Agendar com Tiago <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="barbeiro revela">
+          <span class="barbeiro__inicial" aria-hidden="true">D</span>
+          <h3>Diego Lins</h3>
+          <p class="barbeiro__papel">Barbeiro · 6 anos de cadeira</p>
+          <p class="barbeiro__forte">Pigmentação, luzes e platinado</p>
+          <a href="#" data-whatsapp="Olá! Quero agendar com o Diego na Navalha.">Agendar com Diego <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALERIA ============ -->
+  <section class="galeria" aria-label="Fotos da barbearia">
+    <figure class="galeria__item galeria__item--largo revela"><img src="img/salao-800.webp" srcset="img/salao-800.webp 800w, img/salao.webp 1600w" sizes="(max-width: 900px) 100vw, 50vw" width="1600" height="1062" loading="lazy" decoding="async" alt="Salão da barbearia com parede de tijolos, espelhos e três cadeiras de couro"></figure>
+    <figure class="galeria__item revela"><img src="img/degrade-800.webp" width="800" height="1199" loading="lazy" decoding="async" alt="Barbeiro tatuado fazendo o acabamento do degradê com navalha"></figure>
+    <figure class="galeria__item revela"><img src="img/pente-800.webp" width="800" height="1200" loading="lazy" decoding="async" alt="Corte na tesoura com pente, visto de trás do cliente"></figure>
+    <figure class="galeria__item revela"><img src="img/tesoura-800.webp" width="800" height="1000" loading="lazy" decoding="async" alt="Barbeiro aparando a lateral do cabelo com tesoura"></figure>
+  </section>
+
+  <!-- ============ DEPOIMENTOS ============ -->
+  <section class="secao secao--papel" id="depoimentos">
+    <div class="wrap">
+      <div class="cabeca">
+        <p class="rotulo">Quem senta na cadeira</p>
+        <h2 class="titulo-l">Cliente que <em>volta.</em></h2>
+      </div>
+      <div class="depoimentos">
+        <blockquote class="depo revela">
+          <p class="depo__estrelas" aria-label="5 de 5 estrelas">★★★★★</p>
+          <p class="depo__texto">“Faço a barba com o Caio há três anos. A toalha quente e a navalha bem passada fazem a semana começar melhor.”</p>
+          <footer>Rodrigo F. · assinante do Completo</footer>
+        </blockquote>
+        <blockquote class="depo revela">
+          <p class="depo__estrelas" aria-label="5 de 5 estrelas">★★★★★</p>
+          <p class="depo__texto">“Horário marcado é horário cumprido. Chego, sento e saio em quarenta minutos com o degradê do jeito certo.”</p>
+          <footer>Felipe A. · cliente desde 2020</footer>
+        </blockquote>
+        <blockquote class="depo revela">
+          <p class="depo__estrelas" aria-label="5 de 5 estrelas">★★★★★</p>
+          <p class="depo__texto">“Levo meu filho junto no combo pai e filho. Virou o nosso programa de sábado.”</p>
+          <footer>Marcos V. · Moema</footer>
+        </blockquote>
+      </div>
+      <p class="nota-exemplo">Depoimentos de exemplo: troque pelos dos seus clientes.</p>
+    </div>
+  </section>
+
+  <!-- ============ AGENDAR ============ -->
+  <section class="agendar" id="agendar">
+    <div class="wrap agendar__grade">
+      <div>
+        <p class="rotulo">Agendamento</p>
+        <h2 class="titulo-l">Seu horário em<br><em>três mensagens.</em></h2>
+      </div>
+      <ol class="passos">
+        <li class="revela"><span>01</span><div><b>Escolha o serviço</b><p>Corte, barba, combo ou assinatura.</p></div></li>
+        <li class="revela"><span>02</span><div><b>Mande dia e barbeiro</b><p>Diga o melhor horário e com quem prefere cortar.</p></div></li>
+        <li class="revela"><span>03</span><div><b>Receba a confirmação</b><p>Respondemos em minutos com o horário reservado.</p></div></li>
+      </ol>
+      <a class="botao botao--grande" href="#" data-whatsapp="Olá! Quero agendar um horário na Navalha. Serviço: ___ · Dia: ___ · Barbeiro: ___">Agendar pelo WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- ============ VISITE ============ -->
+  <section class="secao secao--preta" id="visite">
+    <div class="wrap visite">
+      <div class="visite__texto">
+        <p class="rotulo">Endereço e horário</p>
+        <h2 class="titulo-l">Passa aqui<br><em>na Navalha.</em></h2>
+        <p class="visite__endereco" data-info="endereco">Alameda dos Arapanés, 000 · Moema, São Paulo · SP</p>
+        <p class="visite__contato"><a href="#" data-whatsapp="Olá! Tenho uma dúvida sobre a Navalha." data-info="telefone">(11) 90000-0000</a> · <a href="https://instagram.com/" target="_blank" rel="noopener">@navalha.barbearia</a></p>
+        <div class="hero__acoes">
+          <a class="botao" href="#" data-whatsapp="Olá! Quero agendar um horário na Navalha.">Agendar horário</a>
+          <a class="botao botao--linha" href="https://maps.google.com/?q=Moema+São+Paulo" target="_blank" rel="noopener">Abrir no mapa</a>
+        </div>
+      </div>
+      <div class="visite__horario revela">
+        <table class="horario" aria-label="Horário de funcionamento">
+          <tbody>
+            <tr data-dia="1"><th scope="row">Segunda</th><td>10h às 20h</td></tr>
+            <tr data-dia="2"><th scope="row">Terça</th><td>9h às 20h</td></tr>
+            <tr data-dia="3"><th scope="row">Quarta</th><td>9h às 20h</td></tr>
+            <tr data-dia="4"><th scope="row">Quinta</th><td>9h às 21h</td></tr>
+            <tr data-dia="5"><th scope="row">Sexta</th><td>9h às 21h</td></tr>
+            <tr data-dia="6"><th scope="row">Sábado</th><td>8h às 18h</td></tr>
+            <tr data-dia="0"><th scope="row">Domingo</th><td>Fechado</td></tr>
+          </tbody>
+        </table>
+        <figure class="visite__foto">
+          <img src="img/classico-800.webp" srcset="img/classico-800.webp 800w, img/classico.webp 1600w" sizes="(max-width: 900px) 92vw, 40vw" width="1600" height="2323" loading="lazy" decoding="async" alt="Interior da barbearia em preto e branco, com cadeiras enfileiradas diante dos espelhos">
+        </figure>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape" data-upw="UPW-NAVALHA-R4X8">
+  <div class="wrap rodape__grade">
+    <a class="marca" href="#inicio">
+      <svg class="marca__icone" viewBox="0 0 40 40" aria-hidden="true"><path d="M8 26 28 6l5 3-19 19Z" /><circle cx="10.5" cy="30.5" r="4" /></svg>
+      <span class="marca__nome">Navalha<small>barbearia · 2012</small></span>
+    </a>
+    <p class="rodape__frase">Corte, barba e hora marcada em Moema.</p>
+    <nav class="rodape__links" aria-label="Rodapé">
+      <a href="#servicos">Serviços</a><a href="#assinatura">Assinatura</a><a href="#equipe">Equipe</a><a href="#visite">Endereço</a>
+    </nav>
+  </div>
+  <div class="wrap rodape__base">
+    <span>© <span id="ano">2026</span> Navalha · página de demonstração com dados fictícios.</span>
+    <span>Criada por <a href="https://app.upwardacademy.com.br/app/templates" target="_blank" rel="noopener">Upward Academy</a></span>
+  </div>
+</footer>
+
+<a class="zap-flutuante" href="#" data-whatsapp="Olá! Quero agendar um horário na Navalha." aria-label="Agendar pelo WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3Zm0 23.6a10.6 10.6 0 0 1-5.4-1.5l-.4-.2-3.9 1 1-3.8-.2-.4A10.6 10.6 0 1 1 16 26.6Zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7a.6.6 0 0 0 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8 1 3.9.8a3.3 3.3 0 0 0 2.1-1.5 2.7 2.7 0 0 0 .2-1.5c-.1-.2-.3-.3-.7-.4Z"/></svg>
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,531 @@
+<!--
+  Passo · Escola de dança — template de página criado por Upward Academy.
+  © 2026 Upward Academy · UPW-PASSO-C3V1 · licença __UPW_LICENCA__
+  Uso e adaptação para clientes finais permitidos; revenda e redistribuição proibidas (LICENCA.txt).
+  https://app.upwardacademy.com.br/app/templates
+-->
+<!doctype html>
+<html lang="pt-BR" data-upw="UPW-PASSO-C3V1">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Passo · Escola de dança em Perdizes</title>
+  <meta name="description" content="Ballet, jazz, dança contemporânea, hip hop, dança de salão e turmas infantis. Turmas por idade e nível, espetáculo de fim de ano e aula experimental grátis.">
+  <meta name="author" content="Upward Academy">
+  <meta name="copyright" content="© 2026 Upward Academy">
+  <meta name="upw-template" content="UPW-PASSO-C3V1">
+  <meta name="upw-licenca" content="__UPW_LICENCA__">
+  <meta property="og:title" content="Passo · Escola de dança">
+  <meta property="og:description" content="Seis modalidades, turmas a partir de 3 anos e aula experimental grátis.">
+  <meta property="og:image" content="img/palco.webp">
+  <meta name="theme-color" content="#14081f">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%2314081f'/%3E%3Cpath d='M18 46 30 18h6L24 46z M34 46l8-18h6l-8 18z' fill='%23ff4d8d'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebPage","name":"Passo · Escola de dança","creator":{"@type":"Organization","name":"Upward Academy","url":"https://app.upwardacademy.com.br/app/templates"},"copyrightHolder":{"@type":"Organization","name":"Upward Academy"},"identifier":"UPW-PASSO-C3V1"}
+  </script>
+</head>
+<body>
+
+<header class="topo" id="topo">
+  <div class="topo__barra">
+    <a class="marca" href="#inicio" aria-label="Passo, voltar ao início">
+      <svg class="marca__icone" viewBox="0 0 32 32" aria-hidden="true"><path d="M7 26 15 6h4L11 26z"/><path d="M17 26l6-13h4l-6 13z"/></svg>
+      <span>passo</span>
+    </a>
+    <nav class="menu" id="menu" aria-label="Principal">
+      <a href="#modalidades">Modalidades</a>
+      <a href="#turmas">Turmas</a>
+      <a href="#horarios">Horários</a>
+      <a href="#planos">Planos</a>
+      <a href="#espetaculo">Espetáculo</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+    <a class="botao botao--pequeno topo__cta" href="#experimental">Aula grátis</a>
+    <button class="topo__abrir" id="abrir" aria-label="Abrir o menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="inicio">
+    <div class="hero__quadro">
+      <img class="hero__foto" src="img/palco.webp" srcset="img/palco-800.webp 800w, img/palco.webp 1600w" sizes="100vw" width="1600" height="1060" alt="Bailarinos de dança contemporânea deitados no chão do palco sob luz rosa e azul" fetchpriority="high">
+      <div class="hero__conteudo">
+        <p class="etiqueta surge"><span class="ponto"></span>Matrículas 2027 abertas · Perdizes, SP</p>
+        <h1 class="hero__titulo surge">
+          <span class="sr">Dance ballet, jazz, hip hop, dança de salão e muito mais, no seu tempo.</span>
+          <span class="hero__linha" aria-hidden="true">Dance</span>
+          <span class="hero__linha hero__linha--gira" aria-hidden="true"><span class="gira" id="gira">ballet</span></span>
+          <span class="hero__linha hero__linha--fina" aria-hidden="true">no seu tempo.</span>
+        </h1>
+        <div class="hero__base surge">
+          <p class="hero__lead">Seis modalidades, turmas a partir dos 3 anos e professores que lembram o seu nome. Ninguém precisa chegar sabendo: a primeira aula é por nossa conta.</p>
+          <div class="hero__acoes">
+            <a class="botao" href="#experimental">Agendar aula grátis <span class="botao__seta" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+            <a class="botao botao--vidro" href="#horarios">Ver horários</a>
+          </div>
+        </div>
+      </div>
+      <aside class="hero__cartao surge" aria-label="Próxima turma com vaga">
+        <p class="mini">Próxima turma com vaga</p>
+        <p class="hero__cartao-titulo">Jazz adulto · iniciante</p>
+        <p class="hero__cartao-hora">Ter e qui · 19h30</p>
+        <p class="hero__cartao-vagas"><span class="barra"><span style="width:72%"></span></span> 4 vagas</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ FAIXA ============ -->
+  <div class="faixa" aria-hidden="true">
+    <div class="faixa__inclina" id="faixa">
+      <div class="faixa__trilho">
+        <span>Ballet</span><i>✶</i><span class="vazado">Jazz</span><i>✶</i><span>Hip hop</span><i>✶</i><span class="vazado">Contemporânea</span><i>✶</i><span>Dança de salão</span><i>✶</i><span class="vazado">Baby class</span><i>✶</i>
+        <span>Ballet</span><i>✶</i><span class="vazado">Jazz</span><i>✶</i><span>Hip hop</span><i>✶</i><span class="vazado">Contemporânea</span><i>✶</i><span>Dança de salão</span><i>✶</i><span class="vazado">Baby class</span><i>✶</i>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ NÚMEROS ============ -->
+  <section class="numeros wrap" aria-label="A escola em números">
+    <div class="numero revela"><strong><span class="conta" data-ate="6">6</span></strong><span>modalidades no mesmo endereço</span></div>
+    <div class="numero revela"><strong><span class="conta" data-ate="3">3</span>+</strong><span>anos: idade da turma mais nova</span></div>
+    <div class="numero revela"><strong><span class="conta" data-ate="14">14</span></strong><span>alunos no máximo por turma</span></div>
+    <div class="numero revela"><strong><span class="conta" data-ate="3">3</span></strong><span>salas com piso flutuante e espelho</span></div>
+  </section>
+
+  <!-- ============ MODALIDADES ============ -->
+  <section class="secao" id="modalidades">
+    <div class="wrap">
+      <div class="cabeca">
+        <p class="etiqueta revela"><span class="ponto"></span>01 · Modalidades</p>
+        <h2 class="titulo-l revela">Escolha por onde<br><span class="rosa">começar a mexer.</span></h2>
+        <p class="cabeca__texto revela">Cada modalidade tem trilha do iniciante ao avançado. Dá para fazer duas ao mesmo tempo, e muita gente faz.</p>
+      </div>
+
+      <div class="bento">
+        <article class="mod mod--foto mod--alta revela">
+          <img src="img/ballet.webp" srcset="img/ballet-800.webp 800w, img/ballet.webp 1600w" sizes="(max-width: 760px) 92vw, 40vw" width="1600" height="1066" loading="lazy" alt="Bailarina na barra, em preto e branco, com luz forte vindo da janela">
+          <div class="mod__texto">
+            <span class="mod__num">01</span>
+            <h3>Ballet clássico</h3>
+            <p>Base, postura e musicalidade. Método progressivo, da barra ao centro, com ponta só quando o corpo estiver pronto.</p>
+            <ul class="tags"><li>A partir de 4 anos</li><li>Adulto também</li></ul>
+          </div>
+        </article>
+        <article class="mod mod--foto revela">
+          <img src="img/jazz.webp" srcset="img/jazz-800.webp 800w, img/jazz.webp 1600w" sizes="(max-width: 760px) 92vw, 30vw" width="1600" height="1066" loading="lazy" alt="Turma de jazz dançando uma coreografia em frente ao espelho da sala">
+          <div class="mod__texto">
+            <span class="mod__num">02</span>
+            <h3>Jazz</h3>
+            <p>Energia, giros e coreografia do primeiro dia.</p>
+          </div>
+        </article>
+        <article class="mod mod--foto mod--alta-dir revela">
+          <img src="img/hiphop.webp" srcset="img/hiphop-800.webp 800w, img/hiphop.webp 1600w" sizes="(max-width: 760px) 92vw, 30vw" width="1600" height="2400" loading="lazy" alt="Dançarino de hip hop em pose, de óculos escuros e tênis, em fundo cinza">
+          <div class="mod__texto">
+            <span class="mod__num">04</span>
+            <h3>Hip hop</h3>
+            <p>Grooves, freestyle e batalhas amistosas no fim do mês.</p>
+          </div>
+        </article>
+        <article class="mod mod--foto mod--clara revela">
+          <img src="img/contemporanea.webp" srcset="img/contemporanea-800.webp 800w, img/contemporanea.webp 1600w" sizes="(max-width: 760px) 92vw, 30vw" width="1600" height="1319" loading="lazy" alt="Bailarina de roupa preta em movimento contemporâneo, braços abertos, em estúdio branco">
+          <div class="mod__texto">
+            <span class="mod__num">03</span>
+            <h3>Dança contem&shy;porânea</h3>
+            <p>Chão, improviso e criação. Para quem quer se expressar.</p>
+          </div>
+        </article>
+        <article class="mod mod--cor revela">
+          <div class="mod__texto">
+            <span class="mod__num">05</span>
+            <h3>Dança de salão</h3>
+            <p>Forró, samba de gafieira e zouk. Não precisa vir com par: a turma gira.</p>
+            <ul class="tags"><li>Sexta tem baile</li></ul>
+          </div>
+          <svg class="mod__desenho" viewBox="0 0 200 120" aria-hidden="true"><path d="M10 100c30-80 60-80 90-40s60 40 90-40"/><path d="M10 110c30-80 60-80 90-40s60 40 90-40" opacity=".4"/></svg>
+        </article>
+        <article class="mod mod--rosa revela">
+          <div class="mod__texto">
+            <span class="mod__num">06</span>
+            <h3>Infantil e baby class</h3>
+            <p>De 3 a 6 anos: brincadeira com música, coordenação e muita imaginação. Pais assistem a última aula do mês.</p>
+          </div>
+          <span class="mod__grande" aria-hidden="true">3+</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TURMAS ============ -->
+  <section class="secao secao--clara" id="turmas">
+    <div class="wrap turmas">
+      <div class="turmas__lado">
+        <p class="etiqueta etiqueta--escura revela"><span class="ponto"></span>02 · Turmas</p>
+        <h2 class="titulo-l revela">Turma certa pra idade.<br><span class="rosa-escuro">Nível certo pro corpo.</span></h2>
+        <p class="revela">Na aula experimental a professora observa e indica o nível. Sem teste, sem pressão. Você muda de turma quando estiver pronto, não quando o calendário manda.</p>
+        <figure class="turmas__foto revela">
+          <img src="img/galpao.webp" srcset="img/galpao-800.webp 800w, img/galpao.webp 1600w" sizes="(max-width: 900px) 92vw, 40vw" width="1600" height="1199" loading="lazy" alt="Sala de dança ampla em galpão de tijolos, com piso de madeira e janelas em arco">
+          <figcaption>Sala 1 · 120 m² de piso flutuante</figcaption>
+        </figure>
+      </div>
+      <div class="turmas__lista">
+        <article class="turma revela">
+          <span class="turma__idade">3–5</span>
+          <div><h3>Baby class</h3><p>Musicalidade, coordenação e brincadeiras de roda. Aulas de 45 min.</p></div>
+          <ul class="niveis" aria-label="Níveis"><li class="on">Único</li></ul>
+        </article>
+        <article class="turma revela">
+          <span class="turma__idade">6–10</span>
+          <div><h3>Kids</h3><p>Ballet, jazz e hip hop com base técnica e muita coreografia.</p></div>
+          <ul class="niveis" aria-label="Níveis"><li class="on">Inic.</li><li class="on">Inter.</li></ul>
+        </article>
+        <article class="turma revela">
+          <span class="turma__idade">11–15</span>
+          <div><h3>Teen</h3><p>Técnica mais firme, criação em grupo e preparação para festivais.</p></div>
+          <ul class="niveis" aria-label="Níveis"><li class="on">Inic.</li><li class="on">Inter.</li><li class="on">Avanç.</li></ul>
+        </article>
+        <article class="turma revela">
+          <span class="turma__idade">16+</span>
+          <div><h3>Adulto</h3><p>Para quem nunca dançou, para quem parou e para quem não para nunca.</p></div>
+          <ul class="niveis" aria-label="Níveis"><li class="on">Inic.</li><li class="on">Inter.</li><li class="on">Avanç.</li></ul>
+        </article>
+        <article class="turma revela">
+          <span class="turma__idade">60+</span>
+          <div><h3>Dança madura</h3><p>Dança de salão e alongamento com ritmo leve. Muito riso garantido.</p></div>
+          <ul class="niveis" aria-label="Níveis"><li class="on">Livre</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HORÁRIOS ============ -->
+  <section class="secao" id="horarios">
+    <div class="wrap">
+      <div class="cabeca cabeca--linha">
+        <div>
+          <p class="etiqueta revela"><span class="ponto"></span>03 · Grade de horários</p>
+          <h2 class="titulo-l revela">A semana <span class="rosa">inteira</span> dança.</h2>
+        </div>
+        <div class="filtros revela" role="group" aria-label="Filtrar por modalidade">
+          <button class="filtro is-ativo" data-filtro="todas" aria-pressed="true">Todas</button>
+          <button class="filtro" data-filtro="ballet" aria-pressed="false">Ballet</button>
+          <button class="filtro" data-filtro="jazz" aria-pressed="false">Jazz</button>
+          <button class="filtro" data-filtro="contemp" aria-pressed="false">Contemp.</button>
+          <button class="filtro" data-filtro="hiphop" aria-pressed="false">Hip hop</button>
+          <button class="filtro" data-filtro="salao" aria-pressed="false">Salão</button>
+          <button class="filtro" data-filtro="infantil" aria-pressed="false">Infantil</button>
+        </div>
+      </div>
+
+      <div class="grade revela" id="grade">
+        <div class="dia"><h3>Seg</h3><ul>
+          <li data-mod="infantil"><time>09h00</time>Baby class</li>
+          <li data-mod="ballet"><time>17h30</time>Ballet kids</li>
+          <li data-mod="jazz"><time>19h00</time>Jazz teen</li>
+          <li data-mod="contemp"><time>20h30</time>Contemporânea adulto</li>
+        </ul></div>
+        <div class="dia"><h3>Ter</h3><ul>
+          <li data-mod="ballet"><time>08h00</time>Ballet adulto inic.</li>
+          <li data-mod="hiphop"><time>18h00</time>Hip hop kids</li>
+          <li data-mod="jazz"><time>19h30</time>Jazz adulto inic.</li>
+          <li data-mod="salao"><time>20h45</time>Forró</li>
+        </ul></div>
+        <div class="dia"><h3>Qua</h3><ul>
+          <li data-mod="infantil"><time>09h00</time>Baby class</li>
+          <li data-mod="ballet"><time>17h30</time>Ballet kids</li>
+          <li data-mod="hiphop"><time>19h00</time>Hip hop teen</li>
+          <li data-mod="contemp"><time>20h30</time>Contemporânea adulto</li>
+        </ul></div>
+        <div class="dia"><h3>Qui</h3><ul>
+          <li data-mod="ballet"><time>08h00</time>Ballet adulto inic.</li>
+          <li data-mod="salao"><time>15h00</time>Dança madura 60+</li>
+          <li data-mod="jazz"><time>19h30</time>Jazz adulto inic.</li>
+          <li data-mod="salao"><time>20h45</time>Samba de gafieira</li>
+        </ul></div>
+        <div class="dia"><h3>Sex</h3><ul>
+          <li data-mod="ballet"><time>18h00</time>Ballet teen avanç.</li>
+          <li data-mod="hiphop"><time>19h30</time>Hip hop adulto</li>
+          <li data-mod="salao"><time>21h00</time>Baile da casa</li>
+        </ul></div>
+        <div class="dia"><h3>Sáb</h3><ul>
+          <li data-mod="infantil"><time>09h00</time>Baby class</li>
+          <li data-mod="infantil"><time>10h00</time>Kids mix</li>
+          <li data-mod="jazz"><time>11h00</time>Jazz adulto inter.</li>
+          <li data-mod="salao"><time>14h00</time>Zouk</li>
+        </ul></div>
+      </div>
+      <p class="nota">Horários de exemplo. A grade completa e atualizada sai pelo WhatsApp da recepção.</p>
+    </div>
+  </section>
+
+  <!-- ============ PLANOS ============ -->
+  <section class="secao secao--planos" id="planos">
+    <div class="wrap">
+      <div class="cabeca cabeca--centro">
+        <p class="etiqueta revela"><span class="ponto"></span>04 · Planos</p>
+        <h2 class="titulo-l revela">Pague pelo quanto<br><span class="rosa">quer dançar.</span></h2>
+      </div>
+      <div class="planos">
+        <article class="plano revela">
+          <p class="plano__nome">1× por semana</p>
+          <p class="plano__preco"><small>R$</small>189<small>/mês</small></p>
+          <p class="plano__desc">Uma modalidade, uma aula por semana. Bom para começar sem pressa.</p>
+          <ul class="plano__itens"><li>1 aula de 60 min por semana</li><li>Reposição de 1 falta no mês</li><li>Participação no espetáculo</li></ul>
+          <a class="botao botao--linha" href="#" data-whatsapp="Olá! Quero saber mais sobre o plano 1× por semana da Passo.">Quero esse</a>
+        </article>
+        <article class="plano plano--destaque revela">
+          <p class="plano__selo">Mais escolhido</p>
+          <p class="plano__nome">2× por semana</p>
+          <p class="plano__preco"><small>R$</small>279<small>/mês</small></p>
+          <p class="plano__desc">O ritmo em que o corpo aprende de verdade. Dá para misturar modalidades.</p>
+          <ul class="plano__itens"><li>2 aulas por semana</li><li>Misture até 2 modalidades</li><li>Reposição de 2 faltas no mês</li><li>Participação no espetáculo</li></ul>
+          <a class="botao" href="#" data-whatsapp="Olá! Quero saber mais sobre o plano 2× por semana da Passo.">Quero esse <span class="botao__seta" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        </article>
+        <article class="plano revela">
+          <p class="plano__nome">Passe livre</p>
+          <p class="plano__preco"><small>R$</small>389<small>/mês</small></p>
+          <p class="plano__desc">Todas as aulas da grade do seu nível, quantas quiser. Para quem vive aqui.</p>
+          <ul class="plano__itens"><li>Aulas ilimitadas no seu nível</li><li>Baile de sexta incluso</li><li>10% off em workshops</li></ul>
+          <a class="botao botao--linha" href="#" data-whatsapp="Olá! Quero saber mais sobre o passe livre da Passo.">Quero esse</a>
+        </article>
+      </div>
+      <p class="nota nota--centro">Valores de exemplo. Matrícula única de R$ 80 · irmãos têm 10% de desconto · plano semestral com 1 mês grátis.</p>
+    </div>
+  </section>
+
+  <!-- ============ AULA EXPERIMENTAL ============ -->
+  <section class="secao experimental" id="experimental">
+    <div class="wrap">
+      <div class="exp revela">
+        <img class="exp__foto" src="img/sala.webp" srcset="img/sala-800.webp 800w, img/sala.webp 1600w" sizes="(max-width: 900px) 92vw, 1200px" width="1600" height="1326" loading="lazy" alt="Sala de dança iluminada pelo sol, com piso de madeira, plantas e espelho">
+        <div class="exp__conteudo">
+          <p class="etiqueta"><span class="ponto"></span>05 · Aula experimental</p>
+          <h2 class="titulo-xl-2">A primeira<br>é grátis.</h2>
+          <ol class="exp__passos">
+            <li><strong>Escolha</strong> a modalidade e o horário na grade.</li>
+            <li><strong>Mande</strong> uma mensagem: a gente confirma a vaga.</li>
+            <li><strong>Venha</strong> com roupa confortável. O resto é com a gente.</li>
+          </ol>
+          <a class="botao" href="#matricula">Quero minha aula grátis <span class="botao__seta" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROFESSORES ============ -->
+  <section class="secao" id="professores">
+    <div class="wrap">
+      <div class="cabeca cabeca--linha">
+        <div>
+          <p class="etiqueta revela"><span class="ponto"></span>06 · Professores</p>
+          <h2 class="titulo-l revela">Quem conta<br><span class="rosa">os tempos.</span></h2>
+        </div>
+        <p class="cabeca__texto revela">Equipe fictícia para demonstração. Troque pelos nomes, fotos e histórias reais da sua escola.</p>
+      </div>
+      <div class="profs">
+        <article class="prof revela" style="--c:#ff4d8d">
+          <span class="prof__mono" aria-hidden="true">LV</span>
+          <h3>Lívia Valente</h3>
+          <p class="prof__mod">Ballet e baby class</p>
+          <p>Formada em dança, dá aula para crianças há mais de uma década e ainda se emociona em todo espetáculo.</p>
+        </article>
+        <article class="prof revela" style="--c:#8b5cff">
+          <span class="prof__mono" aria-hidden="true">TM</span>
+          <h3>Téo Moraes</h3>
+          <p class="prof__mod">Hip hop</p>
+          <p>Veio das batalhas de rua. Ensina fundamento primeiro e estilo depois, sempre com a turma em roda.</p>
+        </article>
+        <article class="prof revela" style="--c:#ffb547">
+          <span class="prof__mono" aria-hidden="true">RA</span>
+          <h3>Renata Abreu</h3>
+          <p class="prof__mod">Jazz e contemporânea</p>
+          <p>Coreógrafa dos espetáculos da casa. Acredita que todo corpo tem uma dança própria esperando.</p>
+        </article>
+        <article class="prof revela" style="--c:#3ee0b0">
+          <span class="prof__mono" aria-hidden="true">CF</span>
+          <h3>Caio e Flor</h3>
+          <p class="prof__mod">Dança de salão</p>
+          <p>Casal na pista e na vida. Puxam o baile de sexta e fazem até o mais tímido sair dançando.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ESPETÁCULO ============ -->
+  <section class="espetaculo" id="espetaculo">
+    <div class="espetaculo__quadro revela">
+      <img src="img/barra.webp" srcset="img/barra-800.webp 800w, img/barra.webp 1600w" sizes="100vw" width="1600" height="1067" loading="lazy" alt="Bailarinos ensaiando no palco, em preto e branco, com cortinas escuras ao fundo">
+      <div class="espetaculo__conteudo">
+        <p class="etiqueta"><span class="ponto"></span>07 · Espetáculo de fim de ano</p>
+        <p class="espetaculo__data"><span>13</span><span class="vazado">&amp;</span><span>14</span></p>
+        <p class="espetaculo__mes">dezembro · teatro parceiro (endereço a definir)</p>
+        <h2 class="titulo-l">Todo aluno sobe ao palco.</h2>
+        <p class="espetaculo__texto">Do baby class ao adulto avançado, cada turma monta a sua coreografia ao longo do semestre. Figurino emprestado pela escola, ensaio geral com tudo que um palco de verdade tem e uma plateia que aplaude de pé.</p>
+        <ul class="tags tags--claro"><li>Participação inclusa nos planos</li><li>Ingressos para a família</li><li>Fotos e vídeo da apresentação</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DEPOIMENTOS ============ -->
+  <section class="secao" id="depoimentos">
+    <div class="wrap">
+      <div class="cabeca">
+        <p class="etiqueta revela"><span class="ponto"></span>08 · Quem dança aqui</p>
+        <h2 class="titulo-l revela">O que dizem <span class="rosa">no vestiário.</span></h2>
+      </div>
+      <div class="depos">
+        <figure class="depo revela">
+          <p class="depo__aviso">Depoimento de exemplo</p>
+          <blockquote>“Entrei com 41 anos sem nunca ter feito uma aula. Na terceira semana já sabia a coreografia inteira de jazz.”</blockquote>
+          <figcaption><span class="avatar" aria-hidden="true">M</span>Mariana, jazz adulto</figcaption>
+        </figure>
+        <figure class="depo depo--rosa revela">
+          <p class="depo__aviso">Depoimento de exemplo</p>
+          <blockquote>“Minha filha conta os dias até a aula de sábado. E o espetáculo de dezembro fez a família inteira chorar.”</blockquote>
+          <figcaption><span class="avatar" aria-hidden="true">P</span>Paulo, pai da Alice (5 anos)</figcaption>
+        </figure>
+        <figure class="depo revela">
+          <p class="depo__aviso">Depoimento de exemplo</p>
+          <blockquote>“Vim pelo hip hop e fiquei pela turma. O Téo cobra fundamento, mas a aula parece festa.”</blockquote>
+          <figcaption><span class="avatar" aria-hidden="true">G</span>Gabriel, hip hop teen</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="secao secao--faq" id="duvidas">
+    <div class="wrap faq">
+      <div class="faq__lado">
+        <p class="etiqueta revela"><span class="ponto"></span>09 · Dúvidas</p>
+        <h2 class="titulo-l revela">Antes do<br><span class="rosa">primeiro passo.</span></h2>
+        <p class="revela">Não achou a sua? Pergunte pelo WhatsApp, a recepção responde no mesmo dia.</p>
+      </div>
+      <div class="faq__lista">
+        <details class="pergunta revela">
+          <summary>Nunca dancei. Posso começar no adulto?</summary>
+          <p>Pode e deve. As turmas iniciantes são feitas exatamente para quem nunca dançou ou parou há muito tempo. A professora adapta os movimentos e ninguém fica para trás.</p>
+        </details>
+        <details class="pergunta revela">
+          <summary>Que roupa eu preciso para a primeira aula?</summary>
+          <p>Roupa confortável que deixe você se mexer e uma garrafinha de água. Para ballet, meia e sapatilha ajudam, mas não são obrigatórias na aula experimental.</p>
+        </details>
+        <details class="pergunta revela">
+          <summary>Como funciona a reposição de aulas?</summary>
+          <p>Avise a recepção até 2 horas antes e reponha em outra turma do mesmo nível no mesmo mês. A quantidade de reposições depende do seu plano.</p>
+        </details>
+        <details class="pergunta revela">
+          <summary>O espetáculo tem custo extra?</summary>
+          <p>A participação está incluída em todos os planos e o figurino é emprestado pela escola. Os ingressos para a plateia são vendidos à parte, com preço acessível para a família.</p>
+        </details>
+        <details class="pergunta revela">
+          <summary>Pais podem assistir às aulas infantis?</summary>
+          <p>Para as crianças se concentrarem, as aulas são fechadas. Na última aula de cada mês a sala abre para as famílias assistirem.</p>
+        </details>
+        <details class="pergunta revela">
+          <summary>Tem fidelidade ou multa para cancelar?</summary>
+          <p>No plano mensal, não. Basta avisar até o dia 20 para não ser cobrado no mês seguinte. O semestral tem desconto e regras próprias, explicadas na matrícula.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MATRÍCULA ============ -->
+  <section class="secao matricula" id="matricula">
+    <div class="wrap matricula__grade">
+      <div class="matricula__texto">
+        <p class="etiqueta revela"><span class="ponto"></span>10 · Matrícula</p>
+        <h2 class="titulo-xl-2 revela">Bora<br><span class="rosa">dançar?</span></h2>
+        <p class="revela">Preencha e a mensagem sai pronta para o nosso WhatsApp. A recepção confirma a sua aula experimental ou a matrícula. Nada fica salvo no site.</p>
+      </div>
+      <form class="ficha revela" id="ficha" novalidate>
+        <div class="ficha__campo">
+          <label for="f-nome">Seu nome</label>
+          <input id="f-nome" name="nome" type="text" autocomplete="given-name" placeholder="Como podemos te chamar?" required>
+        </div>
+        <div class="ficha__dupla">
+          <div class="ficha__campo">
+            <label for="f-mod">Modalidade</label>
+            <select id="f-mod" name="modalidade">
+              <option>Ballet</option><option>Jazz</option><option>Dança contemporânea</option><option>Hip hop</option><option>Dança de salão</option><option>Infantil / baby class</option><option>Ainda não sei</option>
+            </select>
+          </div>
+          <div class="ficha__campo">
+            <label for="f-idade">Para quem?</label>
+            <select id="f-idade" name="idade">
+              <option>Para mim (adulto)</option><option>Criança de 3 a 5 anos</option><option>Criança de 6 a 10 anos</option><option>Adolescente</option><option>60+</option>
+            </select>
+          </div>
+        </div>
+        <fieldset class="ficha__opcoes">
+          <legend>Quero</legend>
+          <label><input type="radio" name="quero" value="agendar a aula experimental grátis" checked><span>Aula grátis</span></label>
+          <label><input type="radio" name="quero" value="fazer a matrícula"><span>Matrícula</span></label>
+        </fieldset>
+        <p class="ficha__erro" id="ficha-erro" role="alert"></p>
+        <button class="botao botao--largo" type="submit">Enviar pelo WhatsApp <span class="botao__seta" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ ENDEREÇO ============ -->
+  <section class="secao secao--sem-topo" id="endereco">
+    <div class="wrap endereco">
+      <div class="mapa revela" aria-hidden="true">
+        <svg class="mapa__ruas" viewBox="0 0 600 520" preserveAspectRatio="xMidYMid slice">
+          <path d="M-20 140 C 120 120, 260 180, 620 110"/><path d="M-20 360 C 160 330, 380 400, 620 340"/>
+          <path d="M150 -20 C 170 160, 120 340, 190 540"/><path d="M420 -20 C 380 180, 470 330, 430 540"/>
+          <path class="fina" d="M-20 250 H 620"/><path class="fina" d="M300 -20 V 540"/><path class="fina" d="M-20 450 C 200 430, 400 470, 620 440"/>
+          <path class="fina" d="M60 -20 L 80 540"/><path class="fina" d="M530 -20 L 560 540"/>
+        </svg>
+        <span class="mapa__metro">M</span>
+        <span class="mapa__pino"><svg viewBox="0 0 32 32"><path d="M7 26 15 6h4L11 26z"/><path d="M17 26l6-13h4l-6 13z"/></svg></span>
+        <span class="mapa__rotulo">Passo · Rua do Exemplo, 000</span>
+        <span class="mapa__aviso">mapa ilustrativo</span>
+      </div>
+      <div class="endereco__info revela">
+        <p class="etiqueta"><span class="ponto"></span>11 · Onde estamos</p>
+        <h2 class="titulo-l">Rua do Exemplo, 000<br><span class="rosa">Perdizes, SP</span></h2>
+        <dl class="endereco__dados">
+          <div><dt>Recepção</dt><dd>Seg a sex, 8h às 22h<br>Sáb, 8h às 15h</dd></div>
+          <div><dt>Como chegar</dt><dd>5 min a pé da estação de metrô (exemplo) · bicicletário na entrada</dd></div>
+          <div><dt>Contato</dt><dd>(11) 90000-0000<br>@passo.danca (exemplo)</dd></div>
+        </dl>
+        <div class="hero__acoes">
+          <a class="botao" href="#" data-whatsapp="Olá! Quero saber como chegar na Passo.">Chamar no WhatsApp <span class="botao__seta" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+          <a class="botao botao--linha" href="https://www.google.com/maps/search/?api=1&amp;query=Perdizes%2C%20S%C3%A3o%20Paulo" target="_blank" rel="noopener">Abrir no mapa</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape" data-upw="UPW-PASSO-C3V1">
+  <div class="wrap rodape__grade">
+    <a class="marca" href="#inicio">
+      <svg class="marca__icone" viewBox="0 0 32 32" aria-hidden="true"><path d="M7 26 15 6h4L11 26z"/><path d="M17 26l6-13h4l-6 13z"/></svg>
+      <span>passo</span>
+    </a>
+    <nav class="rodape__links" aria-label="Rodapé">
+      <a href="#modalidades">Modalidades</a><a href="#turmas">Turmas</a><a href="#horarios">Horários</a><a href="#planos">Planos</a><a href="#espetaculo">Espetáculo</a><a href="#matricula">Matrícula</a>
+    </nav>
+  </div>
+  <div class="wrap rodape__base">
+    <span>© <span id="ano">2026</span> Passo · página de demonstração com dados fictícios.</span>
+    <span>Criada por <a href="https://app.upwardacademy.com.br/app/templates" target="_blank" rel="noopener">Upward Academy</a></span>
+  </div>
+  <p class="rodape__marca" aria-hidden="true">passo</p>
+</footer>
+
+<a class="zap-flutuante" href="#" data-whatsapp="Olá! Quero agendar uma aula experimental na Passo." aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3Zm0 23.6a10.6 10.6 0 0 1-5.4-1.5l-.4-.2-3.9 1 1-3.8-.2-.4A10.6 10.6 0 1 1 16 26.6Zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7a.6.6 0 0 0 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8 1 3.9.8a3.3 3.3 0 0 0 2.1-1.5 2.7 2.7 0 0 0 .2-1.5c-.1-.2-.3-.3-.7-.4Z"/></svg>
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+Fotos gratuitas do Unsplash (https://unsplash.com/license): uso livre, inclusive comercial.
+Troque pelas fotos reais do negócio antes de publicar.
+Template UPW-DOMINGO-F9R3 · licença __UPW_LICENCA__ · © 2026 Upward Academy
+
+img/maos.webp  ←  https://unsplash.com/photos/1520854221256-17451cc331bf (1600×1066)
+img/colinas.webp  ←  https://unsplash.com/photos/1532712938310-34cb3982ef74 (1600×1066)
+img/vinhedo.webp  ←  https://unsplash.com/photos/1779475501433-69a3a0b310f8 (1600×1066)
+img/buque.webp  ←  https://unsplash.com/photos/1519741497674-611481863552 (1600×1066)
+img/corredor.webp  ←  https://unsplash.com/photos/1757647630063-dd5cd82271f3 (1600×2404)
+img/veu.webp  ←  https://unsplash.com/photos/1606216794079-73f85bbd57d5 (1600×2400)
+img/jardim.webp  ←  https://unsplash.com/photos/1775126964671-43b4c1a1c5ce (1600×2133)
+img/floresta.webp  ←  https://unsplash.com/photos/1769540209843-c1e6a462b9d3 (1600×1066)
+img/palmeira.webp  ←  https://unsplash.com/photos/1606216794074-735e91aa2c92 (1600×2400)
+img/corrida.webp  ←  https://unsplash.com/photos/1775126964334-93899cb3725a (1600×2134)

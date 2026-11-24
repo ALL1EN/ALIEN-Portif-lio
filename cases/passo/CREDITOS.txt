@@ -1,0 +1,12 @@
+Passo · template UPW-PASSO-C3V1 · licença __UPW_LICENCA__ · © 2026 Upward Academy
+Fotos gratuitas do Unsplash (https://unsplash.com/license): uso livre, inclusive comercial.
+Troque pelas fotos reais do negócio antes de publicar.
+
+img/jazz.webp  ←  https://unsplash.com/photos/1524594152303-9fd13543fe6e (1600×1066)
+img/ballet.webp  ←  https://unsplash.com/photos/1758671914469-1aa30cc38d1e (1600×1066)
+img/contemporanea.webp  ←  https://unsplash.com/photos/1586211070543-61ae1ad4a665 (1600×1319)
+img/galpao.webp  ←  https://unsplash.com/photos/1567667867244-2eed283cb70a (1600×1199)
+img/palco.webp  ←  https://unsplash.com/photos/1520732789276-a0ebed2eeabd (1600×1060)
+img/sala.webp  ←  https://unsplash.com/photos/1556394890-c874aac332b1 (1600×1326)
+img/barra.webp  ←  https://unsplash.com/photos/1758671916868-b853bc18d031 (1600×1067)
+img/hiphop.webp  ←  https://unsplash.com/photos/1761882619891-6529ff92df0a (1600×2400)

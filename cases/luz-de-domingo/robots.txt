@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+# UPW-DOMINGO-F9R3 · __UPW_LICENCA__

@@ -1,0 +1,3 @@
+# Nori · UPW-NORI-X5B8 · licença __UPW_LICENCA__
+User-agent: *
+Allow: /

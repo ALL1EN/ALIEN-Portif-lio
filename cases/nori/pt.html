@@ -1,0 +1,369 @@
+<!--
+  Nori · Sushi bar — template de página criado por Upward Academy.
+  © 2026 Upward Academy · UPW-NORI-X5B8 · licença __UPW_LICENCA__
+  Uso e adaptação para clientes finais permitidos; revenda e redistribuição proibidas (LICENCA.txt).
+  https://app.upwardacademy.com.br/app/templates
+-->
+<!doctype html>
+<html lang="pt-BR" data-upw="UPW-NORI-X5B8">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nori · Sushi bar e omakase no balcão</title>
+  <meta name="description" content="Sushi bar com peixe do dia, arroz temperado na casa e omakase de 14 tempos no balcão. Reserve ou peça delivery pelo WhatsApp.">
+  <meta name="author" content="Upward Academy">
+  <meta name="copyright" content="© 2026 Upward Academy">
+  <meta name="upw-template" content="UPW-NORI-X5B8">
+  <meta name="upw-licenca" content="__UPW_LICENCA__">
+  <meta property="og:title" content="Nori · Sushi bar e omakase no balcão">
+  <meta property="og:description" content="Peixe do dia, arroz morno e omakase de 14 tempos. Reservas e delivery pelo WhatsApp.">
+  <meta property="og:image" content="img/hero.webp">
+  <meta name="theme-color" content="#0a0908">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='4' y='4' width='56' height='56' rx='14' fill='%23e5432a'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='36' fill='%23f3ede3'%3EN%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Shippori+Mincho:wght@500;600&family=Hanken+Grotesk:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebPage","name":"Nori · Sushi bar e omakase no balcão","creator":{"@type":"Organization","name":"Upward Academy","url":"https://app.upwardacademy.com.br/app/templates"},"copyrightHolder":{"@type":"Organization","name":"Upward Academy"},"identifier":"UPW-NORI-X5B8"}
+  </script>
+</head>
+<body>
+
+<header class="topo" id="topo">
+  <div class="topo__barra">
+    <a class="marca" href="#inicio" aria-label="Nori, voltar ao início">
+      <span class="marca__selo" aria-hidden="true">N</span>
+      <span>Nori</span>
+    </a>
+    <nav class="menu" id="menu" aria-label="Principal">
+      <a href="#cardapio">Cardápio</a>
+      <a href="#omakase">Omakase</a>
+      <a href="#delivery">Delivery</a>
+      <a href="#casa">A casa</a>
+      <a href="#visite">Endereço</a>
+    </nav>
+    <a class="botao botao--shu botao--pequeno topo__cta" href="#" data-whatsapp="Olá! Quero reservar uma mesa no Nori.">Reservar <span class="botao__seta" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span></a>
+    <button class="topo__abrir" id="abrir" aria-label="Abrir o menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="inicio">
+    <div class="hero__quadro">
+      <picture class="hero__foto">
+        <img src="img/hero.webp" srcset="img/hero-800.webp 800w, img/hero.webp 1600w" sizes="100vw" width="1600" height="1066" fetchpriority="high" alt="Uramaki de salmão com cream cheese e cebolinha em prato de cerâmica escura, com o salão do sushi bar desfocado ao fundo">
+      </picture>
+      <div class="hero__veu" aria-hidden="true"></div>
+
+      <p class="hero__vertical surge" aria-hidden="true"><span>Sushi bar</span><i></i><span>desde 2016</span><i></i><span>São Paulo</span></p>
+
+      <div class="hero__conteudo">
+        <div class="hero__tags surge">
+          <span class="tag tag--viva"><i></i>Balcão aberto hoje</span>
+          <span class="tag">Vila Madalena · SP</span>
+        </div>
+        <h1 class="hero__titulo surge">
+          <span class="hero__linha">Corte preciso,</span>
+          <span class="hero__linha hero__linha--serif">arroz morno.</span>
+        </h1>
+        <div class="hero__base surge">
+          <p class="hero__lead">Peixe que chega cedo, arroz temperado na casa e um balcão de oito lugares onde o itamae decide o que vem a seguir.</p>
+          <div class="hero__acoes">
+            <a class="botao botao--shu" href="#" data-whatsapp="Olá! Quero reservar o omakase no balcão do Nori.">Reservar o balcão <span class="botao__seta" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span></a>
+            <a class="botao botao--vidro" href="#cardapio">Ver o cardápio</a>
+          </div>
+        </div>
+      </div>
+
+      <aside class="hero__ficha surge" aria-label="Hoje no balcão">
+        <span class="mono">Hoje no balcão</span>
+        <strong>Omakase<br>14 tempos</strong>
+        <span>Sessões às 19h e 21h15 · 8 lugares</span>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ FAIXA ============ -->
+  <div class="faixa" aria-hidden="true">
+    <div class="faixa__trilho">
+      <span>Nigiri</span><span class="faixa__serif">peixe do dia</span><span>Sashimi</span><span class="faixa__serif">aburi no maçarico</span><span>Temaki</span><span class="faixa__serif">sakê gelado</span><span>Omakase</span>
+      <span>Nigiri</span><span class="faixa__serif">peixe do dia</span><span>Sashimi</span><span class="faixa__serif">aburi no maçarico</span><span>Temaki</span><span class="faixa__serif">sakê gelado</span><span>Omakase</span>
+    </div>
+  </div>
+
+  <!-- ============ CARDÁPIO ============ -->
+  <section class="secao" id="cardapio">
+    <div class="wrap com-indice">
+      <p class="indice" aria-hidden="true">01 — Cardápio</p>
+      <div class="cabeca cabeca--lado">
+        <div>
+          <span class="tag"><i></i>Cardápio</span>
+          <h2 class="titulo-l">O que sai da <em>tábua</em></h2>
+        </div>
+        <p class="cabeca__texto">Carta curta, que muda com o mar. Os preços são de exemplo: ajuste no arquivo antes de publicar.</p>
+      </div>
+
+      <div class="cardapio">
+        <figure class="cardapio__foto revela">
+          <img src="img/nigiri-800.webp" srcset="img/nigiri-800.webp 800w, img/nigiri.webp 1600w" sizes="(max-width: 900px) 92vw, 40vw" width="1600" height="1066" loading="lazy" decoding="async" alt="Seis nigiris de salmão, atum e peixe branco em prato preto retangular, com hashi e shoyu ao lado">
+          <figcaption><span class="mono">Nigiri do dia</span><b>Salmão, atum, peixe branco e o que o mar trouxer.</b></figcaption>
+        </figure>
+
+        <div class="cardapio__lado revela">
+          <div class="abas" role="tablist" aria-label="Categorias do cardápio">
+            <button class="aba" role="tab" id="aba-comb" aria-controls="painel-comb" aria-selected="true">Combinados</button>
+            <button class="aba" role="tab" id="aba-sash" aria-controls="painel-sash" aria-selected="false" tabindex="-1">Sashimi</button>
+            <button class="aba" role="tab" id="aba-tema" aria-controls="painel-tema" aria-selected="false" tabindex="-1">Temaki</button>
+            <button class="aba" role="tab" id="aba-quen" aria-controls="painel-quen" aria-selected="false" tabindex="-1">Quentes</button>
+          </div>
+
+          <div class="painel" role="tabpanel" id="painel-comb" aria-labelledby="aba-comb">
+            <h3 class="painel__titulo">Combinados</h3>
+            <ul class="pratos">
+              <li><div><b>Combinado Nori</b><span>20 peças · nigiri, uramaki e hossomaki do dia</span></div><em>R$ 129</em></li>
+              <li><div><b>Combinado do chef</b><span>30 peças · inclui aburi e gunkan de ovas</span></div><em>R$ 189</em></li>
+              <li><div><b>Só salmão</b><span>16 peças · sashimi, nigiri e uramaki skin</span></div><em>R$ 92</em></li>
+              <li><div><b>Vegetariano</b><span>14 peças · shiitake, pepino, manga e shiso</span></div><em>R$ 68</em></li>
+              <li><div><b>Barca para dois</b><span>40 peças · o melhor da casa num só pedido</span></div><em>R$ 239</em></li>
+            </ul>
+          </div>
+          <div class="painel" role="tabpanel" id="painel-sash" aria-labelledby="aba-sash">
+            <h3 class="painel__titulo">Sashimi</h3>
+            <ul class="pratos">
+              <li><div><b>Salmão</b><span>8 fatias · corte grosso, servido com wasabi fresco</span></div><em>R$ 64</em></li>
+              <li><div><b>Atum</b><span>6 fatias · akami ou toro, conforme a entrega</span></div><em>R$ 78</em></li>
+              <li><div><b>Peixe branco do dia</b><span>6 fatias · com ponzu e raspas de limão</span></div><em>R$ 69</em></li>
+              <li><div><b>Polvo</b><span>6 fatias · cozido lentamente, com sal grosso</span></div><em>R$ 72</em></li>
+              <li><div><b>Trio da casa</b><span>12 fatias · salmão, atum e peixe branco</span></div><em>R$ 112</em></li>
+            </ul>
+          </div>
+          <div class="painel" role="tabpanel" id="painel-tema" aria-labelledby="aba-tema">
+            <h3 class="painel__titulo">Temaki</h3>
+            <ul class="pratos">
+              <li><div><b>Salmão com cebolinha</b><span>alga crocante, montado na hora</span></div><em>R$ 38</em></li>
+              <li><div><b>Skin</b><span>pele de salmão tostada e molho tarê</span></div><em>R$ 34</em></li>
+              <li><div><b>Atum picante</b><span>atum picado, pimenta e gergelim</span></div><em>R$ 44</em></li>
+              <li><div><b>Camarão empanado</b><span>camarão no panko, maionese de missô</span></div><em>R$ 42</em></li>
+              <li><div><b>Vegetariano</b><span>pepino, manga, cenoura e shiso</span></div><em>R$ 29</em></li>
+            </ul>
+          </div>
+          <div class="painel" role="tabpanel" id="painel-quen" aria-labelledby="aba-quen">
+            <h3 class="painel__titulo">Quentes</h3>
+            <ul class="pratos">
+              <li><div><b>Gyoza de porco</b><span>6 unidades · selado na chapa</span></div><em>R$ 39</em></li>
+              <li><div><b>Missoshiru</b><span>caldo de missô, tofu e cebolinha</span></div><em>R$ 16</em></li>
+              <li><div><b>Lula na chapa</b><span>manteiga, shoyu e limão</span></div><em>R$ 58</em></li>
+              <li><div><b>Salmão na robata</b><span>grelhado na brasa com tarê da casa</span></div><em>R$ 74</em></li>
+              <li><div><b>Arroz frito com shimeji</b><span>ovo, cebolinha e óleo de gergelim</span></div><em>R$ 46</em></li>
+            </ul>
+          </div>
+          <p class="nota-exemplo">Preços e pratos de exemplo. Consulte alergênicos com a equipe.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OMAKASE ============ -->
+  <section class="secao secao--fundo" id="omakase">
+    <div class="wrap com-indice">
+      <p class="indice" aria-hidden="true">02 — Omakase</p>
+      <div class="cabeca">
+        <span class="tag"><i></i>Omakase no balcão</span>
+        <h2 class="titulo-l">Você senta.<br>O chef <em>escolhe.</em></h2>
+        <p class="cabeca__texto">Omakase quer dizer “deixo com você”. São 14 tempos servidos peça por peça, na mão, no ritmo da conversa.</p>
+      </div>
+
+      <div class="oma">
+        <figure class="oma__foto revela">
+          <img src="img/macarico-800.webp" srcset="img/macarico-800.webp 800w, img/macarico.webp 1600w" sizes="(max-width: 900px) 92vw, 36vw" width="1600" height="2398" loading="lazy" decoding="async" alt="Uramaki sendo flambado com maçarico, com a chama laranja sobre o fundo escuro">
+          <figcaption class="tag">Tempo 09 · aburi</figcaption>
+        </figure>
+
+        <div class="oma__tempos revela">
+          <span class="mono">A sequência</span>
+          <ol class="tempos">
+            <li><b>01–02</b><span>Entradas frias da estação</span></li>
+            <li><b>03–04</b><span>Sashimi do dia, cortado na sua frente</span></li>
+            <li><b>05–12</b><span>Oito nigiris, do peixe mais leve ao mais gordo</span></li>
+            <li><b>13</b><span>Temaki do chef, entregue na mão</span></li>
+            <li><b>14</b><span>Sobremesa e chá verde</span></li>
+          </ol>
+        </div>
+
+        <div class="oma__reserva revela" id="reserva">
+          <div class="oma__preco">
+            <span class="mono">Por pessoa</span>
+            <strong>R$ 290</strong>
+            <span>Harmonização com sakê: + R$ 160 (valores de exemplo)</span>
+          </div>
+          <fieldset class="escolha">
+            <legend class="mono">Sessão</legend>
+            <label><input type="radio" name="sessao" value="19h" checked><span>19h</span></label>
+            <label><input type="radio" name="sessao" value="21h15"><span>21h15</span></label>
+          </fieldset>
+          <div class="contador">
+            <span class="mono" id="rot-pessoas">Lugares</span>
+            <div class="contador__caixa" role="group" aria-labelledby="rot-pessoas">
+              <button type="button" id="menos" aria-label="Diminuir lugares">−</button>
+              <output id="pessoas" aria-live="polite">2</output>
+              <button type="button" id="mais" aria-label="Aumentar lugares">+</button>
+            </div>
+          </div>
+          <a class="botao botao--shu botao--cheio" id="reservar" href="#" data-whatsapp="Olá! Quero reservar o omakase no balcão do Nori: sessão das 19h, 2 lugares.">Pedir reserva no WhatsApp <span class="botao__seta" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span></a>
+          <p class="oma__nota">De terça a sábado. Avise restrições alimentares na reserva.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DELIVERY ============ -->
+  <section class="secao" id="delivery">
+    <div class="wrap com-indice">
+      <p class="indice" aria-hidden="true">03 — Delivery</p>
+      <div class="entrega">
+        <div class="entrega__texto">
+          <span class="tag"><i></i>Delivery</span>
+          <h2 class="titulo-l">O balcão vai <em>até você.</em></h2>
+          <p class="cabeca__texto">Montamos na hora do pedido, nunca antes. Arroz e peixe viajam separados do molho, para chegar como saíram da tábua.</p>
+          <ul class="entrega__itens">
+            <li><b>40–55 min</b><span>tempo médio de entrega</span></li>
+            <li><b>6 km</b><span>de raio a partir da casa</span></li>
+            <li><b>18h30</b><span>começamos a aceitar pedidos</span></li>
+          </ul>
+          <div class="hero__acoes">
+            <a class="botao botao--shu" href="#" data-whatsapp="Olá! Quero fazer um pedido de delivery no Nori.">Pedir pelo WhatsApp <span class="botao__seta" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span></a>
+            <a class="botao botao--vidro" href="#" data-app>Pedir pelo app</a>
+          </div>
+        </div>
+        <figure class="entrega__foto revela">
+          <img src="img/barca-800.webp" srcset="img/barca-800.webp 800w, img/barca.webp 1600w" sizes="(max-width: 900px) 92vw, 50vw" width="1600" height="1280" loading="lazy" decoding="async" alt="Barca de madeira com uramakis, hossomakis e nigiris enfileirados">
+          <figcaption class="entrega__selo"><span class="mono">Mais pedido</span><b>Barca para dois</b><span>40 peças · R$ 239</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ A CASA ============ -->
+  <section class="secao secao--fundo" id="casa">
+    <div class="wrap com-indice">
+      <p class="indice" aria-hidden="true">04 — A casa</p>
+      <div class="casa">
+        <figure class="casa__foto revela">
+          <img src="img/hashi-800.webp" srcset="img/hashi-800.webp 800w, img/hashi.webp 1600w" sizes="(max-width: 900px) 92vw, 34vw" width="1600" height="2398" loading="lazy" decoding="async" alt="Hashi segurando uma peça de uramaki de camarão sobre o balcão escuro">
+        </figure>
+        <div class="casa__texto">
+          <span class="tag"><i></i>A casa e o chef</span>
+          <blockquote class="casa__citacao revela">“Sushi é <em>arroz</em>. O peixe é a parte que todo mundo vê.”</blockquote>
+          <p class="casa__assina"><b>Chef Rafael Sato</b> · itamae e sócio (personagem fictício)</p>
+          <p>O Nori começou em 2016 com um balcão de oito lugares e nenhuma pressa. Rafael aprendeu o ofício em casas de Liberdade e Osaka e trouxe de volta uma regra simples: o arroz é temperado três vezes por noite e sai sempre na temperatura do corpo.</p>
+          <p>O peixe chega de manhã cedo, de fornecedores que a gente conhece pelo nome. O que não está bom no dia, não entra no cardápio.</p>
+          <ul class="numeros">
+            <li><strong><span class="conta" data-ate="8">0</span></strong><span>lugares no balcão</span></li>
+            <li><strong><span class="conta" data-ate="3">0</span>×</strong><span>arroz temperado por noite</span></li>
+            <li><strong><span class="conta" data-ate="36">0</span>°</strong><span>temperatura do shari</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALERIA ============ -->
+  <section class="secao secao--curta" aria-labelledby="titulo-galeria">
+    <div class="wrap">
+      <div class="cabeca cabeca--lado">
+        <h2 class="titulo-l" id="titulo-galeria">Uma noite <em>no Nori</em></h2>
+        <p class="cabeca__texto">Algumas fotos para dar fome. Troque pelas da sua casa.</p>
+      </div>
+      <div class="bento">
+        <figure class="bento__item bento__item--a revela"><img src="img/mesa-800.webp" srcset="img/mesa-800.webp 800w, img/mesa.webp 1600w" sizes="(max-width: 900px) 92vw, 50vw" width="1600" height="899" loading="lazy" decoding="async" alt="Mesa vista de cima com tábua de sushi, edamame e pratos de cerâmica"><figcaption>Mesa para compartilhar</figcaption></figure>
+        <figure class="bento__item bento__item--b revela"><img src="img/uramaki-800.webp" width="800" height="1421" loading="lazy" decoding="async" alt="Uramakis com gergelim sobre tábua de madeira, com shoyu ao lado"><figcaption>Uramaki com gergelim</figcaption></figure>
+        <figure class="bento__item bento__item--c revela"><img src="img/jantar-800.webp" width="800" height="1200" loading="lazy" decoding="async" alt="Pessoas servindo sushi com hashi de um prato branco decorado com folhas"><figcaption>Jantar a dois</figcaption></figure>
+        <figure class="bento__item bento__item--d revela"><img src="img/tabua-800.webp" width="800" height="1053" loading="lazy" decoding="async" alt="Tábua de madeira com nigiris de salmão, atum, camarão e tamago"><figcaption>Nigiris variados</figcaption></figure>
+        <div class="bento__item bento__item--e revela">
+          <span class="mono">Sakê da casa</span>
+          <p>Uma carta curta de sakês, servidos gelados ou mornos, para acompanhar cada tempo.</p>
+          <b>12 rótulos</b>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DEPOIMENTOS ============ -->
+  <section class="secao" id="depoimentos">
+    <div class="wrap com-indice">
+      <p class="indice" aria-hidden="true">05 — Quem senta</p>
+      <div class="cabeca cabeca--lado">
+        <div>
+          <span class="tag"><i></i>Depoimentos de exemplo</span>
+          <h2 class="titulo-l">Quem senta, <em>volta.</em></h2>
+        </div>
+        <p class="cabeca__texto">Depoimentos fictícios para mostrar o modelo. Troque pelos dos seus clientes antes de publicar.</p>
+      </div>
+      <div class="depoimentos">
+        <blockquote class="depo revela"><p>“Fiz o omakase no aniversário de casamento. O chef lembrou do nosso nome até a sobremesa.”</p><footer><span class="depo__letra" aria-hidden="true">J</span><span>Juliana R.<small>cliente de exemplo</small></span></footer></blockquote>
+        <blockquote class="depo revela"><p>“O delivery chega com o arroz soltinho e o molho à parte. Parece que acabou de sair do balcão.”</p><footer><span class="depo__letra" aria-hidden="true">T</span><span>Thiago M.<small>cliente de exemplo</small></span></footer></blockquote>
+        <blockquote class="depo revela"><p>“O nigiri de peixe branco com raspas de limão é motivo suficiente para atravessar a cidade.”</p><footer><span class="depo__letra" aria-hidden="true">C</span><span>Camila S.<small>cliente de exemplo</small></span></footer></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ENDEREÇO ============ -->
+  <section class="secao secao--fundo" id="visite">
+    <div class="wrap com-indice">
+      <p class="indice" aria-hidden="true">06 — Endereço</p>
+      <div class="visite">
+        <div class="visite__texto">
+          <span class="tag"><i></i>Endereço e horário</span>
+          <h2 class="titulo-l">A luz vermelha<br>fica <em>acesa.</em></h2>
+          <dl class="dados">
+            <div><dt class="mono">Endereço</dt><dd data-info="endereco">Rua Exemplo, 000 · Vila Madalena, São Paulo · SP</dd></div>
+            <div><dt class="mono">Contato</dt><dd><a href="#" data-whatsapp="Olá! Tenho uma dúvida sobre o Nori." data-info="telefone">(11) 90000-0000</a> · <a href="https://instagram.com/" target="_blank" rel="noopener">@nori.sushibar</a></dd></div>
+          </dl>
+          <div class="hero__acoes">
+            <a class="botao botao--shu" href="#" data-whatsapp="Olá! Quero reservar uma mesa no Nori.">Reservar uma mesa <span class="botao__seta" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span></a>
+            <a class="botao botao--vidro" href="https://maps.google.com/?q=Vila+Madalena+São+Paulo" target="_blank" rel="noopener">Abrir no mapa</a>
+          </div>
+        </div>
+        <div class="horario revela">
+          <div class="horario__topo"><span class="mono">Horário</span><span class="tag tag--viva" id="agora"><i></i>Aberto hoje</span></div>
+          <ul class="horario__lista">
+            <li data-dia="1"><span>Segunda</span><b>Fechado</b></li>
+            <li data-dia="2"><span>Terça a quinta</span><b>18h30 – 23h30</b></li>
+            <li data-dia="5"><span>Sexta</span><b>18h30 – 00h30</b></li>
+            <li data-dia="6"><span>Sábado</span><b>12h – 16h · 18h30 – 00h30</b></li>
+            <li data-dia="0"><span>Domingo</span><b>12h – 17h</b></li>
+          </ul>
+          <div class="horario__mapa" aria-hidden="true"><span class="horario__pino"></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape" data-upw="UPW-NORI-X5B8">
+  <div class="wrap rodape__grade">
+    <div>
+      <a class="marca" href="#inicio"><span class="marca__selo" aria-hidden="true">N</span><span>Nori</span></a>
+      <p class="rodape__frase">Sushi bar e omakase no balcão.<br>Rua Exemplo, 000 · Vila Madalena · SP</p>
+    </div>
+    <nav class="rodape__links" aria-label="Rodapé">
+      <a href="#cardapio">Cardápio</a><a href="#omakase">Omakase</a><a href="#delivery">Delivery</a><a href="#casa">A casa</a><a href="#visite">Endereço</a>
+    </nav>
+    <a class="botao botao--shu" href="#" data-whatsapp="Olá! Quero reservar uma mesa no Nori.">Reservar <span class="botao__seta" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span></a>
+  </div>
+  <div class="wrap rodape__base">
+    <span>© <span id="ano">2026</span> Nori · página de demonstração com dados fictícios.</span>
+    <span>Criada por <a href="https://app.upwardacademy.com.br/app/templates" target="_blank" rel="noopener">Upward Academy</a></span>
+  </div>
+  <p class="rodape__marca" aria-hidden="true">NORI<span>.</span></p>
+</footer>
+
+<a class="zap-flutuante" href="#" data-whatsapp="Olá! Vim pelo site do Nori." aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3Zm0 23.6a10.6 10.6 0 0 1-5.4-1.5l-.4-.2-3.9 1 1-3.8-.2-.4A10.6 10.6 0 1 1 16 26.6Zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7a.6.6 0 0 0 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8 1 3.9.8a3.3 3.3 0 0 0 2.1-1.5 2.7 2.7 0 0 0 .2-1.5c-.1-.2-.3-.3-.7-.4Z"/></svg>
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>
